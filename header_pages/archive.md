@@ -5,24 +5,15 @@ permalink: /Archive/
 main_nav: true
 ---
 
-{% for category in site.categories %}
-  {% capture cat %}{{ category | first }}{% endcapture %}
-  <h2 id="{{cat}}">{{ cat | capitalize }}</h2>
-  {% for desc in site.descriptions %}
-    {% if desc.cat == cat %}
-      <p class="desc"><em>{{ desc.desc }}</em></p>
-    {% endif %}
-  {% endfor %}
-  <ul class="posts-list">
-  {% for post in site.categories[cat] %}
-    <li>
-      <strong>
-        <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-      </strong>
-      <span class="post-date">- {{ post.date | date: "%Y-%m-%-d" }}</span>
-    </li>
-  {% endfor %}
+{% assign postsByYear = site.posts | group_by_exp:"post", "post.date | date: '%Y'" %}
+{% for year in postsByYear %}
+  <h4>{{ year.name }}</h4>
+  <ul>
+    {% for post in year.items %}
+      <li>
+        <div style="width:60px;float:left;">{{ post.date | date: "%b %-d"}}</div>
+        <a href="{{ post.url }}">{{ post.title }}</a>
+      </li>
+    {% endfor %}
   </ul>
-  {% if forloop.last == false %}<hr>{% endif %}
 {% endfor %}
-<br>
