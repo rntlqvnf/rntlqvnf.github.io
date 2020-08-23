@@ -197,7 +197,7 @@ models:
   basicpage:
     type: page
     label: Basic Page
-    match: "*.md"
+    folder: header_pages
     fields:
       - type: string
         name: layout
