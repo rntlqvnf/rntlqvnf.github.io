@@ -143,19 +143,14 @@ pre code.hljs {
     @include clearfix;
     position: relative;
   }
-  .logo {
+  .home {
     float: left;
-    height: 4em;
+	font-size: 1.25em;
+	text-align: center;
+	padding-top: 0.7em;
+	padding-bottom: 0.7em;
     @include media ($tablet) {
     	padding-left: $em-base;
-    }
-    img {
-      max-height: 2.5em;
-      margin-top: 0.75em;
-      padding-right: 1em;
-    }
-    span {
-    	font-size: 1.25em;
     }
   }
   nav {
