@@ -1,7 +1,7 @@
 ---
 layout: page
-title: "Categories"
-permalink: /Categories/
+title: "Posts"
+permalink: /posts/
 main_nav: true
 ---
 
@@ -19,7 +19,7 @@ main_nav: true
       <strong>
         <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
       </strong>
-      <span class="post-date">- {{ post.date | date: "%Y-%m-%-d" }}</span>
+      <span class="post-date">- {{ post.date | date_to_long_string }}</span>
     </li>
   {% endfor %}
   </ul>
