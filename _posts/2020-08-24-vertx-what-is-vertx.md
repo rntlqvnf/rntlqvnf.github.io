@@ -71,7 +71,7 @@ a.then((value) => System.out.println(value)); //유효해지면 출력해라
 
 그래서 정말 간단하게, *이걸 모르면 Vert.x를 시작할 수도 없다!* 정도만 소개하려고 한다. 
 
-### Verticle 이란?
+### 1. Verticle 이란?
 
 Vert.x 의 알파이자 오메가이다.
 
@@ -87,9 +87,9 @@ Verticle은 Vert.x 에서 독립적으로 돌아가는 하나의 프로그램을
 
 이런 각각의 프로그램을 **Verticle** 이라고 한다. 
 
-물론 더 세부적으로 자를 수 있다. 그냥 개발자가 여기까지 이 프로그램의 기능이야! 라고 정해서 만들어낸 프로그램이 **Verticle** 이라고 생각하면 된다.
+물론 더 세부적으로 자를 수 있다. 그냥 개발자가 여기까지 이 프로그램의 기능이야! 라고 정해서 만들어낸 프로그램이 Verticle 이라고 생각하면 된다.
 
-### Worker Verticle 이란?
+### 2. Worker Verticle 이란?
 
 상당히 중요한 점은, Verticle은 **Single Thread** 로 동작한다.
 
@@ -105,13 +105,13 @@ Verticle은 Vert.x 에서 독립적으로 돌아가는 하나의 프로그램을
 
 맞다. 하지만 일반 Verticle 만으로는 불충분하다. 바로 여기서 **Worker Verticle** 이 등장한다.
 
-Worker Verticle은 말 그대로, 일하는 프로그램이다. 
+**Worker Verticle**은 말 그대로, 일하는 프로그램이다. 
 
-**multi thread** 로 동작하기 때문에 위와 같은 큐잉 문제가 발생하지 않는다!
+**Multi thread** 로 동작하기 때문에 위와 같은 큐잉 문제가 발생하지 않는다!
 
 그래서 일반 Verticle은 오래 걸리는 일 (DB 같은) 을 Worker 에게 토스한다.
 
-### Event Bus 란?
+### 3. Event Bus 란?
 
 그럼 여기서 의문점이 생긴다.
 
