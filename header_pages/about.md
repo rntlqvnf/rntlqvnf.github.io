@@ -5,14 +5,15 @@ permalink: /about/
 main_nav: true
 ---
 
-![alt text]({{ site.baseurl }}/assets/profile-placeholder.gif "Profile Picture"){:.profile}
+### 하재현 
+  * [GitHub](https://github.com/rntlqvnf)
 
-Centrarium is a custom theme for Jekyll, made by [Ben Centra][bencentra] for his own blog. He'd be humbled if you liked it enough to use it as well! Installation and configuration instructions can be found in the [GitHub repository](https://github.com/bencentra/centrarium).
+### 학력
+  * 2018.03 ~ 현재 : 포항공과대학교 컴퓨터공학과 재학 중
+  * 2016.03 ~ 2017.11 : 울산과학고등학교
 
-This page is a good place to write about yourself, your project, your product, or whatever it is your site is for. You can replace the image above, or you can get rid of it entirely. 
+### 주요 경력
+  * 2020.07.06 ~ 2020.08.14 : SK 하이닉스 인턴
 
-You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](http://jekyllrb.com/). And you can find the source code for Jekyll at [github.com/jekyll/jekyll](https://github.com/jekyll/jekyll)
-
-[centrarium]: https://github.com/bencentra/centrarium
-[bencentra]: http://bencentra.com
-[jekyll]: https://github.com/jekyll/jekyll
+### 프로젝트
+  * [배드민턴 동아리 종합 관리 어플리케이션 제작](https://github.com/rntlqvnf/ClearApp_FE)
