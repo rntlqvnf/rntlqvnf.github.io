@@ -16,7 +16,7 @@ minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt"
 
 # Site Settings
 locale                   : "ko-KR"
-title                    : "Hajae Blog"
+title                    : "Yshajae Blog"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "하재현"
@@ -95,7 +95,7 @@ analytics:
 
 # Site Author
 author:
-  name             : "하재현"
+  name             : "양산형 하재"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "POSTECH / CSED <br> 능력이 없으면 노력이라도 하자."
   location         : "Republic of Korea"
