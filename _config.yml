@@ -244,21 +244,11 @@ whitelist:
 #  - <base_path>/categories/my-awesome-category/index.html ~> path: /categories/
 #  - <base_path>/my-awesome-category/index.html ~> path: /
 category_archive:
-  type: jekyll-archives
+  type: liquid
   path: /categories/
 tag_archive:
-  type: jekyll-archives
+  type: liquid
   path: /tags/
-jekyll-archives:
-  enabled:
-    - categories
-    - tags
-  layouts:
-    category: archive-taxonomy
-    tag: archive-taxonomy
-  permalinks:
-    category: /category/:name/
-    tag: /tag/:name/
 
 # HTML Compression
 # - https://jch.penibelst.de/
@@ -267,7 +257,6 @@ compress_html:
   ignore:
     envs: development
 
-#collection
 collections:
   archives:
     output: true
