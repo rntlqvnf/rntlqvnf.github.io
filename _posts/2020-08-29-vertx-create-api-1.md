@@ -287,7 +287,7 @@ private void getById(RoutingContext context) {
 
 이후에 **JWT 인증 구현하기** 에서 주로 사용하게 될 기술이다!
 
-이 글에 사용한 소스들은 [github 프로젝트][10]에 올려져있으니 참고 바란다.
+이 글에 사용한 소스들은 [github 프로젝트][10]에 확인할 수 있다.
 
 [1]: https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Vert.x_Logo.svg/1200px-Vert.x_Logo.svg.png
 [2]: https://github.com/rntlqvnf/ClearApp_BE "clearApp_BE"
