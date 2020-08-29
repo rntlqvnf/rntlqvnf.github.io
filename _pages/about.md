@@ -17,3 +17,4 @@ toc: true
 
 ### 프로젝트
   * [배드민턴 동아리 종합 관리 어플리케이션 제작](https://github.com/rntlqvnf/ClearApp_FE)
+  * [감정 분석을 통한 음악 추천 앱](https://github.com/rntlqvnf/IDEA_Outsourcing)
