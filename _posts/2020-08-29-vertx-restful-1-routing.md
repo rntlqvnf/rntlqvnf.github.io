@@ -1,5 +1,5 @@
 ---
-title: "&#91;Vert.x&#93; Vert.x로 RESTful API를 만들어보자 (1)"
+title: "&#91;Vert.x&#93; RESTful API (1) - Routing 구현"
 categories:
   - Java
 tags:
@@ -11,7 +11,7 @@ toc: true
 
 ![Vertx 로고][1]
 
-## 1. Vert.x로 RESTful API를 만들어보자 란?
+## 1. Vert.x로 RESTful API를 만들어보자 프로젝트
 
 Vert.x 는 설명했듯, 비동기 서버 프레임워크다.
 
