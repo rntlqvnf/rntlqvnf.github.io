@@ -1,7 +1,9 @@
 ---
-title: "다빈지 리졸브 공부용 블로그 공유"
+title: "다빈치 리졸브 공부용 블로그 추천"
 categories:
-  - Davinci Resolve 
+  - Davinci Resolve
+tags:
+  - video editing
 toc: true
 ---
 
