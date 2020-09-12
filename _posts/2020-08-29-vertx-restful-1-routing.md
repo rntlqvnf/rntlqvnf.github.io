@@ -23,9 +23,9 @@ Vert.x 는 설명했듯, 비동기 서버 프레임워크다.
 
 현재 계획 중인 목차는 이렇다.
 
-  - 기본적인 **RESTful API** 의 구현
+  - [기본적인 **RESTful API** 의 구현][p1]
 
-  - **JWT** 로 보안 구현하기 (Authentication 구현)
+  - [**JWT** 로 보안 구현하기 (Authentication 구현)][p2]
 
   - **DB** 와 연동하기
 
@@ -299,3 +299,6 @@ private void getById(RoutingContext context) {
 [8]: /assets/vertx/example1/3.PNG
 [9]: /assets/vertx/example1/4.PNG
 [10]: https://github.com/rntlqvnf/Vertx_Examples/tree/master/src/main/java/com/yshajae/vertx/example1
+
+[p1]: {% post_url 2020-08-29-vertx-restful-1-routing %}
+[p2]: {% post_url 2020-08-30-vertx-restful-2-jwt %}
