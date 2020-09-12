@@ -1,10 +1,10 @@
 ---
 title: "&#91;Vert.x&#93; RESTful API (2) - JWT로 AuthN 구현"
 categories:
-  - Java
+  - Back End
 tags:
   - vertx
-  - backend
+  - java
   - restful
   - security
 toc: true

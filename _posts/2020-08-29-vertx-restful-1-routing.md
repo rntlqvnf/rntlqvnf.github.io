@@ -1,10 +1,10 @@
 ---
 title: "&#91;Vert.x&#93; RESTful API (1) - Routing 구현"
 categories:
-  - Java
+  - Back End
 tags:
   - vertx
-  - backend
+  - java
   - restful
 toc: true
 ---

@@ -1,10 +1,10 @@
 ---
 title: "다빈치 리졸브 공부용 블로그 추천"
 categories:
-  - Davinci Resolve
+  - Video Editing
 tags:
-  - video editing
-toc: true
+  - davinci resolve
+toc: false
 ---
 
 요즘 POSTECH Creator 공모전 때문에 영상 편집을 기웃거리고 있었다.

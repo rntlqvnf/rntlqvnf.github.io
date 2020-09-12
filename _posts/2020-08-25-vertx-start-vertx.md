@@ -1,10 +1,10 @@
 ---
 title: "&#91;Vert.x&#93; Vert.x 를 시작해보자"
 categories:
-  - Java
+  - Back End
 tags:
   - vertx
-  - backend
+  - java
 toc: true
 ---
 

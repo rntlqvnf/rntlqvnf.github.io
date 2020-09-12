@@ -1,9 +1,10 @@
 ---
 title: "&#91;Flutter&#93; Context 없이 Navigation 구현하기"
 categories:
-  - Dart
+  - Front End
 tags:
   - flutter
+  - dart
 toc: true
 ---
 
