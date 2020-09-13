@@ -11,6 +11,12 @@ toc: true
 
 ![Vertx 로고][I_1]
 
+## 0. 이전 포스트
+
+  - [기본적인 **RESTful API** 의 구현][P_1]
+
+  - [**JWT** 로 보안 구현하기 (Authentication 구현)][P_2]
+
 ## 1. Maven 설정
 
 위 포스팅에서는 Vert.x의 [Reactive MySQL Client][L_1] 를 이용해서 DB 와 연동해 볼 것이다.
@@ -302,9 +308,15 @@ Postman 을 키자.
 
 조금 구체적인 Reactive MySQL Client 사용법은 부록 느낌으로 차차 올릴 예정이다.
 
+위에서 사용한 코드들은 [github 프로젝트][L_3]에서 확인할 수 있다.
+
 [I_1]: https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Vert.x_Logo.svg/1200px-Vert.x_Logo.svg.png
 [I_2]: /assets/vertx/example3/1.PNG
 [I_3]: /assets/vertx/example3/2.PNG
 
 [L_1]: https://vertx.io/docs/vertx-mysql-client/java/
 [L_2]: https://docs.oracle.com/javase/tutorial/reflect/index.html
+[L_3]: https://github.com/rntlqvnf/Vertx_Examples/tree/master/src/main/java/com/yshajae/vertx/example3
+
+[P_1]: {% post_url 2020-08-29-vertx-restful-1-routing %}
+[P_2]: {% post_url 2020-08-30-vertx-restful-2-jwt %}

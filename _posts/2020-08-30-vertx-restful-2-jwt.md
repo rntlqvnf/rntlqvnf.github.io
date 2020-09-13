@@ -12,6 +12,10 @@ toc: true
 
 ![Vertx 로고][1]
 
+## 0. 이전 포스트
+
+  - [기본적인 **RESTful API** 의 구현][p1]
+
 ## 1. AuthN 이란?
 
 항상 찾아보면서 헷갈렸다. 
@@ -188,6 +192,8 @@ Key 를 파일로 저장해서, 주기적으로 교체할 수 있도록 해야�
 
 최근에 이걸 깜빡해서 하루 동안 생고생을 했던 기억이 있다..
 
+위에서 사용한 코드들은 [github 프로젝트][10]에서 확인할 수 있다.
+
 [1]: https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Vert.x_Logo.svg/1200px-Vert.x_Logo.svg.png
 [2]: https://velopert.com/2389
 [3]: https://medium.com/neillab/what-is-jwt-89889759ae37
@@ -197,3 +203,6 @@ Key 를 파일로 저장해서, 주기적으로 교체할 수 있도록 해야�
 [7]: /assets/vertx/example2/3.PNG
 [8]: /assets/vertx/example2/4.PNG
 [9]: https://blog.naver.com/PostView.nhn?blogId=baekmg1988&logNo=221454486746
+[10]: https://github.com/rntlqvnf/Vertx_Examples/tree/master/src/main/java/com/yshajae/vertx/example2
+
+[p1]: {% post_url 2020-08-29-vertx-restful-1-routing %}

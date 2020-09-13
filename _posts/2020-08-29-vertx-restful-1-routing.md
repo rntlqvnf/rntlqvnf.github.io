@@ -27,7 +27,7 @@ Vert.x 는 설명했듯, 비동기 서버 프레임워크다.
 
   - [**JWT** 로 보안 구현하기 (Authentication 구현)][p2]
 
-  - **DB** 와 연동하기
+  - [**DB** 와 연동하기][p3]
 
   - **Spring Boot** 와 연동하기
 
@@ -302,3 +302,4 @@ private void getById(RoutingContext context) {
 
 [p1]: {% post_url 2020-08-29-vertx-restful-1-routing %}
 [p2]: {% post_url 2020-08-30-vertx-restful-2-jwt %}
+[p3]: {% post_url 2020-09-12-vertx-restful-3-db %}
