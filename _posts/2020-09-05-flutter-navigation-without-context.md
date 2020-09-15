@@ -1,7 +1,7 @@
 ---
 title: "&#91;Flutter&#93; Context 없이 Navigation 구현하기"
 categories:
-  - Front End
+  - Cross-Platform App
 tags:
   - flutter
   - dart
@@ -131,6 +131,13 @@ void setupLocator() {
 ```
 
 이 함수를 `main()` 에서 불러주면 service provider 가 locator 에 등록된다.
+
+```dart
+void main() async {
+  setupLocator();
+  runApp(MyApp());
+}
+```
 
 그리고 `MaterialApp` 에 service 의 global key 를 제공해주자.
 
