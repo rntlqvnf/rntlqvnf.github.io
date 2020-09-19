@@ -4,11 +4,12 @@ categories:
   - Lecture Notes
 tags:
   - algorithm
+  - csed331
 use_math: true
 toc: true
 ---
 
-알고리즘 수업 1주차 강의 내용 요약이다.
+CSED331 알고리즘 수업 1주차 강의 내용 요약이다.
 
 # 1. 알고리즘이란 무엇인가?
 
@@ -70,4 +71,4 @@ PPT 의 내용 상으론 알고리즘이란 **A step-by-step procedure to solve 
 
 그런데 개인적으로는 그냥 알아두기 보다는 왜 그런지 한번쯤은 증명해보는 걸 추천한다.
 
-[1]: /assets/lecture/asymptotic_table.png
+[1]: /assets/lecture/algo/1/asymptotic_table.png
