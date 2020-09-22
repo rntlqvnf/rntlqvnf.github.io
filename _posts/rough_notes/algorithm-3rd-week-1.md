@@ -1,14 +1,3 @@
----
-title: "&#91;Algorithm&#93; 3주차 강의 요약 (1)"
-categories:
-  - Lecture Notes
-tags:
-  - algorithm
-  - csed331
-use_math: true
-toc: true
----
-
 간단한 노트
 
 나중에 이걸 바탕으로 글을 작성할 예정
