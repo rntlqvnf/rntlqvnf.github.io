@@ -285,7 +285,7 @@ private void getById(RoutingContext context) {
 
 이렇게 `context.next()` 를 이용해서 한 경로에 대해 여러 핸들러를 거치도록 구현할 수 있다.
 
-이후에 **JWT 인증 구현하기** 에서 주로 사용하게 될 기술이다!
+이후에 **JWT 인증 구현하기** [에서]() 주로 사용하게 될 기술이다!
 
 이 글에 사용한 소스들은 [github 프로젝트][10]에 확인할 수 있다.
 
@@ -300,6 +300,6 @@ private void getById(RoutingContext context) {
 [9]: /assets/vertx/example1/4.PNG
 [10]: https://github.com/rntlqvnf/Vertx_Examples/tree/master/src/main/java/com/yshajae/vertx/example1
 
-[p1]: {% post_url 2020-08-29-vertx-restful-1-routing %}
+[p1]: 
 [p2]: {% post_url 2020-08-30-vertx-restful-2-jwt %}
 [p3]: {% post_url 2020-09-12-vertx-restful-3-db %}
