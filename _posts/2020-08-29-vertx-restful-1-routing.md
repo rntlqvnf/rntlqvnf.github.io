@@ -300,6 +300,6 @@ private void getById(RoutingContext context) {
 [9]: /assets/vertx/example1/4.PNG
 [10]: https://github.com/rntlqvnf/Vertx_Examples/tree/master/src/main/java/com/yshajae/vertx/example1
 
-[p1]: 
+[p1]: {% post_url 2020-08-29-vertx-restful-1-routing %}
 [p2]: {% post_url 2020-08-30-vertx-restful-2-jwt %}
 [p3]: {% post_url 2020-09-12-vertx-restful-3-db %}
