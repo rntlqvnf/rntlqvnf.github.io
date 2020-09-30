@@ -131,7 +131,7 @@ matrix multiplication은 우리가 배운대로 그냥 하면 $O(n^3)$이 걸린
 
 ![Strassen matrix multiplication][I_9]
 
-complexity를 계산해보면 약 $O(n^2.81)$로, 조금 나아졌음을 알 수 있다.
+complexity를 계산해보면 약 $O(n^{2.81})$로, 조금 나아졌음을 알 수 있다.
 
 최신 연구 상으로는 1.5 정도까지 떨어졌다고 한다.
 
@@ -151,7 +151,7 @@ $0\leq k \leq 2d$이므로, 총 $\sum_{k=0}^{2d} O(k)=O(d^2)$만큼의 시간이
 
 과연 이걸 향상시킬 수 있을까?
 
-놀랍게도, 가능하다! 무려 $O(dlogd)$으로 말이다.
+놀랍게도, 가능하다! 무려 $O(d logd)$으로 말이다.
 
 ## 1. Another Repres. of polynomials
 
@@ -266,7 +266,7 @@ $\omega=e^{2\pi i/n}$라고 하면, n개의 해는 각각 $1, \omega, \omega ^2,
 [I_3]: /assets/lecture/algo/3/delta.PNG
 [I_4]: /assets/lecture/algo/3/small_box.PNG
 [I_5]: /assets/lecture/algo/3/two_row_apart.PNG
-[I_6]: /assets/lecture/algo/3/why_8.PNG
+[I_6]: /assets/lecture/algo/3/why_8.png
 [I_7]: /assets/lecture/algo/3/matrix_multiplication.PNG
 [I_8]: /assets/lecture/algo/3/divide_matrix.PNG
 [I_9]: /assets/lecture/algo/3/strassen_matrix.PNG
