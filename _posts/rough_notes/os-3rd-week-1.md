@@ -71,7 +71,7 @@ Ready Running Blocked
 
 Ready queue는 process가 생성된 것을 한꺼번에 담고 있으므로 각각을 처리하는 term 이 크다! long term.. 
 디스크에 있는 프로세스 데이터를 메모리로 끌고 옴..
-degree of multiprogramming을 담당..
+degree of multiprogramming을 담당.. (메모리에 있는 프로세스의 수)
 만약 이게 좋으면 프로세스가 새로 올라오는 속도 = 나가는 속도.
 Thus, the long-term scheduler may need to be invoked only when a process leaves the system
 Because of the longer interval between executions, the long-term scheduler can afford to take more time to decide
