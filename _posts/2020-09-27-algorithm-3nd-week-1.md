@@ -119,7 +119,7 @@ matrix multiplication은 우리가 배운대로 그냥 하면 $O(n^3)$이 걸린
 
 그런데, 놀랍게도 스트라센 이라는 사람이 이걸 줄이는 방법을 찾아냈다.
 
-우선 divide and onquer을 적용해보자
+우선 divide and conquer을 적용해보자
 
 ![Divide and conquer in matrix multiplication][I_8]
 
