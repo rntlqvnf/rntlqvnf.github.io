@@ -117,7 +117,7 @@ Strong이란 **양방향**으로 path가 존재하는 것을 말한다.
 
 예를 들어, *G*는 모든 pair of nodes에 대해 양방향으로 path가 존재하므로 **strongly connected**이다.
 
-또한 *H*는 $a \rightarrow b$ 로 가는 path가 없으므로 **strongly connected**는 아니지만, 모든 pair of nodes에 대해 최소 한방향으로는 path가 존재하므로 **weakly connected**이다.
+반면 *H*는 $a \rightarrow b$ 로 가는 path가 없으므로 **strongly connected**는 아니지만, 모든 pair of nodes에 대해 최소 한방향으로는 path가 존재하므로 **weakly connected**이다.
 
 그리고 *H*에서 <span style="color:red">$node\;a$</span>, <span style="color:skyblue">$node\;b$</span>, <span style="color:green">$subgraph\;of\;the\;vertices\;b,c,d\;and\;edges\;(b,c), (c,d),\;and\;(d,b)$</span>, 이 세개가 **strongly connected components**이다.
 
