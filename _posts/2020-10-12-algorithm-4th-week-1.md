@@ -103,7 +103,7 @@ $v_i$로부터 모든 cycle의 node들이 방문 가능하므로, DFS는 언젠�
 
 이 DAG의 아주 중요한 특성은 **linearize** (or **topologically sort**)가 가능하다는 것이다.
 
-**Linearize**란, 좌측에서 우측으로 가는 edge만 존재하도록 노드들을 정렬하는 것을 말한다.
+**Linearize**란, 한 쪽 방향의 edge만 존재하도록 노드들을 정렬하는 것을 말한다.
 
 ![Origin][I_6]
 
@@ -190,9 +190,11 @@ Directed graph는 이와 관련된 재밌는 property가 하나 있다.
 
 이런 관점에서 우리가 2번에서 배운 건 모든 node가 각각 strongly connected component인 특수 케이스라 할 수 있다.
 
-당연히 이제 어떻게 만드는지 배울 시간이다.
+이제 어떻게 만드는지 배울 시간이다.
 
-Cycle이 존재하므로 무작정 DFS를 돌릴 수도 없고.. 생각보다 꽤 복잡하다. 
+그런데 생각보다 꽤 막막할 것이다.
+
+Cycle이 존재하므로 무작정 DFS를 돌릴 수도 없는 데다가, 어떻게 component를 분리해내야 할지 생각도 안 날 것이다.
 
 관련된 properties를 하나씩 천천히 알아보며 빌드업해보자.
 
@@ -220,7 +222,7 @@ Direct하게 찾는 방법은 생각보다 어렵다.
 
 Reversed graph $G^R$를 생각해보자
 
-$G^R$에서 source strongly connected component를 찾으면, 이건 $G$의 sink strongly connected component가 된다는 놀라운 사실을 알 수 있다.
+$G^R$에서 **source** strongly connected component를 찾으면, 이건 $G$의 **sink** strongly connected component가 된다는 놀라운 사실을 알 수 있다.
 
 이때 property 2에 의해 $G^R$의 highest post number node는 source strongly connected component에 속하므로,
 
@@ -238,8 +240,8 @@ Property 3를 이용하면, 위에서 구한 source strongly connected component
 
 1. $G^R$을 만든다
 2. $G^R$에 대해 DFS를 돌려 node들을 post number로 정렬한다.
-3. Higest post number node를 starting point로 잡아 $G$에서 DFS를 돌려 source strongly connected component를 찾는다.
-4. 3번에서 구한 source strongly connected component를 $G$에서 지운다.
+3. Higest post number node를 starting point로 잡아 $G$에서 DFS를 돌려 sink strongly connected component를 찾는다.
+4. 3번에서 구한 sink strongly connected component를 $G$에서 지운다.
 5. 3-4번을 graph가 빌 때까지 반복한다.
 
 시간 복잡도를 구해보자.
@@ -262,4 +264,4 @@ Property 3를 이용하면, 위에서 구한 source strongly connected component
 
 [^1]: https://upcount.tistory.com/91
 
-[P_1]: {% post_url 2020-09-30-algorithm-3nd-week-2 %} #strong--weak-connected
+[P_1]: {% post_url 2020-09-30-algorithm-3nd-week-2 %}/#strong--weak-connected
