@@ -21,7 +21,7 @@ toc: true
 
 항상 매 순간 최적의 해를 고른다고 해서 그게 최종적으로 최적일 가능성은 별로 없기 때문이다.
 
-반대로 지금 선택이 다음 선택에는 전혀 무관한 값이고, 매 순간의 최적해가 문제에 대한 최적해가 되는 경우라면 유용하다고 할 수 있겠다.
+다만 지금 선택이 다음 선택에는 전혀 무관한 값이고, 매 순간의 최적해가 문제에 대한 최적해가 되는 경우라면 유용하다고 할 수 있겠다.
 
 # 2. Minimum Spanning Tree
 
@@ -207,7 +207,7 @@ cycle을 형성하지 않는다면 `union(u,v)`를 통해 두 componenet를 합�
 
 대표값을 root로 두고, 이 set에 속한 다른 값들은 node로 표현하는 것이다.
 
-그러면 $x,y$가 같은 set에 판단하기 위해서는 각각이 소속된 tree를 거슬러 올라가서 root를 얻어내고 이를 비교해보기만 하면 된다는 결론에 이른다.
+그러면 $x,y$가 같은 set에 있는지 판단하기 위해서는 각각이 소속된 tree를 거슬러 올라가서 root를 얻어내고 이를 비교해보기만 하면 된다는 결론에 이른다.
 
 이제 아이디어를 캐치했으니, 알고리즘을 자세하게 알아보자.
 
@@ -290,13 +290,13 @@ Induction으로 증명해보자
   이때 각각은 $\geq 2^{k-1}$ nodes를 가지므로, $x$는 $\geq 2\cdot 2^{k-2}=2^k$개의 nodes를 가진다.
 
 > If there are $n$ elements overall, there can be at most $n/2^k$ nodes of the rank $k$
-> > → the max rank is $log n$, so the tree height $\geq logn$ 
+> > → the max rank is $log n$, so the tree height $\leq logn$ 
 
 4번 property로 부터 유도되는 property 이다
 
 중요한 것은 두 번째 문장이다.
 
-Height가 $\geq logn$이라는 말은, `find(x)`와 `union(x,y)`의 시간 복잡도가 $O(logn)$이라는 말이 되기 때문이다.
+Height가 $\leq logn$이라는 말은, `find(x)`와 `union(x,y)`의 시간 복잡도가 $O(logn)$이라는 말이 되기 때문이다.
 
 ## Time complexity of Kruskal's algorithm
 
