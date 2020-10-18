@@ -35,7 +35,7 @@ Greedy algorithm을 설명하기 위해 Minimum Spanning Tree 문제를 풀어�
 
 ![Formula][I_2]
 
-다시말해 Minimum Spanning Tree Problem이란, 주어진 Graph의 모든 노드들을 포함하면서 edge weight의 합을 최소화시키는 **트리**를 찾는 문제이다.
+다시말해 Minimum Spanning Tree Problem이란, 주어진 Graph의 모든 노드들을 포함하면서 **edge weight의 합을 최소화시키는 트리**를 찾는 문제이다.
 
 ## Kruskal's algorithm
 
@@ -43,7 +43,7 @@ Greedy algorithm을 설명하기 위해 Minimum Spanning Tree 문제를 풀어�
 
 다만 무작정 weight가 가장 작은 edge를 고르는 게 아니다!
 
-**트리**-connected acyclic graph를 찾는 것인 만큼 **cycle을 형성하지 않으면서** weight가 가장 작은 edge를 고르는 것이 핵심이다.
+트리-connected acyclic graph를 찾는 것인 만큼 **cycle을 형성하지 않으면서** weight가 가장 작은 edge를 고르는 것이 핵심이다.
 
 이런 접근법을 **Kruskal's algorithm**이라고 한다.
 
@@ -87,15 +87,15 @@ Greedy algorithm을 설명하기 위해 Minimum Spanning Tree 문제를 풀어�
 
 ![Cut][I_9]
 
-Cut이라는 건 Vertices를 2개의 set으로 나누는 partition을 의미한다.
+**Cut**이라는 건 Vertices를 2개의 set으로 나누는 partition을 의미한다.
 
-또한 crossing edge란 이 나눠진 set을 가로지는 edge를 의미한다.
+또한 **crossing edge**란 이 나눠진 set을 가로지는 edge를 의미한다.
 
 이때, 임의의 cut에 대해서 minimum weight의 crossing edge는 항상 MST에 속한다는 것이 **cut property**이다.
 
 왜 이게 성립하는지 증명해보자.
 
-우리가 보여야 할 것은 minimum weight crossing edge를 선택해서 만든 tree가 minimum spanning tree라는 것이다.
+우리가 보여야 할 것은 minimum weight crossing edge를 선택해서 만든 tree가 MST라는 것이다.
 
 #### Proof of cut property
 
@@ -107,7 +107,7 @@ Cut이라는 건 Vertices를 2개의 set으로 나누는 partition을 의미한�
 
 $X$는 not connected 이므로, 전체 $V$를 $X$가 가로지르지 않는 두 영역 $S$와 $V-S$으로 나눌 수 있다.
 
-여기서 crossing edge가 $e$라고 하자.
+여기서 minimum weighted crossing edge를 $e$라고 하자.
 
 만약 $e$가 $T$의 일부라면 증명은 끝난다.
 
@@ -304,7 +304,7 @@ Height가 $\geq logn$이라는 말은, `find(x)`와 `union(x,y)`의 시간 복�
 
 처음에 전제 edge를 weight로 정렬하는데 $O(\left\lvert E \right\rvert log\left\lvert E \right\rvert) \approx O(\left\lvert E \right\rvert log\left\lvert V \right\rvert)$.
 
-이후에 본격적으로 알고리즘을 돌리면, 최악의 경우 총 $\left\lvert E \right\rvert$ 번 실행될 것이며 `union(x,y)`는 $O(log\left\lvert V \right\rvert)$ 만큼 걸리므로 총 $O(\left\lvert E \right\rvert log\left\lvert V \right\rvert)$.
+이후에 본격적으로 알고리즘을 돌리면, 최악의 경우 총 $\left\lvert E \right\rvert$ 번 실행될 것이며 `find(x)`와 `union(x,y)`는 $O(log\left\lvert V \right\rvert)$ 만큼 걸리므로 총 $O(\left\lvert E \right\rvert log\left\lvert V \right\rvert)$.
 
 따라서 토탈 $O(\left\lvert E \right\rvert log\left\lvert V \right\rvert)$이 된다.
 
