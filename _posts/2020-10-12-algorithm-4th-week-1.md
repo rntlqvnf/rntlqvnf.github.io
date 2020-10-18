@@ -47,6 +47,12 @@ clock을 1로 초기화 한 다음, 처음 방문하는 경우 `previsit(v)`를,
 
 예를 들어 왼쪽 그래프의 A node에서 DFS를 시작한다면 우측과 같이 pre-postvisit number가 부여되게 된다.
 
+한 가지 주의할 점은 pre-postvisit number는 상대적인 숫자라는 점이다.
+
+DFS를 어느 지점에서 시작하느냐에 따라 그 값이 달라질 수 있다.
+
+중요한 것은 상대적인 크기이지, 절대 값이 아님을 명심하자.
+
 ## 2.  Terminology for edges
 
 그럼 이 pre-postvisit number가 어떻게 쓰일까?
