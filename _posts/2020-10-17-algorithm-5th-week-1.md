@@ -61,7 +61,7 @@ Greedy algorithm을 설명하기 위해 Minimum Spanning Tree 문제를 풀어�
 
 그 다음으로 작은 건 $C-D$와 $B-D$인데, 이 중 $C-D$를 선택했다. 
 
-여기서 알 수 있듯이, 만들어진 minimum spanning tree가 유일하지 않다.
+여기서 알 수 있듯이, 만들어진 minimum spanning tree는 유일하지 않다.
 
 여러 개의 선택지 중 어떤 것을 고르냐에 따라 답이 달라질 수 있음에 유념하자.
 
@@ -105,7 +105,7 @@ Greedy algorithm을 설명하기 위해 Minimum Spanning Tree 문제를 풀어�
 
 이때, $T$의 일부분을 $X$라고 하자.
 
-$X$는 not connected 이므로, 전체 $V$를 $X$가 가로지르지 않는 두 영역 $S$와 $V-S$으로 나눌 수 있다.
+$X$는 모든 vertice를 연결하진 않았으므로, 전체 $V$를 $X$가 가로지르지 않는 두 영역 $S$와 $V-S$으로 나눌 수 있다.
 
 여기서 minimum weighted crossing edge를 $e$라고 하자.
 
@@ -238,7 +238,7 @@ root에 도달할 때까지 tree를 거슬러올라가서, 찾으면 root를 반
 
 다시 말해, 어떻게 합쳐야 전체 tree의 height를 최소화 할 수 있을까?
 
-간단하다. **height가 작은 tree을 height가 큰 tree의 자식으로 편입**시키면 된다.
+간단하다. **height가 작은 tree을 height가 큰 tree의 root의 자식으로 편입**시키면 된다.
 
 ![ex][I_19]
 
