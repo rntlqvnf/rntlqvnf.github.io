@@ -142,9 +142,33 @@ $\lbrace 1 \rbrace,\lbrace 2 \rbrace,\lbrace 3,4 \rbrace, \lbrace 17,18,\cdots,2
 
 ![Total][I_10]
 
-왜 한쪽만 시그마가 붙어있을까?
+이때 $x$는 각 그룹당 하나씩만 있다고 생각하면 된다.
 
+그럼 이제 이것들을 계산해보자
 
+![Cal][I_11]
+
+총 그릅의 개수는 $log^{\star}n$개 이므로, 첫 번째 값은 당연히 $O(mlog^{\star}n)$이다.
+
+두 번째 값이 살짝 이해가 안 갈 수도 있다.
+
+우선 각 그룹 당 하나씩 있으므로 iteration은 $1$부터 $log^{\star}n$ 까지이다.
+
+그리고 각 그룹의 element의 개수는 최대 $2^k$개 이다.
+
+이게 조금 이해가 안 갈 수도 있는데, 이건 그냥 대충 최댓값을 때린거다.
+
+엄밀하게 구하면 뭐 $2^k - (k+1) \cdots$ 복잡해지지만, 그냥 무조건 $2^k$ 보다는 작으니까 이렇게 잡은거다. 계산이 더 용이해지기도 하고.
+
+그리고 rank가 $k$인 node의 수는 저번 포스트의 property 5에 의해 총 $n/2^k$개 이므로, 위와 같은 식이 나오는 것이다.
+
+그렇게 계산해보면? 총 $O(mlog^{\start}n)$이 나오는 것이다.
+
+PPT 밑에 있는 내용은 교과서에 적힌 접근 방식이다.
+
+원리는 같은데, 너무 쓸데없는 소리가 많아서 이해하기가 힘들다.
+
+한 번 심심하면 읽어보자.
 
 [I_1]: /assets/lecture/algo/5/no_height.PNG
 [I_2]: /assets/lecture/algo/5/union.PNG
@@ -156,3 +180,4 @@ $\lbrace 1 \rbrace,\lbrace 2 \rbrace,\lbrace 3,4 \rbrace, \lbrace 17,18,\cdots,2
 [I_8]: /assets/lecture/algo/5/log.PNG
 [I_9]: /assets/lecture/algo/5/type.PNG
 [I_10]: /assets/lecture/algo/5/total.PNG
+[I_11]: /assets/lecture/algo/5/cal.PNG
