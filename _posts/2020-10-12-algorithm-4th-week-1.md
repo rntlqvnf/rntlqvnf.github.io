@@ -107,7 +107,7 @@ $v_i$로부터 모든 cycle의 node들이 방문 가능하므로, DFS는 언젠�
 
 ![DAG란][I_5]
 
-**DAG, directed acyclic graph**란 말 그대로 cycle이 없는 directed graph이다. Tree의 정의와 동일하다.
+**DAG, directed acyclic graph**란 말 그대로 cycle이 없는 directed graph이다.
 
 이 DAG의 아주 중요한 특성은 **linearize** (or **topologically sort**)가 가능하다는 것이다.
 

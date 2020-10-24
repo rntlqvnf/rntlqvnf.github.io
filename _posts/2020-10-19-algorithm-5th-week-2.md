@@ -162,7 +162,7 @@ $\lbrace 1 \rbrace,\lbrace 2 \rbrace,\lbrace 3,4 \rbrace, \lbrace 17,18,\cdots,2
 
 그리고 rank가 $k$인 node의 수는 저번 포스트의 property 5에 의해 총 $n/2^k$개 이므로, 위와 같은 식이 나오는 것이다.
 
-그렇게 계산해보면? 총 $O(mlog^{\start}n)$이 나오는 것이다.
+그렇게 계산해보면? 총 $O(mlog^{\star}n)$이 나오는 것이다.
 
 PPT 밑에 있는 내용은 교과서에 적힌 접근 방식이다.
 
