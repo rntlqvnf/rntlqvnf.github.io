@@ -1,5 +1,5 @@
 ---
-title: "&#91;Algorithm&#93; 4주차 강의 요약 (1)"
+title: "&#91;Algorithm&#93; Graph (2)"
 categories:
   - Lecture Notes
 tags:

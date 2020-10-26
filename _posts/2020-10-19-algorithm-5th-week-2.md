@@ -1,5 +1,5 @@
 ---
-title: "&#91;Algorithm&#93; 5주차 강의 요약 (2)"
+title: "&#91;Algorithm&#93; Greedy Algorithms (2)"
 categories:
   - Lecture Notes
 tags:

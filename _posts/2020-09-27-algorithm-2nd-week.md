@@ -1,5 +1,5 @@
 ---
-title: "&#91;Algorithm&#93; 2주차 강의 요약"
+title: "&#91;Algorithm&#93; Divide and Conquer (1)"
 categories:
   - Lecture Notes
 tags:
