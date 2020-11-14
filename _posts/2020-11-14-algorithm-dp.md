@@ -1,5 +1,5 @@
 ---
-title: "&#91;Algorithm&#93; Dynamic Programming (3)"
+title: "&#91;Algorithm&#93; Dynamic Programming (1)"
 categories:
   - Lecture Notes
 tags:
