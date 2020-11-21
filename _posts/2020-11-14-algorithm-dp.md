@@ -91,7 +91,7 @@ $dist(D)=min\lbrace dist(B)+1,dist(C)+3\rbrace$
   
   - 주어진 seqeunce에 왼쪽부터 $1,2,\cdots,n$로 순서를 매긴다.
 
-  - **Subproblems**: $j$번째까지의 longest increasing subsequnece (LIS)
+  - **Subproblems**: $j$로 끝나는 longest increasing subsequnece (LIS)
   
 - **Relation**:
 
