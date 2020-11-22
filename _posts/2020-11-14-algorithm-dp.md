@@ -552,7 +552,7 @@ Least square method란, 위처럼 점들의 분포를 직선(또는 곡선)으�
 
   ![OPT CASE][I_29]
 
-  - $e(i,j)$ = minimum sum of squares for points $p_{i+1},p_{i+1},\cdots,p_j$
+  - $e(i,j)$ = minimum sum of squares for points $p_{i},p_{i+1},\cdots,p_j$
 
   $p_1,p_2,\cdots,p_j$를 $p_i$를 기준으로 이등분 한다고 생각하자.
 

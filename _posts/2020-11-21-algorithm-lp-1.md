@@ -273,7 +273,7 @@ variable과 contraints는 동일하고, objective function을 다시 정의해�
 
 놀랍게도 실제로는 **두 LP의 해는 같다!**
 
-이렇게 min flow of $(s,t)\- cut$와 max flow of network가 같다는 theorem이 바로 **Max-flow min-cut theroem**이다.
+이렇게 min cappacity of $(s,t)\- cut$와 max flow of network가 같다는 theorem이 바로 **Max-flow min-cut theroem**이다.
 
 눈치채야 할 것은 이런 식으로 두 LP가 상호적인 관계를 이루는(max solution = min solution) 경우가 존재한다는 것이다.
 
