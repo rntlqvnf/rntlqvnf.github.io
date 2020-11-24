@@ -440,7 +440,7 @@ two optimum values coincide.
 
    왤까? 생각해보면 당연하다. 
 
-   $x\leq 0$이므로, origin이 아닌 경우 objective function value가 음수가 되기 때문이다.
+   $c_i\leq 0$이므로, origin이 아닌 경우 objective function value가 음수가 되기 때문이다.
 
    반대로 $c_i\geq 0$라면 $x_i$를 올려서 더 좋은 objective function value를 얻어낼 수 있으므로 origin은 optimal 하지 않으므로 2번 과정으로 넘어가게 된다.
 
