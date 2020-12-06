@@ -361,14 +361,11 @@ Circuit의 모든 노드를 variable로 생각하자.
 
 그러면 위와 같이 3SAT로 reduce 할 수 있다.
 
-PPT에서는 $length<3$인 clauses를 $length=3$인 clause로 바꾸라고 나와있는데, 아마 교수님께서는 3SAT의 정의를 exactly 3 literal로 생각하시고 이렇게 적어두신 것 같다. 
- 
-근데 교과서 정의에 따르면 3개 이하의 literal이라... 
+이때, 3SAT의 정의를 exactly 3 literal로 생각한다면, $length<3$인 clauses의 literal을 복제하여 $length=3$ 으로 만들어주면 된다.
 
-두 정의 모두 맞지만은 개인적으로 교과서의 정의를 따르는게 낫지 않나 싶다.
+근데 상당히 헷갈리는 것이, 책에서는 3SAT를 at most 3 literal로 생각하기 때문에 위 과정이 없다.
 
-애초에 length를 늘리는 방법도 모르겠고. 같은 literal을 끼얹나?
-
+조사해본 바에 따르면 보통 exactly 3로 간주하고, at most 3가 약간 3SAT의 아종? 요런 느낌으로 간주되는 것 같다.
 ## 3SAT → Independent Set
 
 ![3SAT to Independent Set Reduction][I_30]
@@ -440,6 +437,8 @@ Literal은 $x_i$와 $\overline{x_i}$를 구분하고, variable은 그렇지 않�
 증명은 간단하다.
 
 3번 **이상** 등장하는 literal $x$를 각각 $x_1, x_2, \cdots, x_k$로 치환환다.
+
+(의문: literal $\bar{x}$는 $\bar{x_1}, \bar{x_2}, \cdots, \bar{x_j}$ 로 치환하나?)
 
 ![EQ][I_37]
 
