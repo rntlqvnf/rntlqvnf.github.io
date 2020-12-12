@@ -33,13 +33,13 @@ Optimization problem은 흔히 minimization problem과 maximization problem으�
 
 Minimization problem을 풀기 위해 우리가 만들어낸 알고리즘을 $A$라고 하고, solution을 $A(I)$라고 하자.
 
-이때 **approximation ratio of algorithm A**는 아래와 같이 정의된다.
+이때 **approximation ratio** of algorithm A는 아래와 같이 정의된다.
 
 ![Approximation ratio][I_1]
 
 곧, $\alpha_A$는 우리가 만든 알고리즘의 solution이 optimal solution보다 얼마나 큰지를 말해주는 값이라 할 수 있다.
 
-우리가 왜 approximation ratio를 배웠을까?
+우리가 왜 approximation ratio를 알아야 할까?
 
 이는 approximation ratio가 NP-complete optimization problem을 푸는 알고리즘을 평가하는 매우 중요한 지표이기 때문이다.
 
@@ -119,7 +119,7 @@ Weighted vertex cover는 vertex cover 중에서 경로 비용의 합을 최소�
 
 굉장히 직관적이어서 바로 알아들을 수 있을 것이다.
 
-이때, LP-relaxation이란 원래의 LP는 $x_u$와 $x_v$ 중 하나만 포함되도록 강제했지만, 이를 완화하여 둘 중 하나 이상이 포함되도록 바꿨다는 말이다.
+이때 LP-relaxation이란, 원래의 LP는 $x_u$와 $x_v$ 중 하나만 포함되도록 강제했지만, 이를 완화하여 둘 중 하나 이상이 포함되도록 바꿨다는 말이다.
 
 우리가 할 것은 아래의 알고리즘이 factor-2 approximation algorithm 이라는 것을 증명하는 것이다.
 
@@ -171,9 +171,9 @@ TSP 문제에서는 역으로 polynomial time $t$-approximation algorithm이 존
   
   Hamiltonian cycle 문제에 graph $G=(V,E)$가 주어졌다고 하자.
 
-  우리는 이걸 complete graph $H=(V, E^{\backprime}$으로 변형하여, TSP 문제로 reduction을 할 것이다.
+  우리는 이걸 complete graph $H=(V, E^{\backprime})$으로 변형하여, TSP 문제로 reduction을 할 것이다.
 
-  아래는 $H=(V, E^{\backprime}$의 정의이다.
+  아래는 $H=(V, E^{\backprime})$의 정의이다.
 
   ![Ham][I_7]
 
@@ -219,7 +219,7 @@ Triangle inequaility란, 삼각형 $(a,b,c)$가 있을 때 $a$에서 $c$로 바�
 
 ![MST][I_10]
 
-이 점들의의 mst는 다음과 같다.
+이 점들의의 MST는 다음과 같다.
 
 ![MST_2][I_11]
 
@@ -231,13 +231,13 @@ MST를 따라 A에서 B로 이동하면서 모든 vertex를 방문하려면 어�
 
 이렇게 갔던 점을 갔다가 다시 되돌아와야 할 것이다.
 
-그런데 이렇게 되면 점을 두 번 방문하는 셈이다.
-
 ![2MST][I_14]
 
 아마 최악의 경우에는 이렇게 죄다 왔다갔다 해야할 것이다.
 
 곧, 모든 edge를 두 번씩 방문해야 한다. ($2\cdot cost(MST)$)
+
+그런데 이렇게 되면 TSP의 조건을 어기고 점을 두 번 방문하는 셈이다.
 
 이를 개선하기 위해, 경유해서 가야하는 경로를 없애주자. 
 
