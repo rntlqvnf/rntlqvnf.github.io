@@ -358,7 +358,7 @@ Residual network에서 *L*에서 *R*로 가는 edge가 없다는 의미는 $e^{\
 
 단순히 $y_1+y_3=1,y_2+y_3=6$로 놓기 보다는, LP를 만드는 것이므로 제약 조건을 만들기 위해 upper bound로 만들어보자.
 
-$x_1+6x_2 \leq (y_1+y_3)+6(y_2+y_3) \leq 200y_1+300y_2+400y_3$
+$x_1+6x_2 \leq (y_1+y_3)x_1+(y_2+y_3)x_2 \leq 200y_1+300y_2+400y_3$
 
 따라서 아래와 같은 새로운 LP를 얻을 수 있다.
 
@@ -422,7 +422,7 @@ two optimum values coincide.
 
 여하튼, simplex method는 간단히 두 단계로 이루어진다.
 
-1. Check whether the current vertex is optimal (and if so, halt)
+1. **Check whether the current vertex is optimal (and if so, halt)**
    
    문제가 되는건 어떻게 optimal인지 알 수 있을까? 이다.
 
@@ -446,7 +446,7 @@ two optimum values coincide.
 
    곧, 1번 과정은 current vertex가 origin인 상태에서, $c_i\leq 0$인지 확인하는 과정과 동일하다.
 
-2. Determine where to move next (and move to next)
+2. **Determine where to move next (and move to next)**
 
    Vertex란, 더 이상 값을 증가시킬 수 없는 boundary에서의 값을 의미한다.
 
