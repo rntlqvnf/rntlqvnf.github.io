@@ -281,6 +281,12 @@ NP-complete의 정의를 상기해보자.
 
 곧, 만약 우리가 $A$가 NP-complete 임을 안다면, $A\rightarrow B$ 임을 증명하기만 하면 $B$ 또한 NP-complete 임을 알 수 있게 된다.
 
+이때 주의할 점은 $B$가 search problem이라는 것이다.
+
+만약 이 가정이 없다면 $B$는 NP-hard 가 된다.
+
+$B$가 search problem, 즉 class NP라는 가정이 있기 때문에 NP-hard + NP = NP-complete 가 된 것이다.
+
 이번 챕터에서는 이를 이용하여 NP-completeness을 증명함을 목적으로 한다.
 
 ![Tree][I_21]
