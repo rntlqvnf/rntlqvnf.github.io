@@ -59,8 +59,6 @@ Maximum Clique problem이란, clique 중에 가장 큰 놈을 찾는 문제이�
 
 # 3. Finding All Cliques of Size 3
 
-Ouput clique의 크기를 3으로 고정했을 알고리즘ㅇ
-
 알고리즘의 아이디어를 차근차근 밟아보자.
 
 1. > 모든 vertex가 constant degree를 가진다면 가장 빠른 알고리즘은 무엇일까?
@@ -85,9 +83,9 @@ Ouput clique의 크기를 3으로 고정했을 알고리즘ㅇ
    
    이게 우리가 알아야 할 $O(m^{3/2})$ 알고리즘이다.
 
-   한편 $\Omega (\sqrt(m))$ degree를 가지는 vertex를 **heavy vertex**라고 한다.
+   이때 $\Omega (\sqrt{m})$ degree를 가지는 vertex를 **heavy vertex**라고 한다.
 
-   반대로 $O(\sqrt(m))$ degree를 가지는 vertex를 **light vertex**라고 한다.
+   반대로 $O(\sqrt{m})$ degree를 가지는 vertex를 **light vertex**라고 한다.
 
    한 가지 중요한 observation은, heavy vertex는 $O(\sqrt{m})$개 존재한다는 것이다.
 
@@ -156,13 +154,23 @@ Ouput clique의 크기를 3으로 고정했을 알고리즘ㅇ
 
 핵심은 $v$를 제외한 graph $G$에 $v$를 추가할 때 두 가지 케이스가 발생한다는 것이다.
 
-만약 $v$가 $C$의 vertex들과 모두 connected 되어있다면 ($C-N(v) = \phi$) $v$를 추가해도 maximal이 된다.
+만약 $v$가 $C$의 vertices 중 not connected vertex가 존재한다면, $v$를 추가하면 안된다.
 
-반대로 connected 되어있지 않다면, $v$를 추가하면 안된다.
+반대로 $v$가 $C$의 vertex들과 모두 connected 되어있다면 ($C-N(v) = \phi$) $v$를 추가해도 clique는 유지가 된다.
+
+그런데 maximal도 유지가 될까?
+
+> 그렇지 않다.
+
+$C$의 바깥에 있는 vertex가 $C-N(v) \cup \lbrace v \rbrace$와는 fully connected 일 수 있기 때문이다.
+
+그래서 $C-N(v) \cup \lbrace v \rbrace$를 만들고, 이것이 maximal인지 판단해서 맞다면 반환해야 한다.
 
 이 알고리즘을 재귀적으로 돌리면 모든 maximal clique를 구할 수 있다.
 
 시간 복잡도를 구해보자.
+
+![Lem][I_6]
 
 Lemma에 의해, $G$는 $O(3^{n/3})$개의 maximal cliques를 가지고 있다.
 
@@ -170,7 +178,7 @@ Lemma에 의해, $G$는 $O(3^{n/3})$개의 maximal cliques를 가지고 있다.
 
 이걸 전부 합하면 $O(3^{n/3})$이 나온다.
 
-한편 각 step에서 $C-N(v) = \phi$ 를 판단하는데 $O(m)$이 걸린다.
+한편 각 step에서 $C-N(v) = \phi$ 를 판단하고, $C-N(v) \cup \lbrace v \rbrace$가 maximal인지 판단하는데 $O(m)$이 걸린다. (incident edge를 조사하므로)
 
 따라서 총 $O(m\cdot 3^{n/3})$이 걸린다.
 

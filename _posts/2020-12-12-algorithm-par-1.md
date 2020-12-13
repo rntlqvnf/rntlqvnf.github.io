@@ -53,9 +53,15 @@ Rule1과 Rule2를 계속 적용해서 만든 $G$에 아래의 if-otherwise를 �
 
 Rule1과 Rule2는 대충 직관적으로 와닿을 것이다.
 
-당연히 isolated vertex는 vertex cover에 속할 수 없다.
+- **Rule1**
+   
+  당연히 isolated vertex는 vertex cover에 속할 수 없다.
 
-또한 vertex cover의 사이즈가 $k$이므로, degree가 $k+1$ 이상인 vertex는 당연히 vertex cover에 포함되어야 한다.
+- **Rule2**
+
+  vertex cover의 사이즈가 $k$이므로, degree가 $k+1$ 이상인 vertex는 당연히 vertex cover에 포함되어야 한다.
+
+  이때 decrement $k$ by one이란, 찾아야 하는 vertex cover의 size를 1 줄인다는 의미이다 (하나를 찾았으므로)
 
 그럼 If-otherwise는 대체 뭔소릴까?
 
@@ -75,7 +81,7 @@ Rule1과 Rule2는 대충 직관적으로 와닿을 것이다.
 
   곧, $V$는 $S$의 이웃과 $S$를 합한 값이라는 의미이다.
 
-  또 한편 Rule2에 의해, $S$는 최대 $k^2$개의 edge를 가질 수 있다.
+  또 한편 Rule2에 의해, $S$는 최대 $k^2$개의 edge를 가질 수 있다. ($k$는 무시한 듯 보인다. 왜 무시한 걸까?)
   
   따라서 $\lvert E(G) \rvert \leq k^2$ 이다.
 

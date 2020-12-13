@@ -412,7 +412,7 @@ two optimum values coincide.
 
 ## Proof of Duality Theorem
 
-이해가 안가므로 나중에 기술하겠음 (교수님 필기를 알아볼 수가 없어..!)
+이해 불가.. 책에도 없다 ㅠㅠ
 
 # 4. Simplex Method
 

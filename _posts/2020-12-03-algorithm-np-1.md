@@ -438,7 +438,7 @@ Literal은 $x_i$와 $\overline{x_i}$를 구분하고, variable은 그렇지 않�
 
 3번 **이상** 등장하는 literal $x$를 각각 $x_1, x_2, \cdots, x_k$로 치환환다.
 
-(의문: literal $\bar{x}$는 $\bar{x_1}, \bar{x_2}, \cdots, \bar{x_j}$ 로 치환하나?)
+이때 각 literal $\bar{x}$는 $\bar{x_1}, \bar{x_2}, \cdots, \bar{x_j}$ 로 치환한다.
 
 ![EQ][I_37]
 
@@ -468,6 +468,8 @@ Constrained 3SAT가 3D Matching로 reduce됨을 보이려면, Constrained 3SAT�
 
 이제 한 clause 에 대해 gadget들을 그려보자.
 
+각 **variable**마다 하나씩 gadget을 그려주고, boy-girl pair를 하나 추가로 그려줄 것이다.
+
 ![Clause gadget][I_40]
 
 3SAT를 푸는 방법은 각 괄호에서 true로 만들 literal을 하나씩 선택하는 것이다.
@@ -477,6 +479,8 @@ Constrained 3SAT가 3D Matching로 reduce됨을 보이려면, Constrained 3SAT�
 모든 gadget을 clause의 boy-girl pair와 엮어주자.
 
 이때, 어떤 pet과 연결하는지가 꽤 중요하다.
+
+![Boolean of gadget][I_39]
 
 $x_i$의 형태인 경우 (상 하) 두개의 pet 중 하나와 연결하고, $\overline{x_i}$의 형태인 경우 (좌 우) 두개의 pet 중 하나의 연결한다.
 
@@ -505,7 +509,7 @@ Constrained 3SAT이므로 **각 literal이 최대 2번 등장**하기 때문이�
 
 $x_1$을 간단히 예로 들어보면, $x_1$을 선택했다고 하자.
 
-그러면 (좌 우) pet이 gadget의 boy-girl pair와 matching 되고, $C_2의 boy-girl pair와 상단 pet이 matching 된다.
+그러면 (좌 우) pet이 gadget의 boy-girl pair와 matching 되고, $C_2$의 boy-girl pair와 상단 pet이 matching 된다.
 
 이로 인해 $x_1$ gadget은 $C_1$와 $C_3$의 boy-girl pair와 matching할 수 없게 되고, 곧 $\overline{x_1}$을 선택할 수 없게 된다.
 
