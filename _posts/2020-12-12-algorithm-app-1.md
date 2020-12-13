@@ -1,5 +1,5 @@
 ---
-title: "&#91;Algorithm&#93; Approximation Algorithm (1)"
+title: "&#91;Algorithm&#93; Approximation Algorithm"
 categories:
   - Lecture Notes
 tags:

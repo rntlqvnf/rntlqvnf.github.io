@@ -1,5 +1,5 @@
 ---
-title: "&#91;Algorithm&#93; Parametrized Algorithm (1)"
+title: "&#91;Algorithm&#93; Parametrized Algorithm"
 categories:
   - Lecture Notes
 tags:

@@ -1,5 +1,5 @@
 ---
-title: "&#91;Algorithm&#93; Exponential Algorithm (1)"
+title: "&#91;Algorithm&#93; Exponential Algorithm"
 categories:
   - Lecture Notes
 tags:

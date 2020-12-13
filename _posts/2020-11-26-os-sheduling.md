@@ -1,5 +1,5 @@
 ---
-title: "&#91;OS&#93; Process Scheduling (1)"
+title: "&#91;OS&#93; Process Scheduling"
 categories:
   - Lecture Notes
 tags:

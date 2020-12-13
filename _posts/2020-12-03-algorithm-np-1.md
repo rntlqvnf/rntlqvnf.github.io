@@ -1,5 +1,5 @@
 ---
-title: "&#91;Algorithm&#93; NP-complete problmes (1)"
+title: "&#91;Algorithm&#93; NP-complete problmes"
 categories:
   - Lecture Notes
 tags:
