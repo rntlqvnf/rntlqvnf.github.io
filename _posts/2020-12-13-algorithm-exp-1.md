@@ -162,7 +162,7 @@ Maximum Clique problem이란, clique 중에 가장 큰 놈을 찾는 문제이�
 
 > 그렇지 않다.
 
-$C$의 바깥에 있는 vertex가 $C-N(v) \cup \lbrace v \rbrace$와는 fully connected 일 수 있기 때문이다.
+$C$의 바깥에 있는 vertex가 $C\cap N(v) \cup \lbrace v \rbrace$와는 fully connected 일 수 있기 때문이다.
 
 그래서 $C-N(v) \cup \lbrace v \rbrace$를 만들고, 이것이 maximal인지 판단해서 맞다면 반환해야 한다.
 
@@ -178,7 +178,7 @@ Lemma에 의해, $G$는 $O(3^{n/3})$개의 maximal cliques를 가지고 있다.
 
 이걸 전부 합하면 $O(3^{n/3})$이 나온다.
 
-한편 각 step에서 $C-N(v) = \phi$ 를 판단하고, $C-N(v) \cup \lbrace v \rbrace$가 maximal인지 판단하는데 $O(m)$이 걸린다. (incident edge를 조사하므로)
+한편 각 step에서 $C-N(v) = \phi$ 를 판단하고, $C\cap N(v) \cup \lbrace v \rbrace$가 maximal인지 판단하는데 $O(m)$이 걸린다. (incident edge를 조사하므로)
 
 따라서 총 $O(m\cdot 3^{n/3})$이 걸린다.
 
