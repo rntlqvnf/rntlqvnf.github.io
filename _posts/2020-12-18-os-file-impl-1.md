@@ -101,9 +101,9 @@ File system은 아래 두 가지 정보를 추적해야 한다.
   
 - [Allocation](#allocation)
 
-## Free Space Management
+## 2.1 Free Space Management
 
-### Bitmap
+### 2.1.1 Bitmap
 
 > Array of bits, with Nth bit indicating whether Nth block is free
 
@@ -133,7 +133,7 @@ Bitmap으로 free space를 표현하는 법이다.
 
 이러면 메인 메모리에 문제없이 들어간다!
 
-### Linked List
+### 2.1.1 Linked List
 
 ![Free List][I_5]
 
@@ -145,7 +145,7 @@ Free spaces를 linked list로 엮어서 관리하는 방법이다.
 
 그러나 연속된 free space를 얻어내기가 어렵다.
 
-## Allocation
+## 2.2 Allocation
 
 Allocation의 목표은 두 가지이다.
 
@@ -154,7 +154,7 @@ Allocation의 목표은 두 가지이다.
   
 이 두 목표를 최대한 잘 만족하는 것이 좋은 allocation scheme이라 할 수 있겠다.
 
-### Contiguous Allocation
+### 2.2.1 Contiguous Allocation
 
 ![Contiguous Allocation][I_6]
 
@@ -184,7 +184,7 @@ Contiguous blocks of disk(a.k.a **Extent**)를 allocation의 단위로 두는 �
 
 할당에 있어서 조금 더 선택지가 많아졌지만, large extent로 인한 **internal fragmentation**과 varying size로 인한 **external fragmentation** 문제는 피할 수 없다.
 
-### Linked Allocation
+### 2.2.2 Linked Allocation
 
 ![Linked][I_7]
 
@@ -241,7 +241,7 @@ Random access performance를 올리기 위해, pointer를 separate linked list�
   - Poor locality
     >  FAT implementations typically use simple allocation strategies such as next fit. These can lead to badly fragmented files
 
-### Single-Level Indexed Allocation
+### 2.2.3 Single-Level Indexed Allocation
 
 ![Index][I_9]
 
@@ -264,7 +264,7 @@ Linked Allocation의 random access 문제를 해결하기 위해, array를 통�
   - Still lots of seeks
     > Due to scattered disk blocks, need to seek many times
   
-### Multi-Level Indexed Allocation
+### 2.2.4 sMulti-Level Indexed Allocation
 
 ![Multi level][I_10]
 
@@ -274,7 +274,7 @@ Size를 넘어서 확장하기 어렵다는 문제를 해결하려면 multi-leve
 
 다만 구현이 두가지로 나뉘는데, 하나는 linked list로 구현하는 방식이고 하나는 multilevel index로 구현하는 방식이다.
 
-### Combined Scheme
+### 2.2.5 Combined Scheme
 
 ![Combined][I_11]
 
