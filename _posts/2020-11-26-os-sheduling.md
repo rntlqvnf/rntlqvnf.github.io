@@ -247,7 +247,7 @@ I/O-bound task는 짧은 시간 동안 I/O 결과를 처리하고, 다음 I/O op
 
 한 가지 추천되는 방법은 **Max-Min Fairness**를 맞추는 것이다.
 
-Max-Min Fairness는 아래의 조건을 만족하는 scheduling을 말한다.
+Max-Min Fairness란 아래의 조건을 만족하는 scheduling을 말한다.
 
 - 가장 적게 요구하는 곳부터 할당한다.
 - 요구하는 것보다 많이 가질 수 없다
@@ -257,13 +257,15 @@ Mixture가 있을 때 max-min faireness가 어떻게 동작하는지 알아보�
 
 우선 short-running 또는 I/O-bound task에게 entire request를 준다.
 
-이 task들을 fully allocate하고 남은 만큼의 resource를 CPU-bound task들에게 공평하게 나눠서 할당한다.
+이 task들을 다 채우고 남은 만큼의 resource를 CPU-bound task들에게 공평하게 나눠서 할당한다.
 
 이때 할당 된 것보다 적은 양을 사용해서 extra work가 생기는 경우, 이를 떼어내서 아직 fully allocate되지 않는 task들에게 공평하게 재분배한다.
 
 예를 들어, short-running 또는 I/O-bound task가 10%의 자원을 요구하고 있고, CPU-bound task가 3개가 각각 20%, 40%, 40%를 요구하고 있다고 해보자.
 
-그럼 Max-Min Fairness는 이 task들에게 10%를 할당하고, 남은 90%를 각 CPU-bound task에게 30%씩 할당한다.
+그럼 Max-Min Fairness는 short-running 또는 I/O-bound task를 다 채우기 위해 10%를 할당한다.
+
+그리고 남은 90%를 각 CPU-bound task에게 30%씩 할당한다.
 
 이때 20%짜리가 10%만큼의 extra work를 만들고 있으므로, 이를 떼어내어 40%짜리의 CPU-bound task들에게 각각 5%씩 할당해준다.
 
