@@ -1,7 +1,7 @@
 ---
 title: "&#91;OS&#93; File System Implementation (1)"
 categories:
-  - Lecture Not
+  - Lecture Notes
 tags:
   - os
   - csed312
@@ -71,15 +71,15 @@ Inode란, file header(file attributes except name)를 담는 data stucture이다
 
 이에 관해서 저번 포스트에서 잠깐 언급했었다.
 
-File system challenges를 기반으로 file system components를 나누면 아래와 같다.
+한편 File system challenges를 기반으로 file system components를 나누면 아래와 같다.
 
-1. Disk management
+1. **Disk management**
 
-2. Naming and directories
+2. **Naming and directories**
 
-3. Efficiency and performance
+3. **Efficiency and performance**
 
-4. Reliability and protection
+4. **Reliability and protection**
 
 우리는 오늘 이 중 위 3개를 알아볼 것이다.
 
@@ -192,11 +192,11 @@ Contiguous blocks of disk(a.k.a **Extent**)를 allocation의 단위로 두는 �
 
 각 disk block을 pointer area / data area로 나누어 linked list를 구현한 것이다.
 
-File header에는 시작 node와 끝 node로의 pointer만 기록해주면 파일이 어디에 위치하는지 구할 수 있다.
+File header에는 시작 노드와 끝 노드의 pointer만 기록해주면 파일이 어디 block에 위치하는지 구할 수 있다.
 
-이는 Contiguous Allocation의 문제를 훌륭하게 해결한다.
+이는 Contiguous Allocation의 문제를 훌륭하게 해결할 수 있다.
 
-Linked list로 구현하게 되면 임의의 위치의 block들을 이어붙일 수 있으므로 External fragmentation이 생기지 않고, 또 확장도 어렵지 않기 때문이다.
+왜냐하면 Linked list로 구현하게 되면 임의의 위치의 block들을 이어붙일 수 있으므로 External fragmentation이 생기지 않고, 또 확장도 어렵지 않기 때문이다.
 
 - **장점**
   - Can grow files dynamically
@@ -264,7 +264,7 @@ Linked Allocation의 random access 문제를 해결하기 위해, array를 통�
   - Still lots of seeks
     > Due to scattered disk blocks, need to seek many times
   
-### 2.2.4 sMulti-Level Indexed Allocation
+### 2.2.4 Multi-Level Indexed Allocation
 
 ![Multi level][I_10]
 
@@ -346,9 +346,9 @@ Directory는 근본적으로 -name to inode mapping을 저장하는- 파일이�
 
 우선 root directory가 필요하다.
 
-이는 file system이 로드될 때, 자동적으로 inode #2에 할당된다.
+Root directory는 file system이 로드될 때, 자동적으로 inode #2에 할당된다.
 
-또한 "/"로 접근할 수 있다.
+이는 "/"로 접근할 수 있다.
 
 이외에도
 
@@ -444,14 +444,14 @@ Directory는 근본적으로 -name to inode mapping을 저장하는- 파일이�
 
   첫 번째 방법은 disk controller에 작은 on-board cache를 추가하는 방법이다.
 
-  이 cache는 한 번에 접근하는 track을 저장하기에 충분한 크기라서, 어떤 operation disk를 접근하지 않고도 일어날 수 있게 해준다.
+  이 cache는 한 번에 접근하는 track을 저장하기에 충분한 크기라서, operation이 disk를 접근하지 않고도 일어날 수 있게 해준다.
 
   참고로 main memory의 block buffer는 읽어들여온 disk block을 저장하는 cache다.
 
 - **free-behind and read-ahead**
   
   - **Free-behind**
-    > Remove a page from the buffer as soon as the next page is requested
+    > Remove a page from the buffer as soon as the next page is requested. The previous pages are not likely to be used again and waste buffer space
 
   - **Read-ahead**
     > A requested page and several subsequent pages that are likely to be requested after the current page is processes are read and cached

@@ -1,0 +1,170 @@
+---
+title: "&#91;Review&#93; In-Datacenter Performance Analysis of a Tensor Processing Unit"
+categories:
+  - Paper Reviews
+tags:
+  - tpu
+  - computer architecture
+toc: true
+---
+
+굉장히 오랜만에 글을 쓴다.
+
+방학이 되고 나서 맨날 뒹굴뒹굴 하다가 연참을 시작하는 바람에 다시 공부하고 있다.
+
+김광선 교수님 랩에서 연참을 하고 있는데, 아직 공부를 덜해서 잘은 모르겠지만 나름 재밌다.
+
+사실 랩을 정하는데 정말 많은 고민이 있었다.
+
+대부분의 과목을 평균 이상은 하지만, 특출나게 잘하는 과목이 없고, 좋아하는 건 코딩인지라 나에게 맞는 랩을 찾기가 무척 어려웠다.
+
+대뜸 제일 잘나가는 비전 랩에 들어가기에는 인공지능이 과연 내가 박사졸을 할 때까지 잘나갈까 싶어서 많이 꺼려졌었다.
+
+그 이외에 흥미가 가는 랩들은 신생이거나, 소문이 좀 안좋거나, 타대(카이스트)여서 쉬이 선택하지 못하고 대략 6달을 끙끙 고민만 했었다.
+
+김광선 교수님 랩을 결국 선택하게 된 것은 굉장히 복합적이고 나름 합리적인 판단 하게 이뤄졌다.
+
+내가 시스템 쪽에 나름 강했고, 아키텍쳐는 유행에 크게 영향받지 않는 분야이며, 랩이 비록 신생이지만 2년이 지난 지라 기반이 거의 갖춰졌고, 또 교수님도 굉장히 열정적이셔서 지도를 잘 받을 수 있을 것 같았기 때문이었다.
+
+그렇게 연참을 시작한지 일주일이 지난 지금 -아직은 내가 방학 모드라서 뒹굴뒹굴하는 시간이 더 길긴 하지만- 꽤 재미를 느끼고 있다.
+
+이번 연참을 통해서 좀 진로를 정할 수 있으면 좋겠다.
+
+이 글에서 소개하고자 하는 논문의 제목은 **In-Datacenter Performance Analysis of a Tensor Processing Unit** 이다.
+
+구글에서 2017년 4월 초에 개발한 TPU와 관련된 논문이다.
+
+내가 연참에서 맡은 주제가 systolic array인지라, 이를 사용한 대표격인 논문을 주신 것 같다.
+
+논문을 제대로 읽는 것은 처음이라, 조금은 장황하게 서술해보려고 한다.
+
+나중에 짬이 좀 차면 핵심만 콕콕 집어서 서술할 수 있을 것이라 생각한다.
+
+# Introduction
+
+![PP][I_1]
+
+약 40년 동안은 CPU 성능이 무어의 법칙 등을 따라 굉장히 빠르게 발전했었다.
+
+그러나 무어의 법칙은 종말을 맞았다.
+
+곧, 더 이상 general performance를 끌어올리긴 힘드므로, 특정한 일의 성능만 끌어올릴 수 있는 domain specific architecture를 개발하는 방향으로 선회하게 되었다.
+
+구글은 이 전환의 필요성을 2013년에 깨달았다고 한다.
+
+구글이 분석하기로, 만약 사람들이 음성 인식 DNNs(deep neural networks)을 하루에 3분 이상을 사용한다면 당시 구글 데이터 센터의 2배에 달하는 계산량이 필요했다고 한다.
+
+이걸 무작정 CPU를 많이 박아서 해결하기에는 돈이 너무 많이 들기 때문에, DNNs만을 굉장히 빠르게 처리할 수 있는 ASIC(application-specific integrated circuit)를 개발하고자 했다.
+
+그렇게 개발에 착수한 구글은 공밀레를 시전하여 무려 15개월 만에 **TPU(Tensor Processing Unit)**을 만들어냈다.
+
+# TPU 
+
+## Target Task
+
+구체적으로 TPU의 target task는 아래의 세가지 NN이다
+
+- **Multi-Layer Perceptrons (MLP)**
+  
+  ![MLP][I_3]
+
+  >  Each new layer is a set of nonlinear functions of a weighted sum of all outputs (fully connected) from the prior one.
+
+- **Convolutional Neural Networks (CNN)**
+  
+  ![CNN][I_4]
+
+  >  Each layer is a set of nonlinear functions of weighted sums at different coordinates of spatially nearby subsets of outputs from the prior layer, which allows the weights to be reused.
+
+  [추천 블로그](https://gruuuuu.github.io/machine-learning/cnn-doc/#)
+
+- **Recurrent Neural Network (RNN)**
+
+  ![RNN][I_5]
+
+  > Each subsequent layer is a collection of nonlinear functions of weighted sums of outputs and the previous state. The most popular RNN is Long Short-Term Memory (LSTM). The art of the LSTM is in deciding what to forget and what to pass on as state to the next layer. The weights are reused across time steps.
+
+  [추천 블로그](https://ratsgo.github.io/natural%20language%20processing/2017/03/09/rnnlstm/)
+
+<br>
+
+아래의 표는 구글 데이터 센터에서 위 세 NN이 쓰이는 비율을 나타낸 것이다. 
+
+전체의 95%를 차지함을 알 수 있다.
+
+![Target][I_2]
+
+한가지 재밌는 점은 나름 핫한 CNN이 5% 밖에 차지하지 않는다는 점이다. (최근 통계는 다르려나?)
+
+나중에 결론 부분에서 나오는데, 이 때문에 TPU의 단점인 low memory bandwith가 별로 문제되지 않는다.
+
+암달의 법칙; **low utilization of a huge, cheap resource can still deliver high, cost-effective performance** 을 기억하자!
+
+## TPU Architucture and Implementation
+
+TPU는 빠른 시간 내에 개발해야 했기에 아래의 특징을 가진다.
+
+- PCIe I/O bus를 통해 연결되어 coprocessor로 동작
+
+  - 기존에 있던 서버에 바로 꽂아서 사용할 수 있어야 했기 때문에, CPU와 연동하는 방식으로 만들기엔 부적합함 
+
+  - [PCIe란?](https://www.youtube.com/watch?v=4p9rF193PkU)
+
+- Host로부터 instruction을 전달받음
+  
+  - TPU가 직접 instruction을 가져와서 실행하는 형태보다 훨씬 더 간단함
+  
+  - 직접 instruction을 가져오는 경우 프로그램 카운터를 유지하는 등 추가 구현이 필요하기 때문 (디버깅도 어려워짐)
+
+이 때문에 GPU보다는 FPU (floating-point unit)에 가깝다고 할 수 있다.
+
+TPU의 구조는 아래의 그림에 나와있다.
+
+![Arc][I_6]
+
+처음 봤을 땐 이게 뭔소린가 싶었는데 하나하나 공부하고 나니 생각보다 별 것 없었다.
+
+좌측의 **PCIe Gen3**는 host와 소통하기 위한 I/O라고 생각하면 된다.
+
+이 I/O를 통해 instruction과 data가 들어오면 **host interface**를 거쳐 각각 **inst buffer** / **unified buffer** 에 쌓이게 된다.
+
+NN은 근본적으로 weight와 input data 간의 연산으로 이뤄진다.
+
+Input data는 앞서 말했듯 PCIe를 통해 unified buffer에 쌓인다.
+
+Weight는 위쪽의 DDR3 DRAM Chips로 부터 전달받아, weight queue에 들어간다.
+
+이 두 값을 가지고 연산을 진행하는 장치가 우측의 **Matrix Multiply Unit (MMU)**이다.
+
+MMU의 결과값은 우선 accumulator에 저장되어 추가적인 합산 과정을 거친다.
+
+이후 합산이 끝나면 activiation, normalize, pool을 거쳐서 다시 unified buffer로 넣어줘서 다음 input data로 사용되게 한다. (**Inference**)
+
+전체적인 흐름은 알아보았고, 조금 더 구체적으로 각 유닛을 알아보자.
+
+### MMU
+
+TPU의 핵심은 **MMU**이다.
+
+**MMU**는 65,546(256 x 256)개의 8-bit MAC
+
+# Performance
+
+# Discussion
+
+# Summary
+
+# Review
+
+# References
+
+- [논문](https://dl.acm.org/doi/10.1145/3079856.3080246)
+
+- [PR-085: In-Datacenter Performance Analysis of a Tensor Processing Unit](https://www.youtube.com/watch?v=7WhWkhFAIO4)
+
+[I_1]: /assets/review/tpu/pp.jpg
+[I_2]: /assets/review/tpu/target.PNG
+[I_3]: /assets/review/tpu/mlp.png
+[I_4]: /assets/review/tpu/cnn.png
+[I_5]: /assets/review/tpu/rnn.png
+[I_6]: /assets/review/tpu/arc.PNG
