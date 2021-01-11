@@ -6,6 +6,7 @@ tags:
   - flutter
   - dart
 toc: true
+toc_sticky: true
 ---
 
 Flutter 글은 처음 작성해본다.

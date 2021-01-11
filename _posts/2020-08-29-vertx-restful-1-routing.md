@@ -7,6 +7,7 @@ tags:
   - java
   - restful
 toc: true
+toc_sticky: true
 ---
 
 ![Vertx 로고][1]
