@@ -137,32 +137,81 @@ Weight는 위쪽의 DDR3 DRAM Chips로 부터 전달받아, weight queue에 들�
 
 이 두 값을 가지고 연산을 진행하는 장치가 우측의 **Matrix Multiply Unit (MMU)**이다.
 
-MMU의 결과값은 우선 accumulator에 저장되어 추가적인 합산 과정을 거친다.
+Matrix multiply unit의 연산 결과는 accumulator에서 누적되고, 누적된 값은 activation unit과 normalize / pool unit를 거쳐 unified buffer에 저장된다.
 
-이후 합산이 끝나면 activiation, normalize, pool을 거쳐서 다시 unified buffer로 넣어줘서 다음 input data로 사용되게 한다. (**Inference**)
+저장된 값은 matrix multiply unit의 입력으로 재사용되거나 host 인터페이스와 PCIe 인터페이스를 통해 메인메모리에 출력된다
 
-전체적인 흐름은 알아보았고, 조금 더 구체적으로 각 유닛을 알아보자.
-
-Matrix multiply unit의 연산 결과는 accumulator에서
-누적되고, 누적된 값은 activation unit과 normalize/
-pool unit를 거쳐 unified buffer에 저장된다. 저장된 값
-은 matrix multiply unit의 입력으로 재사용되거나 host
-인터페이스와 PCIe 인터페이스를 통해 메인메모리에 출
-력된다
+전체적인 흐름은 알아보았고, 조금 더 구체적으로 유닛을 알아보자.
 
 ### MMU
 
 TPU의 핵심은 **MMU**이다.
 
-**MMU**는 65,546(256 x 256)개의 8-bit MAC
+**MMU**는 65,546(256 x 256)개의 8-bit MAC(Multiply and Accumulate)가 systolic array 구조를 띄는 형태이다.
+
+Systolic array가 내 연구 참여 주제이다 ㅎ..
+
+Systolic array를 사용한 이유는 행렬 계산을 효율적으로 하기 위해서이다.
+
+행렬 계산의 특성상 특정 값이 계산에 여러번 참여하는데, 여타 계산기처럼 한번 쓰이고 버리기에는 너무 비효율적이다.
+
+![Sys][I_8]
+
+따라서 MAC의 출력 값이 인접한 다음 줄의 MAC의 입력으로 전달되기 때문에 매번 출력 값을 메모리에 저장해야 하는 일반적인 연산방법보다 메모리 액세스 빈도를 낮춰 전력 소모를 줄이는 데 유리한 systolic array를 채택한 것이다.
+
+구체적인 원리는 [링크](http://web.cecs.pdx.edu/~mperkows/temp/May22/0020.Matrix-multiplication-systolic.pdf)를 참조하면 된다.
+
+그런데 공부하면서 꽤 헷갈리는 점이 있었다.
+
+위 링크의 systolic array는 weight와 input이 둘 다 들어오며, weight와 input이 각각 아래쪽과 오른쪽으로 그대로 나가는 형태이다.
+
+![Systolic][I_7]
+
+그런데 내가 교수님한테는 위와 같이 아래쪽에는 계산 값이, 오른쪽에는 input이 그대로 나가는 형태라고 배웠다.
+
+아마 논문 상에서는 [링크](http://web.cecs.pdx.edu/~mperkows/temp/May22/0020.Matrix-multiplication-systolic.pdf)의 systolic array 구조가 아닌가 싶다.
+
+그런데 두 구현이 그렇게 차이가 나는건 아니고, 그냥 세부적인 구현법만 다른 것 같다.
+
+한 가지 착각하면 안되는 점은 이 MMU가 multiplication만, 그러니까 convolution을 구현하지 못하는 것은 아니다.
+
+Weight를 넣어주는 순서만 살짝 바꿔주면 convolutoin도 구현할 수 있다.
+
+### Accumulator
+
+MMU 아래 쪽에는 32bit reg로 구성된 4MiB accumulator가 있다.
+
+각 32bit reg에는 MMU의 세로방향을 따라 내려온 MAC의 16bit 결과 값을 저장하는데 사용된다.
+
+여기서 굳이 32bit인 이유는 16bit 결과값을 누적해서 늘어날 수 있는 최대 bit를 32bit로 제한하기 위해서이다.
+
+한편 4MiB accumulator란 하나의 entry당 **256**개의 32-bit 레지스터를 가진 **4096**-entry Accumulator를 의미하는데, 여기서 256과 4096는 어디서 나온 숫자일까?
+
+**256**은 MMU에서 한 사이클 당 256개의 결과값이 내려오기 때문이다.
+
+**4096**은 최대 성능에 도달하기 위해선 operation/byte를 1350 정도로 맞춰야 하고, 이걸 2의 거듭제곱으로 round up하고(2048) buffering을 생각해서 두 배를 해주면 4096이 되기 때문이다.
+
+이런 숫자 하나하나가 생각보다 많은 의미를 담고 있으니 꽤 주의해서 봐야 한다.
 
 # Performance
 
 # Discussion
 
-# Summary
-
 # Review
+
+하드웨어에 대한 배경지식 하나 없이 논문을 쌩으로 읽으려니까 참 힘들었다.
+
+그럼에도 불구하고 다 읽고나니 꽤 흥미로웠다.
+
+세상에 이런 아이디어도 있구나.. 하는 느낌?
+
+항상 High level programming적인 사고만 하다보니 이런 low level 생각 자체가 굉장히 신선했다.
+
+하지만 아직은 배경지식이 부족해서 왜 이게 DNN에 효과적인지 제대로 설명할 수는 없는게 좀 아쉬웠다.
+
+그래서 그런지 이 논문에서 개선해야 될 점이나, 새로운 아이디어가 떠오르지 못했다. 내 말로 설명할 수 없으니 당연히 글도 제대로 써지지 않았다. 
+
+열심히 논문을 읽고 있으니 언젠간 제대로 이해해서 질문을 던질 수 있을만큼 성장할 수 있을 것이라 믿는다.
 
 # References
 
@@ -176,3 +225,5 @@ TPU의 핵심은 **MMU**이다.
 [I_4]: /assets/review/tpu/cnn.png
 [I_5]: /assets/review/tpu/rnn.png
 [I_6]: /assets/review/tpu/arc.PNG
+[I_7]: /assets/review/tpu/systolic.png
+[I_8]: /assets/review/tpu/sys.PNG
