@@ -7,6 +7,19 @@ tags:
   - computer architecture
 toc: true
 toc_sticky: true
+gallery:
+  - url: /assets/review/tpu/g1.PNG
+    image_path: /assets/review/tpu/g1.PNG
+    alt: "TPU"
+    title: "TPU Performance"
+  - url: /assets/review/tpu/g2.PNG
+    image_path: /assets/review/tpu/g2.PNG
+    alt: "Haswell"
+    title: "Haswell Performance"
+  - url: /assets/review/tpu/g3.PNG
+    image_path: /assets/review/tpu/g3.PNG
+    alt: "NVIDIA"
+    title: "NVIDIA Performance"
 ---
 
 굉장히 오랜만에 글을 쓴다.
@@ -195,9 +208,76 @@ MMU 아래 쪽에는 32bit reg로 구성된 4MiB accumulator가 있다.
 
 # Performance
 
-# Discussion
+![Rep][I_9]
 
-# Review
+성능 비교를 위한 비교군은 E5-2699 v3과 K80이다.
+
+위 두 칩을 선택한 이유는 자기네들 데이터 센터에서 주로 사용되고 있기 때문이라고 한다.
+
+![Roof][I_10]
+
+- X-axis: Floating-point operations per DRAM byte accessed (operational intensity)
+- Y-axis: Floating-point operations per second (performance)
+
+이 논문에서는 성능 비교를 위해 **roofline model**을 사용하고 있다.
+ 
+그렇게 정확한 모델은 아닌데, performance bottleneck 원인에 대한 직관을 제공해줘서 나름 자주 쓰인다.
+
+그래프의 기울기가 변하는 시점을 기준으로, 좌측에 위치하면 memory BW bounded, 우측에 위치하면 compute bounded로 간주한다.
+
+이유는 생각해보면 당연하다. 
+
+좌측에 위치한다면 메모리에서 읽어들이는 속도 때문에 성능 향상에 제한이 걸렸다는 의미이다.
+
+우측에 위치한다면 메모리에선 빨리 읽어들이지만 계산이 느려서 성능 향상이 안되고 있다는 의미이다.
+
+자 이제 본격적으로 성능을 비교해보자.
+
+{% include gallery %}
+
+맨 좌측의 TPU 그래프를 보면 CNN1을 제외한 다른 모든 DNN은 한계치에 도달했다.
+
+또한 CNN은 computation bound, MLP와 LSTM은 memory bound임을 알 수 있다.
+
+우측의 Haswell과 NVIDIA를 보면 선에서도 꽤 떨어져있고, 그래프의 높이도 TPU 대비 상당히 낮음을 확인할 수 있다.
+
+![Bound][I_14]
+
+Haswell과 NVIDIA이 그래프에서 떨어져있는 이유는 response time 제한 때문이다.
+
+DNN은 7ms 안에 서비스 되어야 하는데, CPU와 GPU의 경우 batch size가 64가 되면 7ms를 넘기 때문에 이보다 작은 batch size를 써야 한다.
+
+이 때문에 큰 성능 저하가 발생하는 것이다.
+
+반면 TPU는 250 대신 200을 쓰면 되므로, 별 차이가 없다.
+
+![Sum][I_12]
+
+위 그래프는 방금 전 본 세 그래프를 모은 것이다.
+
+확연한 성능차를 확인할 수 있다.
+
+GPU와 이렇게 차이나는 이유는 GPU가 32bit 연산을 하며 행렬 곱에 특화되어 있지 않은 등 DNN에 최적화 되어있지 않기 때문이다. 이정도나 차이나는게 놀랍긴 하지만.
+
+![Table][I_13]
+
+위는 CPU 대비 성능을 기록한 표이다.
+
+TPU의 경우 LSTM1을 제외하고 압도적인 성능차를 보인다.
+
+한가지 재밌는 점은 GPU가 CPU 대비 그닥 차이 나지 않는다는 점이다. 
+
+![Watt][I_15]
+
+위는 Performance / Watt를 기록한 표이다.
+
+Performance / Watt는 서버 관리 비용과 밀접한 연관이 있기 때문에 꽤 중요한 수치이다.
+
+보다시피 TPU가 CPU / GPU를 압도함을 알 수 있다.
+
+
+
+# Thoughts
 
 하드웨어에 대한 배경지식 하나 없이 논문을 쌩으로 읽으려니까 참 힘들었다.
 
@@ -227,3 +307,9 @@ MMU 아래 쪽에는 32bit reg로 구성된 4MiB accumulator가 있다.
 [I_6]: /assets/review/tpu/arc.PNG
 [I_7]: /assets/review/tpu/systolic.png
 [I_8]: /assets/review/tpu/sys.PNG
+[I_9]: /assets/review/tpu/rep.PNG
+[I_10]: /assets/review/tpu/roof.png
+[I_12]: /assets/review/tpu/sum.PNG
+[I_13]: /assets/review/tpu/table.PNG
+[I_14]: /assets/review/tpu/bound.PNG
+[I_15]: /assets/review/tpu/watt.PNG
