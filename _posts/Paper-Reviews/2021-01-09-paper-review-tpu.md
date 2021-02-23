@@ -194,7 +194,7 @@ Weight를 넣어주는 순서만 살짝 바꿔주면 convolutoin도 구현할 �
 
 MMU 아래 쪽에는 32bit reg로 구성된 4MiB accumulator가 있다.
 
-각 32bit reg에는 MMU의 세로방향을 따라 내려온 MAC의 16bit 결과 값을 저장하는데 사용된다.
+32bit reg는 MMU의 세로방향을 따라 내려온 MAC의 16bit 결과 값을 저장하는데 사용된다.
 
 여기서 굳이 32bit인 이유는 16bit 결과값을 누적해서 늘어날 수 있는 최대 bit를 32bit로 제한하기 위해서이다.
 
@@ -274,8 +274,6 @@ TPU의 경우 LSTM1을 제외하고 압도적인 성능차를 보인다.
 Performance / Watt는 서버 관리 비용과 밀접한 연관이 있기 때문에 꽤 중요한 수치이다.
 
 보다시피 TPU가 CPU / GPU를 압도함을 알 수 있다.
-
-
 
 # Thoughts
 

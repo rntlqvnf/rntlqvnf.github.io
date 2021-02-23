@@ -32,7 +32,7 @@
       /* calculate height of nav list
          viewport height - nav height - masthead x-padding
       */
-      max-height: calc(100vh - #{$nav-height} - 2em);
+      height: calc(100vh - #{$nav-height} - 2em);
     }
   }
 
@@ -127,8 +127,9 @@
   }
 
   img {
-    max-width: 110px;
-    border-radius: 50%;
+    // 사이드바 이미지 크기 조절
+    max-width: 150px;
+    border-radius: 15%;
 
     @include breakpoint($large) {
       padding: 5px;

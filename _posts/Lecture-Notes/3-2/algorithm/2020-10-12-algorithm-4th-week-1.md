@@ -273,4 +273,4 @@ Property 3를 이용하면, 위에서 구한 source strongly connected component
 
 [^1]: https://upcount.tistory.com/91
 
-[P_1]: {% post_url 2020-09-30-algorithm-3nd-week-2 %}/#strong--weak-connected
+[P_1]: {% post_url Lecture-Notes/3-2/algorithm/2020-09-30-algorithm-3nd-week-2 %}/#strong--weak-connected
