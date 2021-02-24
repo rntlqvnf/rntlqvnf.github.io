@@ -20,7 +20,7 @@ title                    : "Yshajae Blog"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "하재현"
-description              : "기술 블로그"
+description              : "기술 & c취미 블로그"
 url                      : "https://rntlqvnf.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : rntlqvnf/blog_comment # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
