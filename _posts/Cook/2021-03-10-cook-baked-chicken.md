@@ -1,5 +1,5 @@
 ---
-title: "&#91;레시피 개발일지&#93; "
+title: "&#91;레시피 개발일지&#93; 튀기지 않은 치킨텐더"
 categories:
   - Cooking
 tags:
