@@ -20,7 +20,7 @@ title                    : "Yshajae Blog"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "하재현"
-description              : "기술 & c취미 블로그"
+description              : "기술 & 취미 블로그"
 url                      : "https://rntlqvnf.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : rntlqvnf/blog_comment # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
@@ -97,7 +97,7 @@ analytics:
 author:
   name             : "양산형 하재"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "POSTECH / CSED <br> 능력이 없으면 노력이라도 하자."
+  bio              : "POSTECH / CSED <br> 학업 | 연구 | 독서 | 요리 | 운동"
   location         : "Republic of Korea"
   email            : # email
   links:
