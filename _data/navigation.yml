@@ -6,7 +6,78 @@ main:
     url: /categories/
   - title: "Tags"
     url: /tags/
-  - title: "Paper Reviews"
-    url: /categories/Paper Reviews/
-  - title: "Cooking"
-    url: /categories/Cooking/
+
+index:
+  - title: Categories
+    children:
+      - title: "연구"
+        url: /categories/Research/
+      - title: "인생 로드맵"
+        url: /categories/Roadmap/
+        children:
+      - title: "강의 노트"
+        url: /categories/Lecture Notes/
+        children:
+      - title: "독서"
+        url: /categories/Book/
+        children:
+      - title: "요리"
+        url: /categories/Cooking/
+        children:
+      - title: "프로그래밍"
+        url: /categories/Programming/
+        children:
+
+docs:
+  - title: Research
+    children:
+      - title: "CV"
+        url: /research/cv/
+      - title: "논문 리뷰"
+        url: /research/paper reviews/
+
+  - title: Roadmap
+    children:
+      - title: "월간 리뷰"
+        url: /roadmap/per-month/
+      - title: "년간 리뷰"
+        url: /roadmap/per-year/
+
+  - title: Lecture Notes
+    children:
+      - title: "알고리즘"
+        url: /tags/csed331/
+      - title: "운영체제"
+        url: /tags/csed312/
+      - title: "인공지능"
+        url: /tags/csed442/
+
+  - title: Book
+    children:
+      - title: "읽은 책 목록"
+        url: /book/read-review-list/
+      - title: "읽을 책 목록"
+        url: /book/to-read-list/
+
+  - title: Food
+    children:
+      - title: "미식 기행"
+        url: /cooking/foodie-adventure/
+      - title: "한식"
+        url: /cooking/korean-recipe/
+      - title: "양식"
+        url: /cooking/western-recipe/
+      - title: "일식"
+        url: /cooking/japanese-recipe/
+      - title: "중식"
+        url: /cooking/chinese-recipe/
+      - title: "퓨전"
+        url: /cooking/fusion-recipe/
+
+  - title: Programming
+    children:
+      - title: "Vert.x"
+        url: /tags/vertx/
+      - title: "Flutter"
+        url: /tags/flutter/
+        children:

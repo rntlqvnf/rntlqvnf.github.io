@@ -87,7 +87,7 @@
       @include clearfix();
       position: -webkit-sticky;
       position: sticky;
-      top: 2em;
+      top: 1em;
       float: right;
     }
   }
@@ -127,9 +127,8 @@
   }
 
   img {
-    // 사이드바 이미지 크기 조절
-    max-width: 150px;
-    border-radius: 15%;
+    max-width: 130px;
+    border-radius: 50%;
 
     @include breakpoint($large) {
       padding: 5px;
