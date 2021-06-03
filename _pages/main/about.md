@@ -27,4 +27,4 @@ toc_sticky: true
   * 감정 분석을 통한 음악 추천 앱
     * [프론트엔드](https://github.com/rntlqvnf/Native-IDEA-app)
     * [백엔드](https://github.com/rntlqvnf/IDEA_python_backend)
-  * [TPU Simulator](https://github.com/rntlqvnf/Systolic-Array-Simulator)
+  * [TPU & Augmentation Accelerator simulator (과제연구)](https://github.com/rntlqvnf/Systolic-Array-Simulator)
