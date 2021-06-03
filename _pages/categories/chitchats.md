@@ -1,8 +1,8 @@
 ---
 title: "잡담"
-permalink: /categories/Chitchat/
+permalink: /categories/Chitchats/
 layout: category
-taxonomy: Chitchat
+taxonomy: Chitchats
 author_profile: false
 sidebar:
     nav: "docs"

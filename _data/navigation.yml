@@ -28,7 +28,7 @@ index:
         url: /categories/Programming/
         children:
       - title: "잡담"
-        url: /categories/Chitchat/
+        url: /categories/Chitchats/
         children:
 
 docs:
@@ -84,3 +84,6 @@ docs:
       - title: "Flutter"
         url: /tags/flutter/
         children:
+  
+  - title: Chit Chats
+    children:
