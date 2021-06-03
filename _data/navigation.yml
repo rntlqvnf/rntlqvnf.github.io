@@ -27,6 +27,9 @@ index:
       - title: "프로그래밍"
         url: /categories/Programming/
         children:
+      - title: "잡담"
+        url: /categories/Chitchat/
+        children:
 
 docs:
   - title: Research
