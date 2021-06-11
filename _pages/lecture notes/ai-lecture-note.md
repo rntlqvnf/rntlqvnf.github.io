@@ -1,5 +1,5 @@
 ---
-title: "운영체제"
+title: "인공지능"
 permalink: /tags/csed442/
 layout: tag
 taxonomy: csed442
