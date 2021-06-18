@@ -28,7 +28,7 @@ index:
         url: /categories/Programming/
         children:
       - title: "잡담"
-        url: /categories/Chitchats/
+        url: /categories/Chit Chats/
         children:
 
 docs:
@@ -41,10 +41,10 @@ docs:
 
   - title: Roadmap
     children:
-      - title: "월간 리뷰"
-        url: /roadmap/per-month/
       - title: "년간 리뷰"
         url: /roadmap/per-year/
+      - title: "월간 리뷰"
+        url: /roadmap/per-month/
 
   - title: Lecture Notes
     children:
@@ -87,3 +87,7 @@ docs:
   
   - title: Chit Chats
     children:
+      - title: "일상"
+        url: /tags/daily-life
+      - title: "생각노트"
+        url: /tags/think-note/
