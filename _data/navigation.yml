@@ -14,22 +14,14 @@ index:
         url: /categories/Research/
       - title: "인생 로드맵"
         url: /categories/Roadmap/
-        children:
       - title: "강의 노트"
         url: /categories/Lecture Notes/
-        children:
-      - title: "독서"
-        url: /categories/Book/
-        children:
-      - title: "요리"
-        url: /categories/Cooking/
-        children:
+      - title: "취미 생활"
+        url: /categories/hobbies/
       - title: "프로그래밍"
         url: /categories/Programming/
-        children:
       - title: "잡담"
         url: /categories/Chit Chats/
-        children:
 
 docs:
   - title: Research
@@ -55,27 +47,14 @@ docs:
       - title: "인공지능"
         url: /tags/csed442/
 
-  - title: Book
+  - title: Hobbies
     children:
-      - title: "읽은 책 목록"
-        url: /book/read-review-list/
-      - title: "읽을 책 목록"
-        url: /book/to-read-list/
-
-  - title: Cooking
-    children:
-      - title: "미식 기행"
-        url: /cooking/foodie-adventure/
-      - title: "한식"
-        url: /cooking/korean-recipe/
-      - title: "양식"
-        url: /cooking/western-recipe/
-      - title: "일식"
-        url: /cooking/japanese-recipe/
-      - title: "중식"
-        url: /cooking/chinese-recipe/
-      - title: "퓨전"
-        url: /cooking/fusion-recipe/
+      - title: "독서"
+        url: https://www.notion.so/ae8835e9dde745109f8ab6d939ac529f
+      - title: "요리"
+        url: https://www.notion.so/9811b1355fb344fca44b199fef747fb0
+      - title: "운동"
+        url: https://www.notion.so/9da5a01fe5fe43dd9afb3736031f6e9b
 
   - title: Programming
     children:
