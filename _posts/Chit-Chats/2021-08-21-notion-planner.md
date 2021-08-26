@@ -4,6 +4,7 @@ categories:
   - Chit Chats
 tags:
   - notion
+  - 일상
 toc: false
 toc_sticky: true
 ---
