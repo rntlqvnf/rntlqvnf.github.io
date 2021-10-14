@@ -2,7 +2,7 @@
 permalink: /calendar/
 title: "Calendar"
 last_modified_at: 2021-10-14T09:30:00-00:00
-toc: true
+toc: false
 toc_sticky: true
 ---
 
