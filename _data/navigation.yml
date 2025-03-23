@@ -4,6 +4,8 @@ main:
     url: /about/
   - title: "Publications"
     url: /publications/
+  - title: "CV"
+    url: /assets/jhha_cv.pdf
   - title: "Calendar"
     url: /calendar/
   - title: "Categories"
@@ -12,11 +14,9 @@ main:
 index:
   - title: Categories
     children:
-      - title: "강의 노트"
+      - title: "Lecture Notes"
         url: /categories/Lecture Notes/
-      - title: "취미 생활"
-        url: /categories/hobbies/
-      - title: "프로그래밍"
+      - title: "Web Programming"
         url: /categories/Programming/
 
 docs:

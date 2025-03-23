@@ -15,12 +15,12 @@
 minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
-locale                   : "ko-KR"
+locale                   : "en-US"
 title                    : "Jahyun Ha's Blog"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
-name                     : "하재현"
-description              : "개인 블로그"
+name                     : "Jaehyun Ha"
+description              : "Personal Homepage"
 url                      : "https://rntlqvnf.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : rntlqvnf/blog_comment # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
@@ -96,7 +96,7 @@ analytics:
 # Site Author
 author:
   name             : "Jaehyun Ha"
-  avatar           : "/assets/back.png"
+  avatar           : "/assets/sigmod.png"
   bio              : "Fourth-year CS PhD student at POSTECH"
   location         : "Republic of Korea"
   email            : "yshajae@postech.ac.kr"
@@ -244,7 +244,7 @@ defaults:
     values:
       layout: single
       author_profile: false
-      read_time: true
+      read_time: false
       comments: true
       share: true
       related: true
