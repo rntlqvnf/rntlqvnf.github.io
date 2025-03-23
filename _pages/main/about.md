@@ -1,31 +1,47 @@
 ---
 permalink: /about/
 title: "About"
-last_modified_at: 2021-06-03T10:15:22-04:00
+last_modified_at: 2025-03-23T10:15:22-04:00
 toc: true
 toc_sticky: true
 ---
 
-### 하재현
-  * [GitHub](https://github.com/rntlqvnf)
+## Jaehyun Ha
 
-### 학력
-  * 2022.03 ~ 현재 : 포항공과대학교 인공지능 대학원 데이터베이스 및 마이닝 연구실 (한욱신 교수님)
-  * 2018.03 ~ 2022.03 : 포항공과대학교 컴퓨터공학과 (4.06/4.3 - 2021년 컴공과 수석 졸업)
-  * 2016.03 ~ 2017.11 : 울산과학고등학교
+I am a fourth-year CS PhD student at the [Pohang University of Science and Technology (POSTECH) at South Korea](https://postech.ac.kr/). 
+I am a member of [Data Systems Lab](https://dslab.postech.ac.kr/). My advisor is [Prof. Wook-shin Han](https://wscrony.github.io/). 
+My research interests lie in Database Systems, particularly in building LLM-powered AI databases and GPU-accelerated graph database systems.
 
-### 주요 활동
-  * 2021.02 ~ 현재 : 5층 RA (Residental Advisor)
-  * 2021.02 ~ 현재 : 차세대 공학 리더 YEHS 준회원
-  * 2020.02 ~ 2021.02 : 생활관 5동 대표
-  * 2020.07 ~ 2020.08 : SK 하이닉스 인턴
-  * 2019.02 ~ 2020.02 : 배드민턴 동아리 클리어 회장
-  * 2019.02 ~ 현재 : 생활관 자치회 부원
-  * 2018.02 ~ 현재 : 삼성꿈장학재단 장학생
+### Current Research Projects
 
-### 프로젝트
-  * [배드민턴 동아리 종합 관리 어플리케이션 제작](https://github.com/rntlqvnf/ClearApp_FE)
-  * 감정 분석을 통한 음악 추천 앱
-    * [프론트엔드](https://github.com/rntlqvnf/Native-IDEA-app)
-    * [백엔드](https://github.com/rntlqvnf/IDEA_python_backend)
-  * [TPU & Augmentation Accelerator simulator (과제연구)](https://github.com/rntlqvnf/Systolic-Array-Simulator)
+  * LLM-Supported AI Database Systems
+  * GPU-Accelerated Graph Database Systems
+
+### Teaching Experience
+
+  * CSED421 : Database Systems (Spring 2022)
+
+### Education
+
+  * 2022.03 – Present: M.S./Ph.D. Integrated Program in Artificial Intelligence, POSTECH
+    * Lab: Database & Mining Lab (Advisor: Prof. Wook-Shin Han)
+  * 2018.03 – 2022.03: B.S. in Computer Science and Engineering, POSTECH
+    * Graduated top of the class in 2021
+    * GPA: 4.06 / 4.3
+  * 2016.03 – 2017.11: Ulsan Science High School
+
+### Hobbies
+
+  * **Badminton**
+  * Weightlifting
+  * Cooking
+  * Web novels
+
+### POSTECH Activities
+  * 2021.02 – 2021.12: Resident Advisor (5th Floor, Dormitory)
+  * 2021.02 – Present: Associate Member, YEHS (Young Engineers Honor Society)
+  * 2020.02 – 2021.02: Representative, Dormitory Building 5
+  * 2020.07 – 2020.08: Intern at SK Hynix
+  * 2019.02 – 2020.02: President, Badminton Club “Clear”
+  * 2019.02 – 2021.02: Member, Dormitory Student Council
+  * 2018.02 – 2021.12: Samsung Dream Scholarship Foundation Scholar

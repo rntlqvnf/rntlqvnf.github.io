@@ -2,12 +2,12 @@
 main:
   - title: "About"
     url: /about/
+  - title: "Publications"
+    url: /publications/
   - title: "Calendar"
     url: /calendar/
   - title: "Categories"
     url: /categories/
-  - title: "Tags"
-    url: /tags/
 
 index:
   - title: Categories
