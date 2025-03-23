@@ -12,33 +12,18 @@ main:
 index:
   - title: Categories
     children:
-      #- title: "연구"
-      #  url: /categories/Research/
-      #- title: "인생 로드맵"
-      #  url: /categories/Roadmap/
       - title: "강의 노트"
         url: /categories/Lecture Notes/
       - title: "취미 생활"
         url: /categories/hobbies/
       - title: "프로그래밍"
         url: /categories/Programming/
-      #- title: "잡담"
-      #  url: /categories/Chit Chats/
 
 docs:
-  - title: Research
+  - title: About
     children:
       - title: "CV"
         url: /research/cv/
-      - title: "논문 리뷰"
-        url: /research/paper reviews/
-
-#  - title: Roadmap
-#    children:
-#      - title: "년간 리뷰"
-#        url: /roadmap/per-year/
-#      - title: "월간 리뷰"
-#        url: /roadmap/per-month/
 
   - title: Lecture Notes
     children:
@@ -57,18 +42,3 @@ docs:
         url: https://www.notion.so/9811b1355fb344fca44b199fef747fb0
       - title: "운동"
         url: https://www.notion.so/9da5a01fe5fe43dd9afb3736031f6e9b
-
-  - title: Programming
-    children:
-      - title: "Vert.x"
-        url: /tags/vertx/
-      - title: "Flutter"
-        url: /tags/flutter/
-        children:
-  
-  #- title: Chit Chats
-  #  children:
-  #    - title: "일상"
-  #      url: /tags/daily-life
-  #    - title: "생각노트"
-  #      url: /tags/think-note/

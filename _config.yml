@@ -95,52 +95,25 @@ analytics:
 
 # Site Author
 author:
-  name             : "양산형 하재"
+  name             : "Jaehyun Ha"
   avatar           : "/assets/back.png"
-  bio              : "POSTECH CSED <br> 학업 / 연구 / 독서 / 요리 / 운동"
+  bio              : "Fourth-year CS PhD student at POSTECH"
   location         : "Republic of Korea"
-  email            : # email
+  email            : "yshajae@postech.ac.kr"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
       url: "mailto:yshajae@postech.ac.kr"
-    - label: "Website"
-      icon: "fas fa-fw fa-link"
-      # url: "https://your-website.com"
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      # url: "https://twitter.com/"
-    - label: "Facebook"
-      icon: "fab fa-fw fa-facebook-square"
-      url: "https://www.facebook.com/profile.php?id=100006371353751"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/rntlqvnf"
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      # url: "https://instagram.com/"
 
 # Site Footer
 footer:
   links:
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      # url:
-    - label: "Facebook"
-      icon: "fab fa-fw fa-facebook-square"
-      url: "https://www.facebook.com/profile.php?id=100006371353751"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/rntlqvnf"
-    - label: "GitLab"
-      icon: "fab fa-fw fa-gitlab"
-      # url:
-    - label: "Bitbucket"
-      icon: "fab fa-fw fa-bitbucket"
-      # url:
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      # url:
 
 
 # Reading Files
