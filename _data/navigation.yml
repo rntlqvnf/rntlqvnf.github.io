@@ -12,12 +12,6 @@ main:
     url: /categories/
 
 index:
-  - title: Categories
-    children:
-      - title: "Lecture Notes"
-        url: /categories/Lecture Notes/
-      - title: "Web Programming"
-        url: /categories/Programming/
 
 docs:
   - title: About
