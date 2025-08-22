@@ -22,16 +22,17 @@ toc: false
         margin-bottom: 2em; /* 헤더와 카드 그리드 사이 간격 확보 */
     }
     .hobby-header h2 {
-        font-size: 2em; /* 대주제 제목을 더 크게 */
+        font-size: 1.8em; /* 대주제 제목을 더 크게 */
         margin-bottom: 0.2em;
     }
     .hobby-header a.insta-account {
-        font-size: 1.1em;
+        font-size: 1.4em;
         font-weight: bold;
         text-decoration: none;
         color: #c13584; /* Instagram-like color */
         flex-shrink: 0;
         margin-left: 15px;
+        margin-top: 0.6em;
     }
     .hobby-log-grid {
         display: grid;
@@ -80,6 +81,7 @@ toc: false
         color: #007bff;
     }
 </style>
+
 
 This page serves as a structured map of my hobbies. Each section links to a dedicated Instagram account for the full visual diary, followed by curated links to specific milestones and favorite moments.
 
