@@ -6,8 +6,8 @@ main:
     url: /publications/
   - title: "CV"
     url: /assets/jhha_cv.pdf
-  - title: "Calendar"
-    url: /calendar/
+  - title: "Hobbies"
+    url: /hobbies/
   - title: "Categories"
     url: /categories/
 
