@@ -7,63 +7,56 @@ toc: false
 
 <style>
     .hobby-section {
-        margin-top: 4em; /* 섹션 간 간격을 조금 더 넓힘 */
+        margin-top: 4em;
         padding-bottom: 2em;
-        border-bottom: 2px solid #f0f0f0; /* 섹션 구분선을 약간 더 두껍게 */
+        border-bottom: 2px solid #f0f0f0;
     }
     .hobby-section:last-child {
         border-bottom: none;
     }
     .hobby-header {
         display: flex;
-        align-items: center;
+        align-items: baseline; /* 수정 2: 세로 정렬 기준을 'center'에서 'baseline'으로 변경 */
         justify-content: space-between;
         flex-wrap: wrap;
-        margin-bottom: 2em; /* 헤더와 카드 그리드 사이 간격 확보 */
+        margin-bottom: 2em;
     }
     .hobby-header h2 {
-        font-size: 1.8em; /* 대주제 제목을 더 크게 */
+        font-size: 1.7em; /* 수정 1: 대주제 제목 크기 조정 (2em -> 1.7em) */
         margin-bottom: 0.2em;
     }
     .hobby-header a.insta-account {
-        font-size: 1.4em;
+        font-size: 1.1em;
         font-weight: bold;
         text-decoration: none;
         color: #c13584; /* Instagram-like color */
         flex-shrink: 0;
         margin-left: 15px;
-        margin-top: 0.6em;
     }
     .hobby-log-grid {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
         gap: 25px;
     }
-
-    /* --- ✨ 여기가 핵심 변경 부분입니다 --- */
     .log-category {
-        border: 1px solid #e9e9e9;      /* 카드에 옅은 테두리 추가 */
-        border-radius: 8px;             /* 모서리를 부드럽게 */
-        padding: 20px;                  /* 카드 내부 여백 추가 */
-        background-color: #fcfcfc;      /* 아주 옅은 배경색으로 구분 */
-        transition: box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out; /* 부드러운 효과를 위한 transition */
-        box-shadow: 0 1px 3px rgba(0,0,0,0.04); /* 은은한 그림자 효과 */
+        border: 1px solid #e9e9e9;
+        border-radius: 8px;
+        padding: 20px;
+        background-color: #fcfcfc;
+        transition: box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.04);
     }
-
     .log-category:hover {
-        transform: translateY(-4px);    /* 마우스를 올리면 살짝 떠오르는 효과 */
-        box-shadow: 0 5px 15px rgba(0,0,0,0.08); /* 그림자를 더 선명하게 */
+        transform: translateY(-4px);
+        box-shadow: 0 5px 15px rgba(0,0,0,0.08);
     }
-
     .log-category h4 {
-        border-bottom: none;            /* 기존의 밑줄 제거 */
+        border-bottom: none;
         padding-bottom: 0;
         margin-top: 0;
-        margin-bottom: 1em;             /* 제목과 목록 사이 간격 조정 */
-        font-size: 1.15em;              /* 소주제 제목을 약간 더 키움 */
+        margin-bottom: 1em;
+        font-size: 1.15em;
     }
-    /* --- ✨ 여기까지 --- */
-
     .log-category ul {
         list-style-type: none;
         padding-left: 0;
@@ -81,7 +74,6 @@ toc: false
         color: #007bff;
     }
 </style>
-
 
 This page serves as a structured map of my hobbies. Each section links to a dedicated Instagram account for the full visual diary, followed by curated links to specific milestones and favorite moments.
 
