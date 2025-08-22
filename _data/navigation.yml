@@ -33,12 +33,3 @@ docs:
         url: /tags/csed312/
       - title: "인공지능"
         url: /tags/csed442/
-
-  - title: Hobbies
-    children:
-      - title: "독서"
-        url: https://www.notion.so/ae8835e9dde745109f8ab6d939ac529f
-      - title: "요리"
-        url: https://www.notion.so/9811b1355fb344fca44b199fef747fb0
-      - title: "운동"
-        url: https://www.notion.so/9da5a01fe5fe43dd9afb3736031f6e9b
