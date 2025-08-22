@@ -1,15 +1,15 @@
 ---
 permalink: /hobbies/
-title: "My Hobby Logs"
+title: "A Curated History of My Hobbies"
 last_modified_at: 2025-08-22T00:00:00-00:00
 toc: false
 ---
 
 <style>
     .hobby-section {
-        margin-top: 3.5em;
+        margin-top: 4em; /* 섹션 간 간격을 조금 더 넓힘 */
         padding-bottom: 2em;
-        border-bottom: 1px solid #eee;
+        border-bottom: 2px solid #f0f0f0; /* 섹션 구분선을 약간 더 두껍게 */
     }
     .hobby-section:last-child {
         border-bottom: none;
@@ -19,9 +19,10 @@ toc: false
         align-items: center;
         justify-content: space-between;
         flex-wrap: wrap;
-        margin-bottom: 1.5em;
+        margin-bottom: 2em; /* 헤더와 카드 그리드 사이 간격 확보 */
     }
     .hobby-header h2 {
+        font-size: 2em; /* 대주제 제목을 더 크게 */
         margin-bottom: 0.2em;
     }
     .hobby-header a.insta-account {
@@ -37,11 +38,31 @@ toc: false
         grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
         gap: 25px;
     }
-    .log-category h4 {
-        margin-bottom: 0.8em;
-        padding-bottom: 0.4em;
-        border-bottom: 2px solid #f0f0f0;
+
+    /* --- ✨ 여기가 핵심 변경 부분입니다 --- */
+    .log-category {
+        border: 1px solid #e9e9e9;      /* 카드에 옅은 테두리 추가 */
+        border-radius: 8px;             /* 모서리를 부드럽게 */
+        padding: 20px;                  /* 카드 내부 여백 추가 */
+        background-color: #fcfcfc;      /* 아주 옅은 배경색으로 구분 */
+        transition: box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out; /* 부드러운 효과를 위한 transition */
+        box-shadow: 0 1px 3px rgba(0,0,0,0.04); /* 은은한 그림자 효과 */
     }
+
+    .log-category:hover {
+        transform: translateY(-4px);    /* 마우스를 올리면 살짝 떠오르는 효과 */
+        box-shadow: 0 5px 15px rgba(0,0,0,0.08); /* 그림자를 더 선명하게 */
+    }
+
+    .log-category h4 {
+        border-bottom: none;            /* 기존의 밑줄 제거 */
+        padding-bottom: 0;
+        margin-top: 0;
+        margin-bottom: 1em;             /* 제목과 목록 사이 간격 조정 */
+        font-size: 1.15em;              /* 소주제 제목을 약간 더 키움 */
+    }
+    /* --- ✨ 여기까지 --- */
+
     .log-category ul {
         list-style-type: none;
         padding-left: 0;
@@ -59,8 +80,6 @@ toc: false
         color: #007bff;
     }
 </style>
-
-## A Curated History of My Interests
 
 This page serves as a structured map of my hobbies. Each section links to a dedicated Instagram account for the full visual diary, followed by curated links to specific milestones and favorite moments.
 
