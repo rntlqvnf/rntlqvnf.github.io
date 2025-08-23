@@ -66,12 +66,21 @@ toc: false
         margin-bottom: 0.7em;
     }
     .log-category a {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        width: 100%;
         text-decoration: none;
         color: #333;
         transition: color 0.2s;
     }
     .log-category a:hover {
         color: #007bff;
+    }
+    .log-category a .link-desc {
+        color: #888;
+        font-size: 0.8em;
+        font-weight: 400;
     }
 </style>
 
@@ -98,10 +107,11 @@ This page serves as a structured map of my hobbies. Each section links to a dedi
         <div class="log-category">
             <h4>🇺🇸 USA - New York - Manhattan</h4>
             <ul>
-                <li><a href="https://www.instagram.com/p/DNpfcYtN4Jc/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" target="_blank">Mountain House - Great Sichuan Cuisine</a></li>
-                <li><a href="
-                https://www.instagram.com/p/DNpeDjnt_Ze/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" target="_blank">JUA - Michelin ⭐ Korean Dining</a></li>
-                <li><a href="https://www.instagram.com/p/DNqJGsAt7Xl/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" target="_blank">Nami Nori - Modern Japanese Cuisine</a></li>
+                <li><a href="https://www.instagram.com/p/DNpfcYtN4Jc/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" target="_blank">Mountain House 
+                <span class="link-desc">Great Sichuan Cuisine</span></a></li>
+                <li><a href="https://www.instagram.com/p/DNpeDjnt_Ze/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" target="_blank">JUA <span class="link-desc">Michelin ⭐ Korean Dining</span></a></li>
+                <li><a href="https://www.instagram.com/p/DNqJGsAt7Xl/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" target="_blank">Nami Nori 
+                <span class="link-desc">Modern Japanese Cuisine</span></a></li>
             </ul>
         </div>
         <div class="log-category">
