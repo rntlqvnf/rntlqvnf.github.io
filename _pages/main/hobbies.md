@@ -166,8 +166,8 @@ This page serves as a structured map of my hobbies. Each section links to a dedi
 
 <div class="hobby-section">
     <div class="hobby-header">
-        <h2>📱 Web Novels</h2>
-        <a href="INSTAGRAM_WEBNOVEL_URL" class="insta-account" target="_blank">View Account ↗</a>
+        <h2>📱 Novels</h2>
+        <a href="https://www.instagram.com/novel_hajae/" class="insta-account" target="_blank">View Account ↗</a>
     </div>
     <div class="hobby-log-grid">
         <div class="log-category">
