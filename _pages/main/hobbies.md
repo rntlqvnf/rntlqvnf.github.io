@@ -1,6 +1,6 @@
 ---
 permalink: /hobbies/
-title: "A Curated History of My Hobbies"
+title: "Hobby Logs"
 last_modified_at: 2025-08-22T00:00:00-00:00
 toc: false
 ---
