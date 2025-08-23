@@ -104,6 +104,11 @@ This page serves as a structured map of my hobbies. Each section links to a dedi
                 <li><a href="https://www.instagram.com/p/DNqJGsAt7Xl/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" target="_blank">Nami Nori - Modern Japanese Cuisine</a></li>
             </ul>
         </div>
+        <div class="log-category">
+            <h4>🇺🇸 USA - Illinois - Urbana-Champaign</h4>
+            <ul>
+            </ul>
+        </div>
     </div>
 </div>
 
@@ -173,10 +178,11 @@ This page serves as a structured map of my hobbies. Each section links to a dedi
         <div class="log-category">
             <h4>Fantasy</h4>
             <ul>
-                </ul>
+                <li><a href="https://www.instagram.com/p/DNs84_93B_v/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" target="_blank">이세계에서 성자로 살아남기</a></li>
+            </ul>
         </div>
         <div class="log-category">
-            <h4>Modern Romance</h4>
+            <h4>Modern Fantasy</h4>
             <ul>
                 </ul>
         </div>
