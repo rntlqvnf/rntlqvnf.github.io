@@ -189,6 +189,7 @@ This page serves as a structured map of my hobbies. Each section links to a dedi
             <h4>Fantasy</h4>
             <ul>
                 <li><a href="https://www.instagram.com/p/DNs84_93B_v/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" target="_blank">이세계에서 성자로 살아남기</a></li>
+                <li><a href="https://www.instagram.com/p/DNtX4TP3HtY/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" target="_blank">아카데미 실눈캐가 되었습니다</a></li>
             </ul>
         </div>
         <div class="log-category">
