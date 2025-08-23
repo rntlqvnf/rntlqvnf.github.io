@@ -184,7 +184,9 @@ This page serves as a structured map of my hobbies. Each section links to a dedi
         <div class="log-category">
             <h4>Modern Fantasy</h4>
             <ul>
-                </ul>
+                <li><a href="https://www.instagram.com/p/DNtJAq73LhR/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" target="_blank">전능의 혀를 얻었다</a></li>
+                <li><a href="https://www.instagram.com/p/DNtJn_HXEwd/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" target="_blank">전능의 혀를 얻었다</a></li>
+            </ul>
         </div>
     </div>
 </div>
