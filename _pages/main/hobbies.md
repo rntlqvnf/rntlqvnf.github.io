@@ -203,6 +203,7 @@ This page serves as a structured map of my hobbies. Each section links to a dedi
             <ul>
                 <li><a href="https://www.instagram.com/p/DNtJAq73LhR/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" target="_blank">전능의 혀를 얻었다</a></li>
                 <li><a href="https://www.instagram.com/p/DNtJn_HXEwd/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" target="_blank">빌런의 프로파일러</a></li>
+                <li><a href="https://www.instagram.com/p/DNva3WuXJ5v/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" target="_blank">레벨업 하기 싫은 천마님</a></li>
             </ul>
         </div>
     </div>
