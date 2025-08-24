@@ -93,20 +93,20 @@ This page serves as a structured map of my hobbies. Each section links to a dedi
     </div>
     <div class="hobby-log-grid">
         <div class="log-category">
-            <h4>🇰🇷 KOREA - Pohang - Namgu</h4>
+            <h4>🇰🇷 KOREA - Pohang</h4>
             <ul>
                 <!-- <li><a href="INSTAGRAM_POST_URL_HERE" target="_blank">Restaurant Name A - A delightful dinner</a></li> -->
                 </ul>
         </div>
         <div class="log-category">
-            <h4>🇨🇳 CHINA - Guandong - Guangzhou</h4>
+            <h4>🇨🇳 CHINA - Guangzhou</h4>
             <ul>
                 <li><a href="https://www.instagram.com/p/DNuULySWGiQ/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" target="_blank"> Guangzhou Restaurant
                 <span class="link-desc">Fantastic Dimsum</span></a></li>
             </ul>
         </div>
         <div class="log-category">
-            <h4>🇺🇸 USA - New York - Manhattan</h4>
+            <h4>🇺🇸 USA - New York</h4>
             <ul>
                 <li><a href="https://www.instagram.com/p/DNpfcYtN4Jc/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" target="_blank">Mountain House 
                 <span class="link-desc">Great Sichuan Cuisine</span></a></li>
@@ -116,7 +116,7 @@ This page serves as a structured map of my hobbies. Each section links to a dedi
             </ul>
         </div>
         <div class="log-category">
-            <h4>🇺🇸 USA - Illinois - Urbana-Champaign</h4>
+            <h4>🇺🇸 USA - Urbana-Champaign</h4>
             <ul>
             </ul>
         </div>
