@@ -189,7 +189,7 @@ This page serves as a structured map of my hobbies. Each section links to a dedi
     </div>
     <div class="hobby-log-grid">
         <div class="log-category">
-            <h4>Fantasy</h4>
+            <h4>🧙‍♂️ Fantasy</h4>
             <ul>
                 <li><a href="https://www.instagram.com/p/DNs84_93B_v/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" target="_blank">이세계에서 성자로 살아남기</a></li>
                 <li><a href="https://www.instagram.com/p/DNtX4TP3HtY/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" target="_blank">아카데미 실눈캐가 되었습니다</a></li>
@@ -199,11 +199,23 @@ This page serves as a structured map of my hobbies. Each section links to a dedi
             </ul>
         </div>
         <div class="log-category">
-            <h4>Modern Fantasy</h4>
+            <h4>🏙️ Modern Fantasy</h4>
             <ul>
                 <li><a href="https://www.instagram.com/p/DNtJAq73LhR/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" target="_blank">전능의 혀를 얻었다</a></li>
                 <li><a href="https://www.instagram.com/p/DNtJn_HXEwd/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" target="_blank">빌런의 프로파일러</a></li>
                 <li><a href="https://www.instagram.com/p/DNva3WuXJ5v/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" target="_blank">레벨업 하기 싫은 천마님</a></li>
+            </ul>
+        </div>
+        <div class="log-category">
+            <h4>⚽ Sports</h4>
+            <ul>
+                <li><a href="https://www.instagram.com/p/DNv3TTC3Is_/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" target="_blank">필드의 고인물</a></li>
+            </ul>
+        </div>
+        <div class="log-category">
+            <h4>🏔️ Wuxia</h4>
+            <ul>
+                <li><a href="https://www.instagram.com/p/DNv20niXKeC/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" target="_blank">안심하세요, 평범한 산적입니다</a></li>
             </ul>
         </div>
     </div>
