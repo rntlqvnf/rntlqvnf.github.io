@@ -126,18 +126,20 @@ This page serves as a structured map of my hobbies. Each section links to a dedi
 <div class="hobby-section">
     <div class="hobby-header">
         <h2>🍳 Culinary</h2>
-        <a href="INSTAGRAM_CULINARY_URL" class="insta-account" target="_blank">View Account ↗</a>
+        <a href="https://www.instagram.com/culinary_hajae/" class="insta-account" target="_blank">View Account ↗</a>
     </div>
     <div class="hobby-log-grid">
         <div class="log-category">
-            <h4>Korean Dishes</h4>
+            <h4>American Dishes</h4>
             <ul>
-                </ul>
+                <li><a href="https://www.instagram.com/p/DNuXfbHWuDY/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" target="_blank">에그 베네딕트</a></li>
+            </ul>
         </div>
         <div class="log-category">
-            <h4>Italian Dishes</h4>
+            <h4>Gordon Ramsay</h4>
             <ul>
-                </ul>
+                <li><a href="https://www.instagram.com/p/DNuXJq0Wt9F/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" target="_blank">궁극의 스테이크 샌드위치</a></li>
+            </ul>
         </div>
     </div>
 </div>
