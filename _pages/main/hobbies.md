@@ -99,10 +99,11 @@ This page serves as a structured map of my hobbies. Each section links to a dedi
                 </ul>
         </div>
         <div class="log-category">
-            <h4>🇯🇵 JAPAN - Tokyo - Shibuya</h4>
+            <h4>🇨🇳 CHINA - Guandong - Guangzhou</h4>
             <ul>
-                <!-- <li><a href="INSTAGRAM_POST_URL_HERE" target="_blank">Restaurant Name B - Unforgettable ramen</a></li> -->
-                </ul>
+                <li><a href="https://www.instagram.com/p/DNuULySWGiQ/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" target="_blank"> Guangzhou Restaurant
+                <span class="link-desc">Fantastic Dimsum</span></a></li>
+            </ul>
         </div>
         <div class="log-category">
             <h4>🇺🇸 USA - New York - Manhattan</h4>
@@ -191,6 +192,7 @@ This page serves as a structured map of my hobbies. Each section links to a dedi
                 <li><a href="https://www.instagram.com/p/DNs84_93B_v/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" target="_blank">이세계에서 성자로 살아남기</a></li>
                 <li><a href="https://www.instagram.com/p/DNtX4TP3HtY/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" target="_blank">아카데미 실눈캐가 되었습니다</a></li>
                 <li><a href="https://www.instagram.com/p/DNtvh4p3N5f/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" target="_blank">악당은 살고 싶다</a></li>
+                <li><a href="https://www.instagram.com/p/DNuLbfq3LoU/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" target="_blank">드래곤을 유괴하다</a></li>
             </ul>
         </div>
         <div class="log-category">
