@@ -62,6 +62,14 @@
   margin-top: 2rem;
 }
 
+@media (max-width: 480px) {
+  .kb-post-grid {
+    /* On mobile, force a single-column layout */
+    grid-template-columns: 1fr;
+    gap: 1rem; /* Optionally reduce the gap on mobile */
+  }
+}
+
 .kb-post-card {
   background-color: #fff;
   border-radius: 20px;

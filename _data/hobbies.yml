@@ -10,7 +10,7 @@ taste:
   title: "Taste"
   emoji: "🍽️"
   excerpt: "From fine dining tables to my own kitchen, a curated log of my epicurean journey."
-  instagram_url: "https://www.instagram.com/gastronomy_hajae/"
+  instagram_url: "https://www.instagram.com/taste_hajae/"
   sub_topics:
     - topic_title: "Gastronomy"
       topic_id: "gastronomy"
@@ -59,11 +59,11 @@ taste:
               url: "https://www.instagram.com/p/DNuXJq0Wt9F/"
               title: "The Ultimate Steak Sandwich"
               tags: [steak, sandwich, gordon ramsay]
-            # - type: blog
-            #   url: "/posts/perfect-steak-philosophy/"
-            #   title: "The Philosophy of a Perfect Steak"
-            #   excerpt: "A deep dive into searing techniques, resting times, and the science of the Maillard reaction for the ultimate steak."
-            #   tags: [steak, technique, cooking, ramsay]
+            - type: blog
+              url: "/posts/perfect-steak-philosophy/"
+              title: "The Philosophy of a Perfect Steak"
+              excerpt: "A deep dive into searing techniques, resting times, and the science of the Maillard reaction for the ultimate steak."
+              tags: [steak, technique, cooking, ramsay]
 
 # ----------------------------------------------------
 # 2. ATHLETICS
@@ -90,13 +90,13 @@ athletics:
           logs: []
 
 # ----------------------------------------------------
-# 3. NARRATIVE ARTS
+# 3. STORIES
 # ----------------------------------------------------
-narrative_arts:
-  title: "Narrative Arts"
+stories:
+  title: "Stories"
   emoji: "📚"
   excerpt: "An archive of captivating stories found in novels, manga, and manhwa."
-  instagram_url: "https://www.instagram.com/narrative_arts_hajae/"
+  instagram_url: "https://www.instagram.com/stories_hajae/"
   sub_topics:
     - topic_title: "Novels"
       topic_id: "novels"
