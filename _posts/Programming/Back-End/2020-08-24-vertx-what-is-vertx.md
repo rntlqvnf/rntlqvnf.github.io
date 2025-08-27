@@ -1,13 +1,14 @@
 ---
 title: "&#91;Vert.x&#93; Vert.x 란 무엇일까?"
+layout: kb-post
 categories:
   - Programming
 tags:
-  - vertx
-  - java
-  - back end
+  - VertX
+  - BackEnd
 toc: true
 toc_sticky: true
+type: profession
 ---
 
 ![Vertx 로고][1]

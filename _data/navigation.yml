@@ -9,16 +9,3 @@ main:
 index:
 
 docs:
-  - title: About
-    children:
-      - title: "CV"
-        url: /research/cv/
-
-  - title: Lecture Notes
-    children:
-      - title: "알고리즘"
-        url: /tags/csed331/
-      - title: "운영체제"
-        url: /tags/csed312/
-      - title: "인공지능"
-        url: /tags/csed442/

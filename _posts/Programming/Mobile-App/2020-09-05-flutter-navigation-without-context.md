@@ -1,13 +1,13 @@
 ---
 title: "&#91;Flutter&#93; Context 없이 Navigation 구현하기"
+layout: kb-post
 categories:
   - Programming
 tags:
-  - flutter
-  - dart
-  - mobile app
+  - Flutter
 toc: true
 toc_sticky: true
+type: profession
 ---
 
 Flutter 글은 처음 작성해본다.

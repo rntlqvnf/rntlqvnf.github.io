@@ -1,14 +1,14 @@
 ---
 title: "&#91;Vert.x&#93; RESTful API (3) - DB 연결"
+layout: kb-post
 categories:
   - Programming
 tags:
-  - vertx
-  - java
-  - restful
-  - back end
+  - VertX
+  - BackEnd
 toc: true
 toc_sticky: true
+type: profession
 ---
 
 ![Vertx 로고][I_1]
