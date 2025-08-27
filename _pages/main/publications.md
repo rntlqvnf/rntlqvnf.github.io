@@ -126,7 +126,7 @@ layout: full-width
       Kyoungmin Kim, <strong>Jaehyun Ha</strong>, George Fletcher, Wook-Shin Han
     </p>
     <div class="pub-highlight">
-      First Korean recipient of the PODS Best Paper Award!
+      First Korean recipient of the PODS Paper!
     </div>
   </div>
 
