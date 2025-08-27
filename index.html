@@ -1,6 +1,164 @@
 ---
-layout: home
-author_profile: true
-sidebar:
-    nav: "index"
+layout: full-width
+permalink: /
+hidden: true
+classes: "page--homepage"
+
+hero_title: "느리지만 확실한 목표 달성을 위한 유연한 꾸준함"
+hero_excerpt: "Life is a search problem—a challenge to devise and execute a strategy toward a self-defined goal. 
+For this problem, there is no single 'optimal' strategy. 
+As someone without talent, my strategy is to carefully choose the best possible path forward, making progress that is not fast, but the most certain."
 ---
+
+<div class="section-stripe" id="home">
+  <div class="section-content text-section">
+    <h1 class="hero-title-text">{{ page.hero_title }}</h1>
+    <p class="hero-excerpt-text">{{ page.hero_excerpt }}</p>
+    
+    <div class="gateway-grid">
+      <a href="/about/" class="gateway-card">
+        <i class="fas fa-user"></i>
+        <span>About</span>
+      </a>
+      <a href="/goals/" class="gateway-card">
+        <i class="fas fa-bullseye"></i>
+        <span>Goals</span>
+      </a>
+      <a href="/contact/" class="gateway-card">
+        <i class="fas fa-envelope"></i>
+        <span>Contact</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<div class="section-stripe stripe-alt-bg" id="research">
+  <div class="section-content">
+    <h2 class="section-title">Research Career</h2>
+    <div class="research-grid">
+      
+      <a href="/assets/jhha_cv.pdf" class="research-card main-card cv-card-dark">
+        <h3 class="card-title">Curriculum Vitae</h3>
+        <p class="card-desc">A detailed record of my academic and professional journey.</p>
+      </a>
+
+      <div class="sub-card-stack">
+
+        <a href="/publications/" class="research-card sub-card">
+          <h4 class="sub-card-title">Publications</h4>
+          <i class="fas fa-arrow-right"></i>
+        </a>
+
+        <a href="/" class="research-card sub-card">
+          <h4 class="sub-card-title">Research Interests</h4>
+          <i class="fas fa-arrow-right"></i>
+        </a>
+        
+        <a href="/" class="research-card sub-card">
+          <h4 class="sub-card-title">Latest News</h4>
+          <i class="fas fa-arrow-right"></i>
+        </a>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section-stripe" id="hobbies">
+  <div class="section-content">
+    <h2 class="section-title">Hobbies</h2>
+    
+    <div class="carousel-wrapper">
+      <div class="hobby-carousel-container">
+
+        <a href="/hobbies/#taste" class="hobby-card-vertical" 
+        style="background-image: url('/assets/home/swing.jpeg');">
+        <div class="card-content-overlay">
+            <span class="card-main-topic">Taste</span>
+            <h3 class="card-sub-topic">Gastronomy</h3>
+        </div>
+        </a>
+
+
+        <a href="/hobbies/#taste" class="hobby-card-vertical" 
+        style="background-image: url('/assets/home/egg.jpeg');">
+        <div class="card-content-overlay">
+            <span class="card-main-topic">Taste</span>
+            <h3 class="card-sub-topic">Culinary</h3>
+        </div>
+        </a>
+
+        <a href="/hobbies/#fitness" class="hobby-card-vertical" 
+        style="background-image: url('/assets/home/hammer.jpeg');">
+        <div class="card-content-overlay">
+            <span class="card-main-topic">Fitness</span>
+            <h3 class="card-sub-topic">Bodybuilding</h3>
+        </div>
+        </a>
+
+        <a href="/hobbies/#fitness" class="hobby-card-vertical" 
+        style="background-image: url('/assets/images/fitness-bg.jpg');">
+        <div class="card-content-overlay">
+            <span class="card-main-topic">Fitness</span>
+            <h3 class="card-sub-topic">Badminton</h3>
+        </div>
+        </a>
+
+        <a href="/hobbies/#stories" class="hobby-card-vertical" 
+        style="background-image: url('/assets/home/재벌집막내아들.jpg');">
+        <div class="card-content-overlay">
+            <span class="card-main-topic">Stories</span>
+            <h3 class="card-sub-topic">Novels</h3>
+        </div>
+        </a>
+
+        <a href="/hobbies/#stories" class="hobby-card-vertical" 
+        style="background-image: url('/assets/home/comics.jpg');">
+        <div class="card-content-overlay">
+            <span class="card-main-topic">Stories</span>
+            <h3 class="card-sub-topic">Comics</h3>
+        </div>
+        </a>
+
+        <a href="/hobbies/#assets" class="hobby-card-vertical"
+        style="background-image: url('/assets/home/real_estate.png');">
+        <div class="card-content-overlay">
+            <span class="card-main-topic">Assets</span>
+            <h3 class="card-sub-topic">Real Estate</h3>
+        </div>
+        </a>
+      
+    </div>
+
+        <div class="carousel-navigation">
+            <button class="carousel-btn prev-btn"><i class="fas fa-chevron-left"></i></button>
+            <button class="carousel-btn next-btn"><i class="fas fa-chevron-right"></i></button>
+        </div>
+  </div>
+</div>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Hobbies 섹션의 요소들을 선택합니다.
+  const carouselWrapper = document.querySelector('#hobbies .carousel-wrapper');
+  if (carouselWrapper) {
+    const container = carouselWrapper.querySelector('.hobby-carousel-container');
+    const prevBtn = carouselWrapper.querySelector('.prev-btn');
+    const nextBtn = carouselWrapper.querySelector('.next-btn');
+
+    // 다음 버튼 클릭 시
+    nextBtn.addEventListener('click', () => {
+      // 한 번에 스크롤할 거리를 계산 (카드 하나 너비 + 카드 사이 간격)
+      const scrollAmount = container.querySelector('.hobby-card-vertical').offsetWidth + 24; // 24px는 gap: 1.5rem
+      container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+    });
+
+    // 이전 버튼 클릭 시
+    prevBtn.addEventListener('click', () => {
+      const scrollAmount = container.querySelector('.hobby-card-vertical').offsetWidth + 24;
+      container.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+    });
+  }
+});
+</script>

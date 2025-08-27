@@ -1,0 +1,256 @@
+/* ==========================================================================
+   Homepage Styles - Final Polished Version
+   ========================================================================== */
+
+/* --- Page Setup --- */
+html { scroll-snap-type: y mandatory; }
+body.page--homepage .initial-content,
+body.page--homepage #main {
+  max-width: none;
+  padding: 0;
+}
+
+/* --- Section Base Styles --- */
+.section-stripe {
+  min-height: 100vh;
+  width: 100%;
+  padding: 5rem 2rem;
+  scroll-snap-align: start;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.stripe-alt-bg { background-color: #f5f5f7; }
+.section-content { width: 100%; max-width: 1280px; }
+.section-title {
+  font-size: 3em;
+  font-weight: 700;
+  text-align: center;
+  margin-top: 0; /* 테마의 기본 위쪽 여백을 제거합니다. */
+  margin-bottom: 2rem; /* 아래쪽 여백을 다시 살짝 늘려 균형을 맞춥니다. */
+}
+
+/* --- Section 1: Manifesto & Gateway --- */
+.text-section {
+  text-align: center;
+  max-width: 950px;
+}
+.hero-title-text {
+  font-size: 2.8em;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+.hero-excerpt-text {
+  font-size: 1.2em;
+  line-height: 1.7;
+  margin: 1.5rem 0 3.5rem;
+  color: #555;
+}
+.gateway-grid {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+.gateway-card {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 0.8rem 1.5rem;
+  background-color: #f5f5f7;
+  border-radius: 99px; /* Pill shape */
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  transition: background-color 0.2s ease;
+  i { font-size: 1.2em; }
+  &:hover { background-color: #e0e0e0; }
+}
+
+/* --- Section 2: Research & Career --- */
+.research-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+  /* align-items: stretch; is the default, which matches heights */
+}
+
+/* 왼쪽의 큰 카드 (CV) */
+.main-card {
+  border-radius: 20px;
+  padding: 2.5rem;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* 요청하신 대로 하단 정렬 유지 */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+  }
+
+  .card-title { font-size: 2.5em; font-weight: 700; margin-bottom: 0.5rem; }
+  .card-desc { font-size: 1.2em; }
+}
+
+/* CV 카드 특별 디자인 */
+.main-card.cv-card-dark {
+  background-color: #000;
+  color: #fff;
+  .card-title, .card-desc { color: #fff; }
+  .card-desc { opacity: 0.8; }
+}
+
+/* 오른쪽 작은 카드들을 감싸는 컨테이너 */
+.sub-card-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* 오른쪽 작은 카드들 */
+.sub-card {
+  border-radius: 20px;
+  padding: 2rem 1.5rem;
+  text-decoration: none;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  
+  .sub-card-title {
+    font-size: 1.3em;
+    font-weight: 700;
+    color: #1d1d1f;
+    margin: 0;
+  }
+
+  i { /* Arrow Icon */
+    font-size: 1.3em;
+    opacity: 0;
+    transform: translateX(-10px);
+    transition: opacity 0.2s ease, transform 0.2s ease;
+  }
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    i {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 900px) {
+  .research-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* --- Section 3: Hobbies (New Carousel Style) --- */
+
+/* carousel-wrapper를 flexbox로 만들고 정렬 기준을 변경합니다. */
+.carousel-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; /* 핵심: 자식 요소들을 오른쪽으로 정렬 */
+}
+
+.hobby-carousel-container {
+  width: 100%; /* 부모 너비를 꽉 채우도록 설정 */
+  display: flex;
+  gap: 1.5rem;
+  overflow-x: auto;
+  padding: 1rem 0 1rem;
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: x mandatory;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.hobby-carousel-container::-webkit-scrollbar {
+  display: none;
+}
+
+/* 화살표 버튼들의 컨테이너 */
+.carousel-navigation {
+  display: flex;
+  /* justify-content: flex-end; -> 이 속성은 이제 부모가 처리하므로 제거 */
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+  /* padding-right: 1rem; -> 불필요하므로 제거 */
+}
+
+/* 새롭게 정의된 버튼 스타일 */
+.carousel-btn {
+  /* position, top, transform, left, right 속성은 모두 제거합니다. */
+  background-color: #f0f0f5;
+  border: none;
+  border-radius: 50%;
+  width: 40px; /* 크기를 살짝 줄여서 조화롭게 */
+  height: 40px;
+  font-size: 1rem;
+  color: #555;
+  cursor: pointer;
+  display: flex; /* 아이콘 중앙 정렬 */
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.carousel-btn:hover {
+  background-color: #e0e0e5;
+  color: #111;
+}
+
+.hobby-card-vertical {
+  /* ... 기존 스타일 유지 ... */
+  flex-shrink: 0;
+  width: 300px;
+  height: 450px;
+  border-radius: 20px;
+  text-decoration: none;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.hobby-card-vertical:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.hobby-card-vertical .card-content-overlay {
+  /* ... 기존 스타일 유지 ... */
+  align-self: flex-end;
+  width: 100%;
+  padding: 1.5rem;
+  box-sizing: border-box;
+  color: #fff;
+  background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%);
+}
+
+/* 작게 표시될 대주제 (예: Taste) */
+.hobby-card-vertical .card-main-topic {
+  font-size: 0.9em;
+  font-weight: 600;
+  color: #fff;
+  opacity: 0.8; /* 살짝 투명하게 하여 부가 정보임을 나타냄 */
+  display: block;
+}
+
+/* 크게 표시될 소주제 (예: Gastronomy) */
+.hobby-card-vertical .card-sub-topic {
+  font-size: 2.2em;
+  font-weight: 700;
+  color: #fff;
+  margin: 0.2rem 0 0; /* 대주제와의 상단 여백 */
+  line-height: 1.2;
+}

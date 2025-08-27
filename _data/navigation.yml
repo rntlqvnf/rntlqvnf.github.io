@@ -1,15 +1,10 @@
-# main links
 main:
-  - title: "About"
-    url: /about/
-  - title: "Publications"
-    url: /publications/
-  - title: "CV"
-    url: /assets/jhha_cv.pdf
+  - title: "Home"
+    url: /#home
+  - title: "Profession"
+    url: /#research
   - title: "Hobbies"
-    url: /hobbies/
-  - title: "Categories"
-    url: /categories/
+    url: /#hobbies
 
 index:
 
