@@ -1,0 +1,74 @@
+---
+layout: default
+---
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<div class="news-container">
+  <header class="news-header">
+    <h1>Latest News</h1>
+    <div class="news-search-wrapper">
+      <i class="fas fa-search"></i>
+      <input type="search" class="news-search-input" placeholder="Search in news (e.g., award, conference)...">
+    </div>
+  </header>
+
+  <div class="news-feed">
+    {% for item in site.data.news %}
+      {% capture search_terms %}{{ item.title }} {{ item.content }} {{ item.tags | join: ' ' }}{% endcapture %}
+      <div class="news-entry" data-search-terms="{{ search_terms | downcase }}">
+        <p class="news-date">{{ item.date | date: "%B %d, %Y" }}</p>
+        <h3 class="news-title">{{ item.title }}</h3>
+        <div class="news-content">
+          <p>{{ item.content }}</p>
+        </div>
+
+        {% if item.images %}
+          <div class="swiper news-slider-{{ forloop.index }}">
+            <div class="swiper-wrapper">
+              {% for image in item.images %}
+                <div class="swiper-slide">
+                  <img src="{{ image.url | relative_url }}" alt="{{ image.alt | default: 'News image' }}">
+                </div>
+              {% endfor %}
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
+        {% endif %}
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Initialize all Swiper sliders
+  const sliders = document.querySelectorAll('[class^="swiper news-slider-"]');
+  sliders.forEach(slider => {
+    new Swiper(slider, {
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      loop: true,
+    });
+  });
+
+  // Live Search Logic
+  const searchInput = document.querySelector('.news-search-input');
+  const newsEntries = document.querySelectorAll('.news-entry');
+  
+  searchInput.addEventListener('input', e => {
+    const searchTerm = e.target.value.toLowerCase();
+    newsEntries.forEach(entry => {
+      const searchData = entry.getAttribute('data-search-terms');
+      if (searchData.includes(searchTerm)) {
+        entry.style.display = 'block';
+      } else {
+        entry.style.display = 'none';
+      }
+    });
+  });
+});
+</script>

@@ -1,0 +1,22 @@
+- date: "2025-06-18"
+  title: "Visiting Researcher at UIUC"
+  content: "Beginning a 3-month research visit at the University of Illinois Urbana-Champaign."
+  tags: [uiuc, research, visit, academic trip]
+  images:
+    - url: "/assets/news/uiuc/3.jpeg"
+      alt: "UIUC Cloths"
+    - url: "/assets/news/uiuc/4.jpeg"
+      alt: "UIUC Card"
+    - url: "/assets/news/uiuc/2.jpeg"
+      alt: "UIUC Union"
+    - url: "/assets/news/uiuc/1.jpeg"
+      alt: "UIUC Gym"
+- date: "2022-03-01"
+  title: "Graduated First in Class, Dept. of Computer Science & Engineering"
+  content: "Honored to graduate as the top student (First in Class) for the Class of 2022 from the Department of Computer Science & Engineering at POSTECH."
+  tags: [graduation, postech, first in class, academics]
+  images:
+    - url: "/assets/news/graduate/specific.jpeg"
+      alt: "현판"
+    - url: "/assets/news/graduate/overall.jpeg"
+      alt: "근접샷"

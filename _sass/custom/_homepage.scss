@@ -50,7 +50,9 @@ body.page--homepage #main {
   display: flex;
   justify-content: center;
   gap: 1rem;
+  flex-wrap: wrap; /* Add this line */
 }
+
 .gateway-card {
   display: flex;
   align-items: center;
@@ -62,8 +64,14 @@ body.page--homepage #main {
   color: #333;
   font-weight: 600;
   transition: background-color 0.2s ease;
-  i { font-size: 1.2em; }
-  &:hover { background-color: #e0e0e0; }
+}
+
+.gateway-card i { 
+  font-size: 1.2em; 
+}
+
+.gateway-card:hover { 
+  background-color: #e0e0e0; 
 }
 
 /* --- Section 2: Research & Career --- */
