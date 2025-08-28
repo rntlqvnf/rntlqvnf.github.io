@@ -50,13 +50,13 @@ taste:
         - group_title: "American Dishes"
           logs:
             - type: insta
-              url: "https://www.instagram.com/p/DNuXfbHWuDY/"
+              url: "https://www.instagram.com/p/DN6KGuPkXZb/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
               title: "Eggs Benedict"
               tags: [american, brunch, eggs]
         - group_title: "Gordon Ramsay's Recipes"
           logs:
             - type: insta
-              url: "https://www.instagram.com/p/DNuXJq0Wt9F/"
+              url: "https://www.instagram.com/p/DN6KZSbkS6n/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
               title: "The Ultimate Steak Sandwich"
               tags: [steak, sandwich, gordon ramsay]
             # - type: blog
