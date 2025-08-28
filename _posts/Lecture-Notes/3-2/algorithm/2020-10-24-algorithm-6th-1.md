@@ -1,6 +1,6 @@
 ---
 title: "&#91;Algorithm&#93; Greedy Algorithm (3)"
-layout: kb-post
+layout: profession-post
 categories:
   - Lecture Notes
 tags:

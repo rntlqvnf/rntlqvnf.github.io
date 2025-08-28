@@ -10,7 +10,7 @@ layout: default
           <header class="post__header">
             {% if page.categories.size > 0 %}
               {% assign main_category = page.categories | first %}
-              <a href="/knowledge_base/#{{ main_category | slugify }}" class="post__category-link">
+              <a href="/profession-posts/#{{ main_category | slugify }}" class="post__category-link">
                 <span class="post__category">{{ main_category }}</span>
               </a>
             {% endif %}

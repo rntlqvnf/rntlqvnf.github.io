@@ -1,6 +1,6 @@
 ---
 title: "&#91;OS&#93; Process Scheduling"
-layout: kb-post
+layout: profession-post
 categories:
   - Lecture Notes
 tags:

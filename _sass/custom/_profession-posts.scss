@@ -55,7 +55,7 @@
   font-size: 1.8em; /* Subtitle styling */
 }
 
-.kb-post-grid {
+.profession-post-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   gap: 1.5rem;
@@ -63,14 +63,14 @@
 }
 
 @media (max-width: 480px) {
-  .kb-post-grid {
+  .profession-post-grid {
     /* On mobile, force a single-column layout */
     grid-template-columns: 1fr;
     gap: 1rem; /* Optionally reduce the gap on mobile */
   }
 }
 
-.kb-post-card {
+.profession-post-card {
   background-color: #fff;
   border-radius: 20px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.05);
@@ -78,12 +78,12 @@
   height: 100%; /* Ensure cards in a row have same height */
 }
 
-.kb-post-card:hover {
+.profession-post-card:hover {
   transform: translateY(-8px);
   box-shadow: 0 8px 25px rgba(0,0,0,0.12);
 }
 
-.kb-post-card a {
+.profession-post-card a {
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -92,20 +92,20 @@
   color: #1d1d1f;
 }
 
-.kb-post-card .title {
+.profession-post-card .title {
   font-size: 1.5em;
   font-weight: 700;
   margin: 0 0 0.5rem 0;
 }
 
-.kb-post-card .excerpt {
+.profession-post-card .excerpt {
   color: #555;
   line-height: 1.6;
   margin-bottom: 1.5rem;
   flex-grow: 1; /* Pushes the date to the bottom */
 }
 
-.kb-post-card .date {
+.profession-post-card .date {
   font-size: 0.9em;
   color: #888;
   margin-top: auto; /* Aligns to the bottom */

@@ -8,7 +8,7 @@
       <span class="taxonomy-label">Categories</span>
       <div class="taxonomy-pills">
         {% for category in page.categories %}
-          <a href="/knowledge_base/#{{ category | slugify }}" class="taxonomy-pill">{{ category }}</a>
+          <a href="/profession-posts/#{{ category | slugify }}" class="taxonomy-pill">{{ category }}</a>
         {% endfor %}
       </div>
     </div>
@@ -19,7 +19,7 @@
       <span class="taxonomy-label">Tags</span>
       <div class="taxonomy-pills">
         {% for tag in page.tags %}
-          <a href="/knowledge_base/?tag={{ tag | slugify }}" class="taxonomy-pill">{{ tag }}</a>
+          <a href="/profession-posts/?tag={{ tag | slugify }}" class="taxonomy-pill">{{ tag }}</a>
         {% endfor %}
       </div>
     </div>

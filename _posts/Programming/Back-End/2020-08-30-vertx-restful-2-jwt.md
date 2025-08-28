@@ -1,6 +1,6 @@
 ---
 title: "&#91;Vert.x&#93; RESTful API (2) - JWT로 AuthN 구현"
-layout: kb-post
+layout: profession-post
 categories:
   - Programming
 tags:

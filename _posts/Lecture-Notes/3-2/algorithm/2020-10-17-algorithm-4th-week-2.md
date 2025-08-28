@@ -1,6 +1,6 @@
 ---
 title: "&#91;Algorithm&#93; Graph (3)"
-layout: kb-post
+layout: profession-post
 categories:
   - Lecture Notes
 tags:

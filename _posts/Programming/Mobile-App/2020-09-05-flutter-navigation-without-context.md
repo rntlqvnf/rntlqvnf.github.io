@@ -1,6 +1,6 @@
 ---
 title: "&#91;Flutter&#93; Context 없이 Navigation 구현하기"
-layout: kb-post
+layout: profession-post
 categories:
   - Programming
 tags:

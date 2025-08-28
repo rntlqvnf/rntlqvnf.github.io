@@ -1,6 +1,6 @@
 ---
 title: "&#91;OS&#93; File System Implementation (1)"
-layout: kb-post
+layout: profession-post
 categories:
   - Lecture Notes
 tags:
