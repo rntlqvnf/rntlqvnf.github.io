@@ -21,6 +21,10 @@ layout: default
           <section class="page__content" itemprop="text">
             {{ content }}
           </section>
+
+          {% if site.comments.provider and page.comments %}
+            {% include comments.html %}
+          {% endif %}
         </div>
 
         {% if page.toc %}
@@ -32,12 +36,10 @@ layout: default
           </aside>
         {% endif %}
       </div>
-      
+
       <footer class="page__meta">
         {% include kb-page__taxonomy.html %}
       </footer>
-
-      {% include post_pagination.html %}
     </div>
   </article>
 </div>
