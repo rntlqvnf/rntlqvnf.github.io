@@ -206,4 +206,4 @@ Key 를 파일로 저장해서, 주기적으로 교체할 수 있도록 해야�
 [9]: https://blog.naver.com/PostView.nhn?blogId=baekmg1988&logNo=221454486746
 [10]: https://github.com/rntlqvnf/Vertx_Examples/tree/master/src/main/java/com/yshajae/vertx/example2
 
-[p1]: {% post_url Programming/Back-End/2020-08-29-vertx-restful-1-routing %}
+[p1]: {% post_url profession/Programming/Back-End/2020-08-29-vertx-restful-1-routing %}
