@@ -69,14 +69,14 @@ As someone without talent, my strategy is to carefully choose the best possible 
   </div>
 </div>
 
-<div class="section-stripe" id="hobbies">
+<div class="section-stripe" id="pursuits">
   <div class="section-content">
-    <h2 class="section-title">Hobbies</h2>
+    <h2 class="section-title">Pursuits</h2>
     
     <div class="carousel-wrapper">
       <div class="hobby-carousel-container">
 
-        <a href="/hobbies/taste" class="hobby-card-vertical" 
+        <a href="/pursuits/taste?tab=gastronomy" class="hobby-card-vertical" 
         style="background-image: url('/assets/home/swing.jpeg');">
         <div class="card-content-overlay">
             <span class="card-main-topic">Taste</span>
@@ -85,7 +85,7 @@ As someone without talent, my strategy is to carefully choose the best possible 
         </a>
 
 
-        <a href="/hobbies/taste" class="hobby-card-vertical" 
+        <a href="/pursuits/taste?tab=culinary" class="hobby-card-vertical" 
         style="background-image: url('/assets/home/egg.jpeg');">
         <div class="card-content-overlay">
             <span class="card-main-topic">Taste</span>
@@ -93,7 +93,7 @@ As someone without talent, my strategy is to carefully choose the best possible 
         </div>
         </a>
 
-        <a href="/hobbies/athletics" class="hobby-card-vertical" 
+        <a href="/pursuits/athletics?tab=bodybuilding" class="hobby-card-vertical" 
         style="background-image: url('/assets/home/hammer.jpeg');">
         <div class="card-content-overlay">
             <span class="card-main-topic">Athletics</span>
@@ -101,7 +101,7 @@ As someone without talent, my strategy is to carefully choose the best possible 
         </div>
         </a>
 
-        <a href="/hobbies/athletics" class="hobby-card-vertical" 
+        <a href="/pursuits/athletics?tab=badminton" class="hobby-card-vertical" 
         style="background-image: url('/assets/home/badminton.jpg');">
         <div class="card-content-overlay">
             <span class="card-main-topic">Athletics</span>
@@ -109,7 +109,7 @@ As someone without talent, my strategy is to carefully choose the best possible 
         </div>
         </a>
 
-        <a href="/hobbies/stories" class="hobby-card-vertical" 
+        <a href="/pursuits/stories?tab=novels" class="hobby-card-vertical" 
         style="background-image: url('/assets/home/jabel.jpg');">
         <div class="card-content-overlay">
             <span class="card-main-topic">Stories</span>
@@ -117,7 +117,7 @@ As someone without talent, my strategy is to carefully choose the best possible 
         </div>
         </a>
 
-        <a href="/hobbies/stories" class="hobby-card-vertical" 
+        <a href="/pursuits/stories?tab=comics" class="hobby-card-vertical" 
         style="background-image: url('/assets/home/comics.jpg');">
         <div class="card-content-overlay">
             <span class="card-main-topic">Stories</span>
@@ -125,11 +125,19 @@ As someone without talent, my strategy is to carefully choose the best possible 
         </div>
         </a>
 
-        <a href="/hobbies/investment" class="hobby-card-vertical"
-        style="background-image: url('/assets/home/real_estate.png');">
+        <a href="/pursuits/capital?tab=economics" class="hobby-card-vertical"
+        style="background-image: url('/assets/home/economics.png');">
         <div class="card-content-overlay">
-            <span class="card-main-topic">Investment</span>
-            <h3 class="card-sub-topic">Real Estate</h3>
+            <span class="card-main-topic">Capital</span>
+            <h3 class="card-sub-topic">Economics</h3>
+        </div>
+        </a>
+      
+        <a href="/pursuits/capital?tab=investment" class="hobby-card-vertical"
+        style="background-image: url('/assets/home/investment.png');">
+        <div class="card-content-overlay">
+            <span class="card-main-topic">Capital</span>
+            <h3 class="card-sub-topic">Investment</h3>
         </div>
         </a>
       
@@ -145,21 +153,17 @@ As someone without talent, my strategy is to carefully choose the best possible 
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-  // Hobbies 섹션의 요소들을 선택합니다.
-  const carouselWrapper = document.querySelector('#hobbies .carousel-wrapper');
+  const carouselWrapper = document.querySelector('#pursuits .carousel-wrapper');
   if (carouselWrapper) {
     const container = carouselWrapper.querySelector('.hobby-carousel-container');
     const prevBtn = carouselWrapper.querySelector('.prev-btn');
     const nextBtn = carouselWrapper.querySelector('.next-btn');
 
-    // 다음 버튼 클릭 시
     nextBtn.addEventListener('click', () => {
-      // 한 번에 스크롤할 거리를 계산 (카드 하나 너비 + 카드 사이 간격)
       const scrollAmount = container.querySelector('.hobby-card-vertical').offsetWidth + 24; // 24px는 gap: 1.5rem
       container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
     });
 
-    // 이전 버튼 클릭 시
     prevBtn.addEventListener('click', () => {
       const scrollAmount = container.querySelector('.hobby-card-vertical').offsetWidth + 24;
       container.scrollBy({ left: -scrollAmount, behavior: 'smooth' });

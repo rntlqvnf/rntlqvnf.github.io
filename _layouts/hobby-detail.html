@@ -1,15 +1,17 @@
 ---
 layout: default
 ---
-{% assign hobby = site.data.hobbies[page.hobby_key] %}
+{% assign hobby = site.data.pursuits[page.hobby_key] %}
 
 <div class="hobby-detail-page">
   <header class="hobby-hero">
     <h1 class="hobby-title">{{ hobby.emoji }} {{ hobby.title }}</h1>
     <p class="hobby-excerpt">{{ hobby.excerpt }}</p>
-    <a href="{{ hobby.instagram_url }}" class="insta-account-btn" target="_blank">
-      <i class="fab fa-instagram"></i> View on Instagram
-    </a>
+    {% if hobby.instagram_url %}
+      <a href="{{ hobby.instagram_url }}" class="insta-account-btn" target="_blank">
+        <i class="fab fa-instagram"></i> View on Instagram
+      </a>
+    {% endif %}
   </header>
 
   <div class="hobby-tabs">
@@ -48,15 +50,43 @@ layout: default
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-  // Tab Switching Logic
   const tabs = document.querySelectorAll('.tab-link');
   const tabContents = document.querySelectorAll('.tab-content');
+
+  // This function now reads URL Parameters instead of the hash
+  function activateTabFromURL() {
+    const params = new URLSearchParams(window.location.search);
+    const tabId = params.get('tab'); // Looks for '?tab=...'
+    if (!tabId) return;
+
+    const targetTab = document.querySelector(`.tab-link[data-target="${tabId}"]`);
+    const targetContent = document.getElementById(tabId);
+
+    if (targetTab && targetContent) {
+      // Deactivate the default first tab
+      tabs.forEach(t => t.classList.remove('active'));
+      tabContents.forEach(c => c.classList.remove('active'));
+
+      // Activate the target tab and content
+      targetTab.classList.add('active');
+      targetContent.classList.add('active');
+    }
+  }
   
+  // Run the function when the page loads
+  activateTabFromURL();
+
+  // Tab Switching Logic (when a tab is clicked)
   tabs.forEach(tab => {
     tab.addEventListener('click', () => {
       tabs.forEach(t => t.classList.remove('active'));
       tab.classList.add('active');
       const targetId = tab.getAttribute('data-target');
+      
+      // Also update the URL with the parameter when clicking
+      const newUrl = window.location.pathname + `?tab=${targetId}`;
+      history.pushState({}, '', newUrl);
+
       tabContents.forEach(content => {
         content.classList.remove('active');
         if (content.id === targetId) {
@@ -66,7 +96,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
-  // Live Search Logic
+  // Live Search Logic (no changes needed here)
   const searchInputs = document.querySelectorAll('.hobby-search-input');
   searchInputs.forEach(input => {
     input.addEventListener('input', e => {

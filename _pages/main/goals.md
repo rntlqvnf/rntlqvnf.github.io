@@ -108,7 +108,7 @@ layout: full-width
     </div>
 
     <div class="goal-card hobby-goal-card">
-      <p class="category">In Hobbies</p>
+      <p class="category">In Pursuits</p>
       <h3>The Top-Level Amateur</h3>
       <ul class="hobby-list">
         <li class="hobby-item">Gastronomy</li>

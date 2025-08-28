@@ -3,8 +3,8 @@ main:
     url: /#home
   - title: "Profession"
     url: /#research
-  - title: "Hobbies"
-    url: /#hobbies
+  - title: "Pursuits"
+    url: /#pursuits
 
 index:
 

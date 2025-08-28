@@ -101,7 +101,7 @@ layout: full-width
       <div class="icon"><i class="fab fa-instagram"></i></div>
       <h3>Instagram DM</h3>
       <p class="description">
-        For casual conversations, or questions about my personal posts and hobbies.
+        For casual conversations, or questions about my personal posts and pursuits.
       </p>
       <div class="address">@daily_hajae</div>
     </a>

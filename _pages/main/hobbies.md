@@ -1,5 +1,5 @@
 ---
-permalink: /hobbies/
+permalink: /pursuits/
 title: "Hobby Logs"
 last_modified_at: 2025-08-22T00:00:00-00:00
 toc: false
@@ -84,7 +84,7 @@ toc: false
     }
 </style>
 
-This page serves as a structured map of my hobbies. Each section links to a dedicated Instagram account for the full visual diary, followed by curated links to specific milestones and favorite moments.
+This page serves as a structured map of my pursuits. Each section links to a dedicated Instagram account for the full visual diary, followed by curated links to specific milestones and favorite moments.
 
 <div class="hobby-section">
     <div class="hobby-header">

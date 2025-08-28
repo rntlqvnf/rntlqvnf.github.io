@@ -1,6 +1,6 @@
 ---
 title: "취미 생활"
-permalink: /categories/hobbies/
+permalink: /categories/pursuits/
 taxonomy: 일상
 author_profile: false
 sidebar:

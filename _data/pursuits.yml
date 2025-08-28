@@ -1,0 +1,185 @@
+# ==========================================================================
+# HOBBIES DATA FILE
+# Structure: Main Topic -> Sub-Topics -> Groups -> Logs
+# ==========================================================================
+
+# ----------------------------------------------------
+# 1. TASTE
+# ----------------------------------------------------
+taste:
+  title: "Taste"
+  emoji: "🍽️"
+  excerpt: "From fine dining tables to my own kitchen, a curated log of my epicurean journey."
+  instagram_url: "https://www.instagram.com/taste_hajae/"
+  sub_topics:
+    - topic_title: "Gastronomy"
+      topic_id: "gastronomy"
+      groups:
+        - group_title: "🇺🇸 USA - New York"
+          logs:
+            - type: insta
+              url: "https://www.instagram.com/p/DNpfcYtN4Jc/"
+              title: "Mountain House"
+              description: "Great Sichuan Cuisine"
+              tags: [sichuan, newyork, american]
+            - type: insta
+              url: "https://www.instagram.com/p/DNpeDjnt_Ze/"
+              title: "JUA"
+              description: "Michelin ⭐ Korean Dining"
+              tags: [korean, michelin, newyork]
+            - type: insta
+              url: "https://www.instagram.com/p/DNqJGsAt7Xl/"
+              title: "Nami Nori"
+              description: "Modern Japanese Cuisine"
+              tags: [japanese, temaki, newyork]
+        - group_title: "🇨🇳 CHINA - Guangzhou"
+          logs:
+            - type: insta
+              url: "https://www.instagram.com/p/DNuULySWGiQ/"
+              title: Guangzhou Restaurant
+              description: "Fantastic Dimsum"
+              tags: [dimsum, chinese, guangzhou]
+        - group_title: "🇰🇷 KOREA - Pohang"
+          logs: [] # Add logs here later
+        - group_title: "🇺🇸 USA - Urbana-Champaign"
+          logs: [] # Add logs here later
+
+    - topic_title: "Culinary"
+      topic_id: "culinary"
+      groups:
+        - group_title: "American Dishes"
+          logs:
+            - type: insta
+              url: "https://www.instagram.com/p/DNuXfbHWuDY/"
+              title: "Eggs Benedict"
+              tags: [american, brunch, eggs]
+        - group_title: "Gordon Ramsay's Recipes"
+          logs:
+            - type: insta
+              url: "https://www.instagram.com/p/DNuXJq0Wt9F/"
+              title: "The Ultimate Steak Sandwich"
+              tags: [steak, sandwich, gordon ramsay]
+            # - type: blog
+            #   url: "/posts/perfect-steak-philosophy/"
+            #   title: "The Philosophy of a Perfect Steak"
+            #   excerpt: "A deep dive into searing techniques, resting times, and the science of the Maillard reaction for the ultimate steak."
+            #   tags: [steak, technique, cooking, ramsay]
+
+# ----------------------------------------------------
+# 2. ATHLETICS
+# ----------------------------------------------------
+athletics:
+  title: "Athletics"
+  emoji: "🏸" # Changed emoji to be more representative
+  excerpt: "A journey of building a strong and athletic body through disciplined training and competitive sports."
+  instagram_url: "INSTAGRAM_ATHLETICS_URL_HERE"
+  sub_topics:
+    - topic_title: "Bodybuilding"
+      topic_id: "bodybuilding"
+      groups:
+        - group_title: "Major Lifts (PRs)"
+          logs: []
+        - group_title: "Physique Updates"
+          logs: []
+    - topic_title: "Badminton"
+      topic_id: "badminton"
+      groups:
+        - group_title: "Tournament Records"
+          logs: []
+        - group_title: "Memorable Rallies"
+          logs: []
+
+# ----------------------------------------------------
+# 3. STORIES
+# ----------------------------------------------------
+stories:
+  title: "Stories"
+  emoji: "📚"
+  excerpt: "An archive of captivating stories found in novels, manga, and manhwa."
+  instagram_url: "https://www.instagram.com/stories_hajae/"
+  sub_topics:
+    - topic_title: "Novels"
+      topic_id: "novels"
+      groups:
+        - group_title: "🧙‍♂️ 판타지"
+          logs:
+            - type: insta
+              url: "https://www.instagram.com/p/DNs84_93B_v/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+              title: "이세계에서 성자로 살아남기"
+              tags: [판타지, 이세계]
+            - type: insta
+              url: "https://www.instagram.com/p/DNtX4TP3HtY/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+              title: "아카데미 실눈캐가 되었습니다"
+              tags: [판타지, 아카데미]
+            - type: insta
+              url: "https://www.instagram.com/p/DNtvh4p3N5f/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+              title: "악당은 살고 싶다"
+              tags: [판타지, 아카데미]
+            - type: insta
+              url: "https://www.instagram.com/p/DNuLbfq3LoU/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+              title: "드래곤을 유괴하다"
+              tags: [판타지, 드래곤]
+            - type: insta
+              url: "https://www.instagram.com/p/DNvaXI73N8f/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+              title: "망나니 1왕자가 되었다"
+              tags: [판타지, 망나니, 무훈시]
+        - group_title: "🏙️ 현대판타지"
+          logs:
+            - type: insta
+              url: "https://www.instagram.com/p/DNtJAq73LhR/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+              title: "전능의 혀를 얻었다"
+              tags: [현대판타지, 요리, 파인다이닝]
+            - type: insta
+              url: "https://www.instagram.com/p/DNtJn_HXEwd/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+              title: "빌런의 프로파일러"
+              tags: [현대판타지, 빌런, 심리학]
+            - type: insta
+              url: "https://www.instagram.com/p/DNva3WuXJ5v/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+              title: "레벨업 하기 싫은 천마님"
+              tags: [현대판타지, 아카데미, 천마]
+        - group_title: "⚽ 스포츠"
+          logs:
+            - type: insta
+              url: "https://www.instagram.com/p/DNv3TTC3Is_/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+              title: "필드의 고인물"
+              tags: [스포츠, 이블라인, 축구]
+        - group_title: "🏔️ 무협"
+          logs:
+            - type: insta
+              url: "https://www.instagram.com/p/DNv20niXKeC/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+              title: "안심하세요, 평범한 산적입니다"
+              tags: [무협, 또라이, 산적]
+    - topic_title: "Comics"
+      topic_id: "comics"
+      groups:
+        - group_title: "Manga"
+          logs: []
+        - group_title: "Manwha"
+          logs: []
+
+# ----------------------------------------------------
+# 4. CAPITAL
+# ----------------------------------------------------
+
+capital:
+  title: "Capital"
+  emoji: "💰"
+  excerpt: "In a world of constant flux, I focus on the long game. This is a record of building resilient wealth through a disciplined, low-risk approach, connecting economic theory with real-world practice."
+  sub_topics:
+    - topic_title: "Economics"
+      topic_id: "economics"
+      groups:
+        - group_title: "Reading List"
+          logs: [] 
+        - group_title: "Policy & Global Affairs"
+          logs: []
+          
+    - topic_title: "Investment"
+      topic_id: "investment"
+      groups:
+        - group_title: "Stock"
+          logs: [] 
+        - group_title: "Real Estate"
+          logs: []
+        - group_title: "Venture"
+          logs: []
