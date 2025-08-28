@@ -69,14 +69,18 @@ layout: full-width
   margin-top: 1.5rem;
   display: flex;
   flex-wrap: wrap;
-  gap: 0.8rem;
+  gap: 0.5rem;
 }
 .hobby-item {
   background-color: #f5f5f7;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 0.5rem;
   border-radius: 8px;
   font-size: 1.1em;
   font-weight: 600;
+  text-align: center;
+  box-sizing: border-box;
+  margin-bottom: 0rem;
+  flex-basis: calc(50% - 0.4rem)
 }
 
 /* --- Responsive Adjustments --- */
