@@ -6,7 +6,8 @@ categories:
 tags:
   - Career
   - AI
-toc: false
+toc: true
+toc_sticky: true
 type: profession
 ---
 
