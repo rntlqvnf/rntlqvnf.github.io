@@ -111,12 +111,10 @@ layout: full-width
       <p class="category">In Pursuits</p>
       <h3>The Top-Level Amateur</h3>
       <ul class="hobby-list">
-        <li class="hobby-item">Gastronomy</li>
-        <li class="hobby-item">Culinary</li>
-        <li class="hobby-item">Bodybuilding</li>
-        <li class="hobby-item">Badminton</li>
-        <li class="hobby-item">Novels</li>
-        <li class="hobby-item">Investment</li>
+        <li class="hobby-item">Taste</li>
+        <li class="hobby-item">Athletics</li>
+        <li class="hobby-item">Stories</li>
+        <li class="hobby-item">Capital</li>
       </ul>
     </div>
 
