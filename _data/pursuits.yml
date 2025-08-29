@@ -20,9 +20,8 @@ taste:
             logs:
               - type: blog
                 url: "gastronomy/taste-as-cs/"
-                title: "Culinary Philosophy"
-                excerpt: "Exploring the art and science of cooking, from ingredient selection to plating techniques."
-                tags: [philosophy, culinary, cooking]
+                title: "컴퓨터공학자는 미식을 어떻게 이해하는가?"
+                tags: [philosophy, taste, AI]
       moments:
         - groups:
           - group_title: "🇺🇸 USA - New York"
