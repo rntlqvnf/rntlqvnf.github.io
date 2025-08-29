@@ -22,28 +22,57 @@ layout: default
 
   {% for sub_topic in hobby.sub_topics %}
     <div id="{{ sub_topic.topic_id }}" class="tab-content {% if forloop.first %}active{% endif %}">
+
       <div class="hobby-search-wrapper">
         <i class="fas fa-search"></i>
         <input type="search" class="hobby-search-input" placeholder="Search in {{ sub_topic.topic_title }}...">
       </div>
 
-      {% for group in sub_topic.groups %}
-        <section class="hobby-sub-group">
-          <h2 class="sub-group-title">{{ group.group_title }}</h2>
-          <div class="content-grid">
-            {% for log in group.logs %}
-              {% capture search_terms %}{{ log.title }} {{ log.description }} {{ log.excerpt }} {{ log.tags | join: ' ' }}{% endcapture %}
-              <div class="log-card" data-search-terms="{{ search_terms | downcase }}">
-                {% if log.type == 'insta' %}
-                  {% include hobby-insta-card.html url=log.url title=log.title description=log.description featured=log.featured %}
-                {% elsif log.type == 'blog' %}
-                  {% include hobby-blog-card.html url=log.url title=log.title excerpt=log.excerpt %}
-                {% endif %}
-              </div>
+      <div class="tab-content-wrapper">
+
+        {% if sub_topic.thoughts and sub_topic.thoughts[0].groups.size > 0 %}
+          <div class="hobby-section thoughts-section">
+            <h2 class="section-title">Thoughts</h2>
+            {% for group in sub_topic.thoughts[0].groups %}
+              <section class="hobby-sub-group">
+                <h3 class="sub-group-title">{{ group.group_title }}</h3>
+                <div class="content-grid">
+                  {% for log in group.logs %}
+                    {% capture search_terms %}{{ log.title }} {{ log.description }} {{ log.excerpt }} {{ log.tags | join: ' ' }}{% endcapture %}
+                    <div class="log-card" data-search-terms="{{ search_terms | downcase }}">
+                      {% include hobby-blog-card.html url=log.url title=log.title excerpt=log.excerpt %}
+                    </div>
+                  {% endfor %}
+                </div>
+              </section>
             {% endfor %}
           </div>
-        </section>
-      {% endfor %}
+        {% endif %}
+
+        {% if sub_topic.moments and sub_topic.moments[0].groups.size > 0 %}
+          <div class="hobby-section moments-section">
+            <div class="moments-header">
+              <h2 class="section-title">Moments</h2>
+            </div>
+            {% for group in sub_topic.moments[0].groups %}
+              <section class="hobby-sub-group">
+                <h3 class="sub-group-title">{{ group.group_title }}</h3>
+                <div class="content-grid">
+                  {% for log in group.logs %}
+                    {% capture search_terms %}{{ log.title }} {{ log.description }} {{ log.excerpt }} {{ log.tags | join: ' ' }}{% endcapture %}
+                    <div class="log-card" data-search-terms="{{ search_terms | downcase }}">
+                      {% if log.type == 'insta' %}
+                        {% include hobby-insta-card.html url=log.url title=log.title description=log.description featured=log.featured %}
+                      {% endif %}
+                    </div>
+                  {% endfor %}
+                </div>
+              </section>
+            {% endfor %}
+          </div>
+        {% endif %}
+      
+      </div>
     </div>
   {% endfor %}
 </div>

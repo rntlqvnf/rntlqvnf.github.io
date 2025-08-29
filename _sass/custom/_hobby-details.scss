@@ -1,62 +1,69 @@
-/* ==========================================================================
-   FINAL & DEFINITIVE STYLES FOR HOBBIES PAGE
-   ========================================================================== */
 
 /* --- Page Layout & Hero --- */
-.hobby-detail-page { max-width: 1280px; margin: 0 auto; padding: 4rem 1rem; }
-.hobby-hero { text-align: center; margin-bottom: 4rem; }
+.hobby-detail-page { max-width: 1280px; margin: 0 auto; padding: 0 1rem 4rem; }
+.hobby-hero { text-align: center; padding: 4rem 1rem; }
 .hobby-title { font-size: 3em; font-weight: 800; margin-bottom: 1rem; }
 .hobby-excerpt { font-size: 1.2em; color: #555; max-width: 800px; margin: 0 auto 2rem; }
 
-/* --- Tabs & Search (DEFINITIVE FIX) --- */
-.hobby-tabs {
-  display: flex;
-  border-bottom: 1px solid #ddd;
-  margin-bottom: 2rem;
-  /* Make the container scrollable on the x-axis */
-  overflow-x: auto;
-  /* Hide the scrollbar for a cleaner look */
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
-}
-.hobby-tabs::-webkit-scrollbar {
-  display: none; /* Chrome, Safari, and Opera */
-}
-.tab-link {
-  border: none;
-  background: none;
-  padding: 0.75rem 1.5rem;
-  font-size: 1.1em;
-  font-weight: 600;
-  color: #555;
-  cursor: pointer;
-  border-bottom: 3px solid transparent;
-  transition: all 0.2s ease;
-  /* Prevent tabs from shrinking or wrapping */
-  flex-shrink: 0;
-  white-space: nowrap;
-}
+/* --- Tabs --- */
+.hobby-tabs { display: flex; border-bottom: 1px solid #ddd; margin-bottom: 3rem; overflow-x: auto; -ms-overflow-style: none; scrollbar-width: none; }
+.hobby-tabs::-webkit-scrollbar { display: none; }
+.tab-link { border: none; background: none; padding: 0.75rem 1.5rem; font-size: 1.1em; font-weight: 600; color: #555; cursor: pointer; border-bottom: 3px solid transparent; transition: all 0.2s ease; flex-shrink: 0; white-space: nowrap; }
 .tab-link:hover { color: #111; }
 .tab-link.active { color: #0071e3; border-bottom-color: #0071e3; }
-
 .tab-content { display: none; }
 .tab-content.active { display: block; }
-.hobby-search-wrapper { position: relative; margin-bottom: 2rem; }
+
+/* --- Search Bar --- */
+.hobby-search-wrapper { position: relative; margin-bottom: 2.5rem; }
 .hobby-search-wrapper .fa-search { position: absolute; top: 50%; left: 1rem; transform: translateY(-50%); color: #aaa; }
-.hobby-search-input { width: 100%; padding: 0.8rem 1rem 0.8rem 3rem; font-size: 1em; border-radius: 12px; border: 1px solid #ddd; background-color: #f8f8fa; }
-
-/* --- Content Structure (DEFINITIVE FIX) --- */
-.hobby-sub-group { margin-top: 4rem; }
-.sub-group-title { font-size: 1.8em; font-weight: 700; margin-bottom: 2rem; border-bottom: 1px solid #eef0f2; padding-bottom: 1rem; }
-
-/* Default style for desktop and tablets */
-.content-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-  gap: 1.5rem;
-  align-items: stretch;
+.hobby-search-input {
+  width: 100%;
+  /* max-width: 400px; */ /* This line is now removed or commented out */
+  padding: 0.8rem 1rem 0.8rem 3rem;
+  font-size: 1em;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  background-color: #f8f8fa;
 }
-/* Rule for mobile screens (e.g., less than 420px wide) */
+
+/* --- Section Styling --- */
+.hobby-section {
+  padding: 3rem;
+  border-radius: 20px;
+}
+.hobby-section + .hobby-section {
+  margin-top: 2rem;
+}
+.section-title {
+  font-size: 2.2em;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 2.5rem;
+}
+
+.thoughts-section {
+  background-color: #f5f5f7;
+}
+.moments-section {
+  background-color: #fff;
+  border: 1px solid #eee;
+}
+
+/* --- Content Structure within Sections --- */
+.hobby-sub-group { margin-top: 3rem; }
+.hobby-sub-group:first-of-type { margin-top: 0; }
+.sub-group-title {
+  font-size: 1.5em;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #e0e0e0; /* 색상을 더 진하게 변경 */
+}
+
+.content-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 1.5rem; }
+.log-card { display: block; }
+
 @media (max-width: 420px) {
   .content-grid {
     /* On mobile, force a single-column layout */
@@ -110,7 +117,10 @@
   justify-content: center;
   text-align: center;
   flex-grow: 1;
-  padding: 2.5rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
   text-decoration: none;
   color: #1d1d1f;
 }
