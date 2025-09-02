@@ -2,8 +2,9 @@
 title: "컴퓨터공학자로서 AI 시대를 살아남기"
 layout: profession-post
 categories:
-  - Survival Strategies
+  - Reflections
 tags:
+  - Survival
   - Career
   - AI
 toc: true
