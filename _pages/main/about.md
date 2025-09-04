@@ -1,10 +1,7 @@
 ---
 layout: about-page
-title: "About"
+title: "Jaehyun Ha"
 permalink: /about/
-
-bio_text: "Jaehyun Ha - Computer Science Ph.D. Candidate at POSTECH"
-
 gallery:
   - url: /assets/about/uiuc.jpeg
     alt: "UIUC"

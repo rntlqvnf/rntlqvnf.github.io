@@ -6,99 +6,269 @@ layout: default
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
 <style>
-/* --- About 페이지 전용 스타일 --- */
-.about-wrapper {
-  max-width: 900px;
+/* --- Global & Wrapper --- */
+.about-page-wrapper {
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 4rem 2rem;
-  text-align: center;
+  padding: 6rem 2rem;
 }
 
-/* --- 사진 슬라이더 스타일 --- */
-.swiper {
-  width: 100%;
-  height: 500px;
-  border-radius: 16px;
-  margin-bottom: 2rem;
-  box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+/* --- 1. Hero Section (2-Column) --- */
+.about-hero {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 4rem;
 }
+
+/* --- Info Panel General Style --- */
+.info-panel {
+  text-align: left;
+  line-height: 1.6;
+}
+
+.info-name {
+  font-size: 3em;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+/* --- 그룹핑 및 기본 스타일 --- */
+.info-affiliation, .info-details, .info-research, .info-links {
+  padding-top: 1rem; /* margin-top을 없애고 이 값으로만 간격 조절 */
+  border-top: 1px solid #e5e5e5; /* 그룹을 나누는 옅은 선 */
+}
+
+.info-title {
+  font-size: 1.2em;
+  font-weight: 600;
+  color: #1d1d1f; /* 애플의 메인 텍스트 블랙 */
+  margin-top: 0; /* <-- 이 한 줄을 추가해주세요 */
+  margin-bottom: 0;
+}
+
+.info-university {
+  font-size: 1.1em;
+  color: #86868b; /* 애플의 보조 텍스트 그레이 */
+  margin-bottom: 0.5rem;
+}
+
+/* --- 상세 정보 링크 --- */
+.info-details p {
+  font-size: 1.1em;
+  color: #555;
+  margin-top: 0; /* <-- 이 한 줄을 추가해주세요 */
+  margin-bottom: 1rem;
+}
+
+.info-details p strong {
+  color: #1d1d1f;
+  font-weight: 600;
+}
+
+.info-details a {
+  color: #0071e3; /* 애플 블루 */
+  text-decoration: none;
+  font-weight: 500;
+}
+.info-details a:hover {
+  text-decoration: underline;
+}
+
+/* --- 연구 분야 리스트 --- */
+.info-research h4 {
+  font-size: 1.2em;
+  font-weight: 600;
+  color: #1d1d1f;
+  margin-bottom: 0.rem;
+  margin-top: 0; /* <-- 이 한 줄을 추가해주세요 */
+}
+
+.info-research ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.info-research li {
+  font-size: 1.1em;
+  padding-left: 1.5em;
+  position: relative;
+  margin-bottom: 0.5rem;
+  color: #555;
+}
+
+.info-research li::before {
+  content: "–"; /* 불릿을 대시(-)로 변경 */
+  position: absolute;
+  left: 0;
+  color: #0071e3; /* 불릿 포인트에 색상 강조 */
+}
+
+
+/* --- 아이콘 링크 버튼 --- */
+.info-links {
+  padding-top: 1rem;
+  display: flex;
+  gap: 1rem; /* 버튼 사이 간격 */
+  flex-wrap: wrap;
+}
+
+.info-links a {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  background-color: #f5f5f7;
+  color: #1d1d1f;
+  padding: 0.7rem 1.4rem;
+  border-radius: 99px; /* 알약 모양 */
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1em;
+  transition: background-color 0.2s ease;
+}
+
+.info-links a:hover {
+  background-color: #e8e8ea;
+}
+
+.info-links a i {
+  font-size: 1.2em;
+  color: #555;
+}
+
+.photo-panel {
+  min-width: 0; /* <-- 이 한 줄을 추가해주세요! */
+}
+
+/* --- Swiper Slider Styles (in Hero) --- */
+.photo-panel .swiper {
+  width: 90%;
+  border-radius: 24px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+  aspect-ratio: 1 / 1;
+  overflow: hidden; /* border-radius가 자식 요소에도 적용되도록 */
+}
+
 .swiper-slide {
   display: flex;
   justify-content: center;
   align-items: center;
   background: #eee;
 }
+
 .swiper-slide img {
   display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
+
 .swiper-button-next, .swiper-button-prev {
   color: #fff;
   filter: drop-shadow(0 2px 5px rgba(0,0,0,0.5));
 }
 
-/* --- 소개글 및 링크 버튼 스타일 --- */
-.about-bio {
-  font-size: 1.5em;
-  font-weight: 600;
-  line-height: 1.5;
-  margin-bottom: 2rem;
+/* --- 2. Q&A Navigation Section --- */
+.qa-nav-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
 }
-.about-links {
+
+.qa-link-card {
   display: flex;
-  justify-content: center;
-  gap: 1.5rem;
-  flex-wrap: wrap;
-}
-
-.about-links .btn {
-  display: flex; /* 아이콘과 텍스트를 나란히 배치 */
-  align-items: center; /* 세로 중앙 정렬 */
-  gap: 0.6rem; /* 아이콘과 텍스트 사이 간격 */
-
-  background-color: #f5f5f7; /* gateway-card의 옅은 회색 배경 */
-  border: none; /* 테두리 제거 */
-  border-radius: 99px; /* 알약 모양 */
-  padding: 0.8rem 1.8rem; /* 세로/가로 패딩 조정 */
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem 1rem;
+  border-top: 1px solid #dcdcdc;
   text-decoration: none;
-  
-  font-size: 1.05em;
+  color: #1d1d1f;
+  transition: color 0.3s ease;
+}
+
+.qa-link-card:last-child {
+  border-bottom: 1px solid #dcdcdc;
+}
+
+.qa-link-card h2 {
+  font-size: 2.2em;
   font-weight: 600;
-  color: #333;
-  transition: all 0.2s ease;
-
-  /* 그림자 추가 (선택 사항, 경계가 확실하다면 생략 가능) */
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05); 
+  margin: 0;
 }
 
-.about-links .btn i { /* 버튼 안의 아이콘 스타일 */
-  font-size: 1.2em; /* 아이콘 크기를 텍스트보다 살짝 크게 */
-  line-height: 1; /* 아이콘의 자체 라인 높이 조정 */
+.qa-link-card::after {
+  content: '→';
+  font-size: 2em;
+  font-weight: 300;
+  color: #888;
+  opacity: 0;
+  transform: translateX(-20px);
+  transition: all 0.3s ease;
 }
 
-.about-links .btn span { /* 텍스트 스팬 (필요하다면 추가 스타일링 가능) */
-  line-height: 1; /* 텍스트의 자체 라인 높이 조정 */
+.qa-link-card:hover {
+  color: #0071e3;
 }
 
-
-.about-links .btn:hover {
-  background-color: #e0e0e0; /* 호버 시 배경색 살짝 진하게 */
-  transform: translateY(-1px); /* 호버 시 살짝 위로 떠오르는 효과 */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 호버 시 그림자 강조 */
+.qa-link-card:hover::after {
+  opacity: 1;
+  transform: translateX(0);
+  color: #0071e3;
 }
 
-@media (max-width: 768px) {
-  .swiper { height: 400px; }
-  .about-bio { font-size: 1.2em; }
+/* --- Responsive Design --- */
+@media (max-width: 900px) {
+  .about-hero {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .photo-panel {
+    order: -1;
+  }
+  .info-name { font-size: 2.5em; }
+  .qa-link-card h2 { font-size: 1.8em; }
 }
 </style>
 
-<div class="initial-content">
-  <div id="main" role="main">
-    <div class="about-wrapper">
-      
+<div class="about-page-wrapper">
+
+  <section class="about-hero">
+    <div class="info-panel">
+      <h1 class="info-name">{{ page.title | default: "Your Name" }}</h1>
+
+      <div class="info-affiliation">
+        <p class="info-title">Ph.D. Candidate in Computer Science & Engineering</p>
+        <p class="info-university">Pohang University of Science and Technology</p>
+      </div>
+
+      <div class="info-details">
+        <p>
+          <strong>Lab:</strong> 
+          <a href="https://dslab.postech.ac.kr/" target="_blank">Data Systems Lab</a>
+        </p>
+        <p>
+          <strong>Advisor:</strong> 
+          <a href="https://wscrony.github.io/" target="_blank">Prof. Wook-Shin Han</a>
+        </p>
+      </div>
+
+      <div class="info-research">
+        <h4>Research Interests</h4>
+        <ul>
+          <li>Database Systems</li>
+          <li>Large Language Models</li>
+        </ul>
+      </div>
+
+      <div class="info-links">
+        <a href="/assets/jhha_cv.pdf" aria-label="CV" target="_blank"><i class="fas fa-file-alt"></i> CV</a>
+        <a href="https://github.com/rntlqvnf" aria-label="GitHub" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+        <a href="https://scholar.google.com/citations?user=U6ZrhqwAAAAJ&hl=ko" aria-label="Google Scholar" target="_blank"><i class="fas fa-graduation-cap"></i> Scholar</a>
+      </div>
+    </div>
+    
+    <div class="photo-panel">
       <div class="swiper">
         <div class="swiper-wrapper">
           {% for image in page.gallery %}
@@ -110,24 +280,21 @@ layout: default
         <div class="swiper-button-next"></div>
         <div class="swiper-button-prev"></div>
       </div>
-
-      <p class="about-bio">
-        {{ page.bio_text }}
-      </p>
-
-        <div class="about-links">
-            <a href="/assets/jhha_cv.pdf" class="btn">
-            <i class="fa-solid fa-file"></i> <span>CV</span>
-            </a>
-            <a href="/#pursuits" class="btn">
-            <i class="fa-solid fa-face-smile"></i> <span>Pursuits</span>
-            </a>
-            <a href="/contact/" class="btn">
-            <i class="fa-solid fa-envelope"></i> <span>Contact</span>
-            </a>
-      </div>
     </div>
-  </div>
+  </section>
+
+  <nav class="qa-nav-wrapper">
+    <a href="/research-interests/" class="qa-link-card">
+      <h2>What are your main research interests?</h2>
+    </a>
+    <a href="/#pursuits" class="qa-link-card">
+      <h2>What do you enjoy doing outside of research?</h2>
+    </a>
+    <a href="/contact/" class="qa-link-card">
+      <h2>How can I reach you?</h2>
+    </a>
+  </nav>
+
 </div>
 
 <script>
@@ -136,6 +303,6 @@ layout: default
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
     },
-    loop: true, // 사진이 계속 반복되도록
+    loop: true,
   });
 </script>
