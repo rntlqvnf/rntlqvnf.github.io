@@ -11,6 +11,31 @@
       alt: "UIUC Union"
     - url: "/assets/news/uiuc/1.jpeg"
       alt: "UIUC Gym"
+- date: "2024-05-28"
+  title: "Co-Author of VLDB 2024 Demo Paper on DoppelGanger++"
+  content: "Co-authored the demo paper 'DoppelGanger++ in Action: A Database Replay System with Fast Dependency Graph Generation,' presented at VLDB 2024. The work showcased the practical implementation of DoppelGanger++ for efficient database replay."
+  tags: [vldb, database systems, publication, demo, replay, performance]
+  images:
+  - url: "/assets/news/dopp_vldb/dopp.png"
+    alt: "도플갱어"
+- date: "2024-02-25"
+  title: "Co-First Author of ACM SIGMOD 2024 Paper on DoppelGanger++"
+  content: "As co-first author, I contributed to 'DoppelGanger++: Towards Fast Dependency Graph Generation for Database Replay,' accepted at ACM SIGMOD 2024. The work proposes a fast and efficient database replay system with significantly improved dependency graph generation."
+  tags: [acm sigmod, database systems, publication, replay, performance, co-first author]
+  images:
+    - url: "/assets/news/dopp_sigmod/dopp.png"
+      alt: "도플갱어"
+    - url: "/assets/news/dopp_sigmod/dopp_2.png"
+      alt: "도플갱어 아키텍쳐"
+- date: "2023-03-13"
+  title: "Second Author at ACM PODS 2023 - the First Korean Research Team Ever"
+  content: "I co-authored a paper presented at ACM PODS 2023, marking the first Korean research team in the conference’s 42-year history. Our work introduced an optimal sampling method for multi-table joins, advancing both theory and practice in database research"
+  tags: [acm pods, first korean team, database theory, publication, sampling, joins, machine learning, research]
+  images:
+    - url: "/assets/news/pods/pods_1.png"
+      alt: "논문"
+    - url: "/assets/news/pods/pods_2.png"
+      alt: "교수님 포스팅"
 - date: "2022-03-01"
   title: "Graduated First in Class, Dept. of Computer Science & Engineering"
   content: "Honored to graduate as the top student (First in Class) for the Class of 2022 from the Department of Computer Science & Engineering at POSTECH."
