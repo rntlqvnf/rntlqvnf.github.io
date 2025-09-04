@@ -66,6 +66,50 @@ body.page--homepage #main {
   transition: background-color 0.2s ease;
 }
 
+#home,
+#research {
+  position: relative;
+}
+
+.scroll-down-arrow {
+  /* 위치 설정 */
+  position: absolute; /* #home 섹션을 기준으로 위치를 잡음 */
+  bottom: 30px;       /* 하단에서 30px 위 */
+  left: 50%;          /* 왼쪽에서 50% 지점 */
+  transform: translateX(-50%); /* 정확히 중앙에 오도록 조정 */
+
+  /* 디자인 */
+  font-size: 1.5rem; /* 아이콘 크기 */
+  color: #333;      /* 아이콘 색상 */
+  text-decoration: none;
+  
+  /* 애니메이션 적용 */
+  animation: bounce 2s infinite;
+}
+
+/* 마우스를 올렸을 때 색상 변경 (선택 사항) */
+.scroll-down-arrow:hover {
+  color: #0071e3;
+}
+
+
+/* 통통 튀는 애니메이션 효과 정의 */
+// @keyframes bounce {
+//   0%, 20%, 50%, 80%, 100% {
+//     transform: translateX(-50%) translateY(0);
+//   }
+//   40% {
+//     transform: translateX(-50%) translateY(-20px);
+//   }
+//   60% {
+//     transform: translateX(-50%) translateY(-10px);
+//   }
+// }
+
+html {
+  scroll-behavior: smooth;
+}
+
 .gateway-card i { 
   font-size: 1.2em; 
 }
