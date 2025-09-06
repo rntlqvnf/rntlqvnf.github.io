@@ -18,6 +18,10 @@
   images:
   - url: "/assets/news/dopp_vldb/dopp.png"
     alt: "도플갱어"
+  - url: "/assets/news/dopp_vldb/1.png"
+    alt: "1"
+  - url: "/assets/news/dopp_vldb/2.png"
+    alt: "2"
 - date: "2024-02-25"
   title: "Co-First Author of ACM SIGMOD 2024 Paper on DoppelGanger++"
   content: "As co-first author, I contributed to 'DoppelGanger++: Towards Fast Dependency Graph Generation for Database Replay,' accepted at ACM SIGMOD 2024. The work proposes a fast and efficient database replay system with significantly improved dependency graph generation."
