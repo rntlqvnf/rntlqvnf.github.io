@@ -18,9 +18,9 @@
   images:
   - url: "/assets/news/dopp_vldb/dopp.png"
     alt: "도플갱어"
-  - url: "/assets/news/dopp_vldb/1.png"
+  - url: "/assets/news/dopp_vldb/1.jpg"
     alt: "1"
-  - url: "/assets/news/dopp_vldb/2.png"
+  - url: "/assets/news/dopp_vldb/2.jpg"
     alt: "2"
 - date: "2024-02-25"
   title: "Co-First Author of ACM SIGMOD 2024 Paper on DoppelGanger++"
