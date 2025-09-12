@@ -41,6 +41,13 @@ taste:
                 title: "Nami Nori"
                 description: "Modern Japanese Cuisine"
                 tags: [japanese, temaki, newyork]
+          - group_title: "🇺🇸 USA - Champaign"
+            logs:
+              - type: insta
+                url: "https://www.instagram.com/p/DOaCF1iDUYd/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+                title: "The Himalayan Chimney"
+                description: "GOAT Indian Restaurant"
+                tags: [indian, curry, goat]
           - group_title: "🇨🇳 CHINA - Guangzhou"
             logs:
               - type: insta
@@ -176,30 +183,49 @@ stories:
             logs: []
 
 # ----------------------------------------------------
-# 4. CAPITAL
+# 4. WEALTH
 # ----------------------------------------------------
 
-capital:
-  title: "Capital"
-  emoji: "💰"
-  excerpt: "In a world of constant flux, I focus on the long game. This is a record of building resilient wealth through a disciplined, low-risk approach, connecting economic theory with real-world practice."
+wealth:
+  title: "Wealth"
+  emoji: "🏦"
+  excerpt: "A journey to understand, build, and preserve wealth. Beyond short-term gains, this chronicles the principles and processes for building robust assets that grow over time."
   sub_topics:
-    - topic_title: "Economics"
-      topic_id: "economics"
+    - topic_title: "Market"
+      topic_id: "market"
       thoughts:
         - groups:
-          - group_title: "Reading List"
-            logs: [] 
-          - group_title: "Policy & Global Affairs"
-            logs: []
-          
-    - topic_title: "Investment"
-      topic_id: "investment"
-      thoughts:
-        - groups:
-          - group_title: "Stock"
+          - group_title: "Equities"
             logs: [] 
           - group_title: "Real Estate"
             logs: []
-          - group_title: "Venture"
+          - group_title: "Financial Products"
+            logs: []
+          - group_title: "Alternatives"
+            logs: []
+          
+    - topic_title: "System"
+      topic_id: "system"
+      thoughts:
+        - groups:
+          - group_title: "Taxation"
+            logs:
+              - type: blog
+                url: "wealth/high-income-pitfall/"
+                title: "애매한 고소득자가 빠지는 함정"
+                tags: [tax, high income]
+          - group_title: "Policy & Politics"
+            logs: []
+          
+    - topic_title: "Philosophy"
+      topic_id: "philosophy"
+      thoughts:
+        - groups:
+          - group_title: "Value Investing"
+            logs:
+              - type: blog
+                url: "wealth/failure-of-value-invest/"
+                title: "가치투자는 왜 실패하는가?"
+                tags: [philosophy, value investing, peter lynch]
+          - group_title: "Economic Principles"
             logs: []

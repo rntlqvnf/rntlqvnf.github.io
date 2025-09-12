@@ -16,6 +16,15 @@ layout: default
   gap: 4rem;
 }
 
+.pursuit-post-grid.no-toc {
+  grid-template-columns: 1fr;
+}
+
+.pursuit-post-grid.no-toc .pursuit-post-main {
+  max-width: 800px; 
+  margin: 0 auto;
+}
+
 .pursuit-post-header {
   margin-bottom: 3rem;
   border-bottom: 1px solid #eee;
@@ -80,7 +89,7 @@ layout: default
   <div class="pursuit-post-wrapper">
     <article itemscope itemtype="https://schema.org/CreativeWork">
 
-      <div class="pursuit-post-grid">
+      <div class="pursuit-post-grid {% unless page.toc %}no-toc{% endunless %}">
         
         <!-- Main Content Area -->
         <div class="pursuit-post-main">
