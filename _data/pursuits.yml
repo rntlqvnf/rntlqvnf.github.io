@@ -59,9 +59,9 @@ taste:
             logs:
               - type: insta
                 url: "https://www.instagram.com/p/DOwYdtUE9ON/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
-                title: Guangzhou Restaurant
-                description: "Fantastic Dimsum"
-                tags: [dimsum, chinese, guangzhou]
+                title: 무탄
+                description: "인스타그래머블 중식당"
+                tags: [짜장면, 트러플, 스테이크, 멘보샤]
           - group_title: "🇰🇷 KOREA - Pohang"
             logs: [] # Add logs here later
           - group_title: "🇺🇸 USA - Urbana-Champaign"
