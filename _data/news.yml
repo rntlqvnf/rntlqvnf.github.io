@@ -18,8 +18,8 @@
   content: "Co-authored the demo paper 'DoppelGanger++ in Action: A Database Replay System with Fast Dependency Graph Generation,' presented at VLDB 2024. The work showcased the practical implementation of DoppelGanger++ for efficient database replay."
   tags: [vldb, database systems, publication, demo, replay, performance]
   images:
-  - url: "/assets/news/dopp_vldb/dopp.png"
-    alt: "도플갱어"
+  - url: "/assets/news/dopp_vldb/3.png"
+    alt: "3"
   - url: "/assets/news/dopp_vldb/1.jpg"
     alt: "1"
   - url: "/assets/news/dopp_vldb/2.jpg"
@@ -29,8 +29,6 @@
   content: "As co-first author, I contributed to 'DoppelGanger++: Towards Fast Dependency Graph Generation for Database Replay,' accepted at ACM SIGMOD 2024. The work proposes a fast and efficient database replay system with significantly improved dependency graph generation."
   tags: [acm sigmod, database systems, publication, replay, performance, co-first author]
   images:
-    - url: "/assets/news/dopp_sigmod/dopp.png"
-      alt: "도플갱어"
     - url: "/assets/news/dopp_sigmod/dopp_2.png"
       alt: "도플갱어 아키텍쳐"
 - date: "2023-03-13"
@@ -38,9 +36,9 @@
   content: "I co-authored a paper presented at ACM PODS 2023, marking the first Korean research team in the conference’s 42-year history. Our work introduced an optimal sampling method for multi-table joins, advancing both theory and practice in database research"
   tags: [acm pods, first korean team, database theory, publication, sampling, joins, machine learning, research]
   images:
-    - url: "/assets/news/pods/pods_1.png"
+    - url: "/assets/news/pods/1.png"
       alt: "논문"
-    - url: "/assets/news/pods/pods_2.png"
+    - url: "/assets/news/pods/2.png"
       alt: "교수님 포스팅"
 - date: "2022-03-01"
   title: "Graduated First in Class, Dept. of Computer Science & Engineering"
