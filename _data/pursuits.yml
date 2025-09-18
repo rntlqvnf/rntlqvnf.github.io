@@ -89,7 +89,7 @@ athletics:
   title: "Athletics"
   emoji: "🏸" # Changed emoji to be more representative
   excerpt: "A journey of building a strong and athletic body through disciplined training and competitive sports."
-  instagram_url: "INSTAGRAM_ATHLETICS_URL_HERE"
+  instagram_url: "https://www.instagram.com/athletics_hajae"
   sub_topics:
     - topic_title: "Bodybuilding"
       topic_id: "bodybuilding"
@@ -98,7 +98,11 @@ athletics:
           - group_title: "Major Lifts (PRs)"
             logs: []
           - group_title: "Physique Updates"
-            logs: []
+            logs:
+              - type: insta
+                url: "https://www.instagram.com/p/DOwfC0-E_2F/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+                title: "미국에서 3개월간의 다이어트 (2025.06~09)"
+                tags: [다이어트, 미국]
     - topic_title: "Badminton"
       topic_id: "badminton"
       moments:
