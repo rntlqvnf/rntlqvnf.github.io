@@ -55,6 +55,13 @@ taste:
                 title: Guangzhou Restaurant
                 description: "Fantastic Dimsum"
                 tags: [dimsum, chinese, guangzhou]
+          - group_title: "🇰🇷 KOREA - Seoul"
+            logs:
+              - type: insta
+                url: "https://www.instagram.com/p/DOwYdtUE9ON/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+                title: Guangzhou Restaurant
+                description: "Fantastic Dimsum"
+                tags: [dimsum, chinese, guangzhou]
           - group_title: "🇰🇷 KOREA - Pohang"
             logs: [] # Add logs here later
           - group_title: "🇺🇸 USA - Urbana-Champaign"
