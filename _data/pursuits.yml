@@ -16,12 +16,12 @@ taste:
       topic_id: "gastronomy"
       thoughts:
         - groups:
-          - group_title: "Philosophy"
-            logs:
-              - type: blog
-                url: "gastronomy/taste-as-cs/"
-                title: "컴퓨터공학자는 미식을 어떻게 이해하는가?"
-                tags: [philosophy, taste, AI]
+          # - group_title: "Philosophy"
+          #   logs:
+          #     - type: blog
+          #       url: "gastronomy/taste-as-cs/"
+          #       title: "컴퓨터공학자는 미식을 어떻게 이해하는가?"
+          #       tags: [philosophy, taste, AI]
       moments:
         - groups:
           - group_title: "🇺🇸 USA - New York"
