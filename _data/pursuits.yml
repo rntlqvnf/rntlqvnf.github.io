@@ -204,46 +204,46 @@ stories:
 # 4. WEALTH
 # ----------------------------------------------------
 
-wealth:
-  title: "Wealth"
-  emoji: "🏦"
-  excerpt: "A journey to understand, build, and preserve wealth. Beyond short-term gains, this chronicles the principles and processes for building robust assets that grow over time."
-  sub_topics:
-    - topic_title: "Market"
-      topic_id: "market"
-      thoughts:
-        - groups:
-          - group_title: "Equities"
-            logs: [] 
-          - group_title: "Real Estate"
-            logs: []
-          - group_title: "Financial Products"
-            logs: []
-          - group_title: "Alternatives"
-            logs: []
+# wealth:
+#   title: "Wealth"
+#   emoji: "🏦"
+#   excerpt: "A journey to understand, build, and preserve wealth. Beyond short-term gains, this chronicles the principles and processes for building robust assets that grow over time."
+#   sub_topics:
+#     - topic_title: "Market"
+#       topic_id: "market"
+#       thoughts:
+#         - groups:
+#           - group_title: "Equities"
+#             logs: [] 
+#           - group_title: "Real Estate"
+#             logs: []
+#           - group_title: "Financial Products"
+#             logs: []
+#           - group_title: "Alternatives"
+#             logs: []
           
-    - topic_title: "System"
-      topic_id: "system"
-      thoughts:
-        - groups:
-          - group_title: "Taxation"
-            logs:
-              - type: blog
-                url: "wealth/high-income-pitfall/"
-                title: "애매한 고소득자가 빠지는 함정"
-                tags: [tax, high income]
-          - group_title: "Policy & Politics"
-            logs: []
+#     - topic_title: "System"
+#       topic_id: "system"
+#       thoughts:
+#         - groups:
+#           - group_title: "Taxation"
+#             logs:
+#               - type: blog
+#                 url: "wealth/high-income-pitfall/"
+#                 title: "애매한 고소득자가 빠지는 함정"
+#                 tags: [tax, high income]
+#           - group_title: "Policy & Politics"
+#             logs: []
           
-    - topic_title: "Philosophy"
-      topic_id: "philosophy"
-      thoughts:
-        - groups:
-          - group_title: "Value Investing"
-            logs:
-              - type: blog
-                url: "wealth/failure-of-value-invest/"
-                title: "가치투자는 왜 실패하는가?"
-                tags: [philosophy, value investing, peter lynch]
-          - group_title: "Economic Principles"
-            logs: []
+#     - topic_title: "Philosophy"
+#       topic_id: "philosophy"
+#       thoughts:
+#         - groups:
+#           - group_title: "Value Investing"
+#             logs:
+#               - type: blog
+#                 url: "wealth/failure-of-value-invest/"
+#                 title: "가치투자는 왜 실패하는가?"
+#                 tags: [philosophy, value investing, peter lynch]
+#           - group_title: "Economic Principles"
+#             logs: []
