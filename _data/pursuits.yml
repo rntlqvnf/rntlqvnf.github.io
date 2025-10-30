@@ -55,6 +55,13 @@ taste:
                 title: Guangzhou Restaurant
                 description: "Fantastic Dimsum"
                 tags: [dimsum, chinese, guangzhou]
+          - group_title: "🇹🇼 Taiwan - Taipei"
+            logs:
+              - type: insta
+                url: "https://www.instagram.com/p/DQJSqAgkS7p/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+                title: Xing Penglai
+                description: "Traditional Taiwanese Dishes"
+                tags: [taiwanese, traditional, taipei]
           - group_title: "🇰🇷 KOREA - Seoul"
             logs:
               - type: insta
