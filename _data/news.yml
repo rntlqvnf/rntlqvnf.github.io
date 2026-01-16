@@ -1,3 +1,12 @@
+- date: "2026-01-16"
+  title: "Second Author of VLDB 2026 Paper on S62"
+  content: "Co-authored the paper 'S62: Schemaless Graph Engine Strikes Back for General-Purpose Analytics' accepted at VLDB 2026. The work presents S62, a novel graph database system that supports schemaless data models while ensuring efficient storage and query processing."
+  tags: [s62, vldb, graph databases]
+  images:
+    - url: "/assets/news/s62-vldb/s62-paper.png"
+      alt: "S62 Paper"
+    - url: "/assets/news/s62-vldb/contribution.png"
+      alt: "Github"
 - date: "2025-06-18"
   title: "Visiting Researcher at UIUC"
   content: "Beginning a 3-month research visit at the University of Illinois Urbana-Champaign."
