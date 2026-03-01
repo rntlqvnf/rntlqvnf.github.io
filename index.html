@@ -3,32 +3,66 @@ layout: full-width
 permalink: /
 hidden: true
 classes: "page--homepage"
-
-hero_title: "유연한 꾸준함"
-hero_excerpt: "Life is a search problem—a challenge to devise and execute a strategy toward a self-defined goal. 
-For this problem, there is no single 'optimal' strategy. As someone without an overwhelming talent, my strategy is to carefully choose the best path, making progress that is not fast, but the most certain."
 ---
 
-<div class="section-stripe" id="home">
-  <div class="section-content text-section">
-    <h1 class="hero-title-text">{{ page.hero_title }}</h1>
-    <p class="hero-excerpt-text">{{ page.hero_excerpt }}</p>
-    
-    <div class="gateway-grid">
-      <a href="/about/" class="gateway-card">
-        <i class="fas fa-user"></i>
-        <span>About</span>
-      </a>
-      <a href="/goals/" class="gateway-card">
-        <i class="fas fa-bullseye"></i>
-        <span>Goals</span>
-      </a>
-      <a href="/contact/" class="gateway-card">
-        <i class="fas fa-envelope"></i>
-        <span>Contact</span>
-      </a>
+<div class="section-stripe" id="about">
+  <div class="section-content">
+    <div class="about-layout">
+
+      <div class="about-info">
+        <img src="/assets/about/uiuc.jpeg" alt="Jaehyun Ha" class="about-photo">
+        <h1 class="about-name">Jaehyun Ha</h1>
+        <p class="about-position">Five-year Integrated MS/PhD Student</p>
+        <p class="about-university">Pohang University of Science and Technology</p>
+
+        <hr class="about-divider">
+
+        <div class="about-details">
+          <p><strong>Lab:</strong> <a href="https://dslab.postech.ac.kr/" target="_blank" rel="noopener noreferrer">Data Systems Lab</a></p>
+          <p><strong>Advisor:</strong> <a href="https://wscrony.github.io/" target="_blank" rel="noopener noreferrer">Prof. Wook-Shin Han</a></p>
+        </div>
+
+        <hr class="about-divider">
+
+        <div class="about-mentoring">
+          <span class="about-label">Mentees</span>
+          <span class="about-mentoring-names">Junho Moon · Suho Noh · Minwoo Kim</span>
+        </div>
+      </div>
+
+      <div class="about-right">
+        <a href="#research" class="scroll-section-card dark">
+          <i class="fas fa-arrow-down scroll-card-icon"></i>
+          <div>
+            <p class="scroll-label">CV · Publications · Research Interests · News</p>
+            <h3>Research</h3>
+          </div>
+        </a>
+        <a href="#pursuits" class="scroll-section-card light">
+          <i class="fas fa-arrow-down scroll-card-icon"></i>
+          <div>
+            <p class="scroll-label">Athletics · Gastronomy · Stories</p>
+            <h3>Pursuits</h3>
+          </div>
+        </a>
+        <div class="about-links-row">
+          <a href="/contact/" class="about-icon-card" aria-label="Contact">
+            <i class="fas fa-envelope"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/jae-hyun-ha-064075256/" target="_blank" rel="noopener noreferrer" class="about-icon-card" aria-label="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="https://github.com/rntlqvnf" target="_blank" rel="noopener noreferrer" class="about-icon-card" aria-label="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://scholar.google.com/citations?user=U6ZrhqwAAAAJ&hl=ko" target="_blank" rel="noopener noreferrer" class="about-icon-card" aria-label="Scholar">
+            <i class="fas fa-graduation-cap"></i>
+          </a>
+        </div>
+      </div>
+
     </div>
-    
+
     <a href="#research" class="scroll-down-arrow" aria-label="Scroll down">
       <i class="fas fa-chevron-down"></i>
     </a>
@@ -37,53 +71,47 @@ For this problem, there is no single 'optimal' strategy. As someone without an o
 
 <div class="section-stripe stripe-alt-bg" id="research">
   <div class="section-content">
-    <h2 class="section-title">Research Career</h2>
+    <h2 class="section-title">Research</h2>
+
     <div class="research-grid">
-      
-      <a href="/assets/jhha_cv.pdf" class="research-card main-card cv-card-dark">
+
+      <a href="/assets/jhha_cv.pdf" class="research-card main-card cv-card-dark" target="_blank" rel="noopener noreferrer">
         <h3 class="card-title">Curriculum Vitae</h3>
         <p class="card-desc">A detailed record of my academic and professional journey.</p>
       </a>
-
-      <div class="sub-card-stack">
-
-        <a href="/publications/" class="research-card sub-card">
-          <h4 class="sub-card-title">Publications</h4>
-          <i class="fas fa-arrow-right"></i>
-        </a>
-
-        <a href="/research_interests/" class="research-card sub-card">
-          <h4 class="sub-card-title">Research Interests</h4>
-          <i class="fas fa-arrow-right"></i>
-        </a>
-        
-        <a href="/news/" class="research-card sub-card">
-          <h4 class="sub-card-title">Latest News</h4>
-          <i class="fas fa-arrow-right"></i>
-        </a>
-
-        <a href="/profession-posts/" class="research-card sub-card">
-          <h4 class="sub-card-title">Posts</h4>
-          <i class="fas fa-arrow-right"></i>
-        </a>
-
-      </div>
-      
-      <a href="#pursuits" class="scroll-down-arrow" aria-label="Scroll down">
-        <i class="fas fa-chevron-down"></i>
+      <a href="/publications/" class="research-card sub-card">
+        <h4 class="sub-card-title">Publications</h4>
+        <i class="fas fa-arrow-right"></i>
       </a>
+      <a href="/research_interests/" class="research-card sub-card">
+        <h4 class="sub-card-title">Research Interests</h4>
+        <i class="fas fa-arrow-right"></i>
+      </a>
+      <a href="/news/" class="research-card sub-card">
+        <h4 class="sub-card-title">Latest News</h4>
+        <i class="fas fa-arrow-right"></i>
+      </a>
+      <a href="/profession-posts/" class="research-card sub-card">
+        <h4 class="sub-card-title">Posts</h4>
+        <i class="fas fa-arrow-right"></i>
+      </a>
+
     </div>
+
+    <a href="#pursuits" class="scroll-down-arrow" aria-label="Scroll down">
+      <i class="fas fa-chevron-down"></i>
+    </a>
   </div>
 </div>
 
 <div class="section-stripe" id="pursuits">
   <div class="section-content">
     <h2 class="section-title">Pursuits</h2>
-    
+
     <div class="carousel-wrapper">
       <div class="hobby-carousel-container">
 
-        <a href="/pursuits/taste?tab=gastronomy" class="hobby-card-vertical" 
+        <a href="/pursuits/taste?tab=gastronomy" class="hobby-card-vertical"
         style="background-image: url('/assets/home/swing.jpeg');">
         <div class="card-content-overlay">
             <span class="card-main-topic">Taste</span>
@@ -91,7 +119,7 @@ For this problem, there is no single 'optimal' strategy. As someone without an o
         </div>
         </a>
 
-        <a href="/pursuits/taste?tab=culinary" class="hobby-card-vertical" 
+        <a href="/pursuits/taste?tab=culinary" class="hobby-card-vertical"
         style="background-image: url('/assets/home/egg.jpeg');">
         <div class="card-content-overlay">
             <span class="card-main-topic">Taste</span>
@@ -99,7 +127,7 @@ For this problem, there is no single 'optimal' strategy. As someone without an o
         </div>
         </a>
 
-        <a href="/pursuits/athletics?tab=bodybuilding" class="hobby-card-vertical" 
+        <a href="/pursuits/athletics?tab=bodybuilding" class="hobby-card-vertical"
         style="background-image: url('/assets/home/hammer.jpeg');">
         <div class="card-content-overlay">
             <span class="card-main-topic">Athletics</span>
@@ -107,7 +135,7 @@ For this problem, there is no single 'optimal' strategy. As someone without an o
         </div>
         </a>
 
-        <a href="/pursuits/athletics?tab=badminton" class="hobby-card-vertical" 
+        <a href="/pursuits/athletics?tab=badminton" class="hobby-card-vertical"
         style="background-image: url('/assets/home/badminton.jpg');">
         <div class="card-content-overlay">
             <span class="card-main-topic">Athletics</span>
@@ -115,7 +143,7 @@ For this problem, there is no single 'optimal' strategy. As someone without an o
         </div>
         </a>
 
-        <a href="/pursuits/stories?tab=novels" class="hobby-card-vertical" 
+        <a href="/pursuits/stories?tab=novels" class="hobby-card-vertical"
         style="background-image: url('/assets/home/jabel.jpg');">
         <div class="card-content-overlay">
             <span class="card-main-topic">Stories</span>
@@ -123,7 +151,7 @@ For this problem, there is no single 'optimal' strategy. As someone without an o
         </div>
         </a>
 
-        <a href="/pursuits/stories?tab=comics" class="hobby-card-vertical" 
+        <a href="/pursuits/stories?tab=comics" class="hobby-card-vertical"
         style="background-image: url('/assets/home/comics.jpg');">
         <div class="card-content-overlay">
             <span class="card-main-topic">Stories</span>
@@ -131,30 +159,6 @@ For this problem, there is no single 'optimal' strategy. As someone without an o
         </div>
         </a>
 
-        <!-- <a href="/pursuits/wealth?tab=market" class="hobby-card-vertical"
-        style="background-image: url('/assets/home/market.jpg');">
-        <div class="card-content-overlay">
-            <span class="card-main-topic">Wealth</span>
-            <h3 class="card-sub-topic">Market</h3>
-        </div>
-        </a>
-      
-        <a href="/pursuits/wealth?tab=system" class="hobby-card-vertical"
-        style="background-image: url('/assets/home/economic-system.webp');">
-        <div class="card-content-overlay">
-            <span class="card-main-topic">Wealth</span>
-            <h3 class="card-sub-topic">System</h3>
-        </div>
-        </a>
-
-        <a href="/pursuits/wealth?tab=philosophy" class="hobby-card-vertical"
-        style="background-image: url('/assets/home/philosophy.jpg');">
-        <div class="card-content-overlay">
-            <span class="card-main-topic">Wealth</span>
-            <h3 class="card-sub-topic">Philosophy</h3>
-        </div>
-        </a> -->
-      
     </div>
 
         <div class="carousel-navigation">
@@ -174,7 +178,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const nextBtn = carouselWrapper.querySelector('.next-btn');
 
     nextBtn.addEventListener('click', () => {
-      const scrollAmount = container.querySelector('.hobby-card-vertical').offsetWidth + 24; // 24px는 gap: 1.5rem
+      const scrollAmount = container.querySelector('.hobby-card-vertical').offsetWidth + 24;
       container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
     });
 

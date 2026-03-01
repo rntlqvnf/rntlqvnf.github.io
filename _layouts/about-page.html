@@ -178,53 +178,6 @@ layout: default
   filter: drop-shadow(0 2px 5px rgba(0,0,0,0.5));
 }
 
-/* --- 2. Q&A Navigation Section --- */
-.qa-nav-wrapper {
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-.qa-link-card {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 3rem 1rem;
-  border-top: 1px solid #dcdcdc;
-  text-decoration: none;
-  color: #1d1d1f;
-  transition: color 0.3s ease;
-}
-
-.qa-link-card:last-child {
-  border-bottom: 1px solid #dcdcdc;
-}
-
-.qa-link-card h2 {
-  font-size: 2.2em;
-  font-weight: 600;
-  margin: 0;
-}
-
-.qa-link-card::after {
-  content: '→';
-  font-size: 2em;
-  font-weight: 300;
-  color: #888;
-  opacity: 0;
-  transform: translateX(-20px);
-  transition: all 0.3s ease;
-}
-
-.qa-link-card:hover {
-  color: #0071e3;
-}
-
-.qa-link-card:hover::after {
-  opacity: 1;
-  transform: translateX(0);
-  color: #0071e3;
-}
-
 /* --- Responsive Design --- */
 @media (max-width: 900px) {
   .about-hero {
@@ -235,7 +188,6 @@ layout: default
     order: -1;
   }
   .info-name { font-size: 2.5em; }
-  .qa-link-card h2 { font-size: 1.8em; }
 }
 </style>
 
@@ -292,17 +244,6 @@ layout: default
     </div>
   </section>
 
-  <nav class="qa-nav-wrapper">
-    <a href="/#research" class="qa-link-card">
-      <h2>Q. What are your research interests in detail?</h2>
-    </a>
-    <a href="/#pursuits" class="qa-link-card">
-      <h2>Q. What do you enjoy outside of research?</h2>
-    </a>
-    <a href="/contact/" class="qa-link-card">
-      <h2>Q. How can I reach you?</h2>
-    </a>
-  </nav>
 
 </div>
 

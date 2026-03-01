@@ -1,9 +1,12 @@
 /* ==========================================================================
-   Homepage Styles - Final Polished Version
+   Homepage Styles
    ========================================================================== */
 
 /* --- Page Setup --- */
-html { scroll-snap-type: y mandatory; }
+html {
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
 body.page--homepage .initial-content,
 body.page--homepage #main {
   max-width: none;
@@ -19,250 +22,373 @@ body.page--homepage #main {
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: #ffffff;
 }
 .stripe-alt-bg { background-color: #f5f5f7; }
-.section-content { width: 100%; max-width: 1280px; }
+.section-content { width: 100%; max-width: 1200px; }
 .section-title {
-  font-size: 3em;
+  font-size: 2.8em;
   font-weight: 700;
   text-align: center;
-  margin-top: 0; /* 테마의 기본 위쪽 여백을 제거합니다. */
-  margin-bottom: 2rem; /* 아래쪽 여백을 다시 살짝 늘려 균형을 맞춥니다. */
-}
-
-/* --- Section 1: Manifesto & Gateway --- */
-.text-section {
-  text-align: center;
-  max-width: 950px;
-}
-.hero-title-text {
-  font-size: 2.8em;
-  font-weight: 800;
+  margin-top: 0;
+  margin-bottom: 2.5rem;
+  color: #1d1d1f;
   letter-spacing: -0.02em;
 }
-.hero-excerpt-text {
-  font-size: 1.2em;
-  line-height: 1.7;
-  margin: 1.5rem 0 3.5rem;
-  color: #555;
-}
-.gateway-grid {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  flex-wrap: wrap; /* Add this line */
-}
 
-.gateway-card {
-  display: flex;
-  align-items: center;
-  gap: 0.8rem;
-  padding: 0.8rem 1.5rem;
-  background-color: #f5f5f7;
-  border-radius: 99px; /* Pill shape */
-  text-decoration: none;
-  color: #333;
-  font-weight: 600;
-  transition: background-color 0.2s ease;
-}
-
-#home,
-#research {
-  position: relative;
-}
+/* --- Scroll Arrow --- */
+#about, #research { position: relative; }
 
 .scroll-down-arrow {
-  /* 위치 설정 */
-  position: absolute; /* #home 섹션을 기준으로 위치를 잡음 */
-  bottom: 30px;       /* 하단에서 30px 위 */
-  left: 50%;          /* 왼쪽에서 50% 지점 */
-  transform: translateX(-50%); /* 정확히 중앙에 오도록 조정 */
-
-  /* 디자인 */
-  font-size: 1.5rem; /* 아이콘 크기 */
-  color: #333;      /* 아이콘 색상 */
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.2rem;
+  color: #86868b;
   text-decoration: none;
-  
-  /* 애니메이션 적용 */
-  animation: bounce 2s infinite;
+  transition: color 0.2s ease;
+}
+.scroll-down-arrow:hover { color: #1d1d1f; }
+
+/* --- Section 0: About --- */
+.about-layout {
+  display: grid;
+  grid-template-columns: 1fr 1.25fr;
+  gap: 3rem;
+  align-items: start;
 }
 
-/* 마우스를 올렸을 때 색상 변경 (선택 사항) */
-.scroll-down-arrow:hover {
+.about-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.about-photo {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 18px;
+  object-fit: cover;
+  object-position: center 40%;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.14);
+}
+
+.about-name {
+  font-size: 2.5em;
+  font-weight: 700;
+  color: #1d1d1f;
+  margin: 0 0 0.3rem;
+  letter-spacing: -0.02em;
+}
+
+.about-position {
+  font-size: 1.05em;
+  color: #555;
+  margin: 0 0 0.15rem;
+}
+
+.about-university {
+  font-size: 1em;
+  color: #86868b;
+  margin: 0;
+}
+
+.about-divider {
+  border: none;
+  border-top: 1px solid #e5e5e5;
+  margin: 1.2rem 0;
+}
+
+.about-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.about-details p {
+  font-size: 1em;
+  color: #555;
+  margin: 0;
+}
+
+.about-details strong { color: #1d1d1f; font-weight: 600; }
+
+.about-details a {
   color: #0071e3;
+  text-decoration: none;
+  font-weight: 500;
+}
+.about-details a:hover { text-decoration: underline; }
+
+.about-mentoring {
+  display: flex;
+  gap: 0.5rem;
+  align-items: baseline;
+  flex-wrap: wrap;
 }
 
-
-/* 통통 튀는 애니메이션 효과 정의 */
-// @keyframes bounce {
-//   0%, 20%, 50%, 80%, 100% {
-//     transform: translateX(-50%) translateY(0);
-//   }
-//   40% {
-//     transform: translateX(-50%) translateY(-20px);
-//   }
-//   60% {
-//     transform: translateX(-50%) translateY(-10px);
-//   }
-// }
-
-html {
-  scroll-behavior: smooth;
+.about-label {
+  font-size: 1em;
+  font-weight: 600;
+  color: #1d1d1f;
+  white-space: nowrap;
 }
 
-.gateway-card i { 
-  font-size: 1.2em; 
+.about-mentoring-names {
+  font-size: 1em;
+  color: #555;
 }
 
-.gateway-card:hover { 
-  background-color: #e0e0e0; 
+.about-right {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  height: 100%;
 }
 
-/* --- Section 2: Research & Career --- */
+.about-links-row {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.about-icon-card {
+  flex: 1;
+  height: 54px;
+  border-radius: 14px;
+  background-color: #f5f5f7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #555;
+  font-size: 1.1em;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+.about-icon-card:hover { background-color: #e8e8ea; color: #1d1d1f; }
+
+.scroll-section-card {
+  flex: 1;
+  border-radius: 20px;
+  padding: 2rem 2.5rem;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 180px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.scroll-section-card.dark  { background-color: #1d1d1f; }
+.scroll-section-card.light {
+  background-color: #f5f5f7;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.scroll-card-icon {
+  font-size: 1.1em;
+  transition: transform 0.3s ease;
+}
+
+.scroll-section-card.dark  .scroll-card-icon { color: rgba(255, 255, 255, 0.35); }
+.scroll-section-card.light .scroll-card-icon { color: #aaa; }
+
+.scroll-section-card .scroll-label {
+  font-size: 0.82em;
+  font-weight: 500;
+  margin: 0 0 0.35rem;
+  letter-spacing: 0.01em;
+}
+
+.scroll-section-card.dark  .scroll-label { color: rgba(255, 255, 255, 0.45); }
+.scroll-section-card.light .scroll-label { color: #888; }
+
+.scroll-section-card h3 {
+  font-size: 2.6em;
+  font-weight: 700;
+  margin: 0;
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+
+.scroll-section-card.dark  h3 { color: #fff; }
+.scroll-section-card.light h3 { color: #1d1d1f; }
+
+.scroll-section-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.15);
+
+  .scroll-card-icon { transform: translateY(4px); }
+}
+
+/* --- Section 1: Research Bento Grid --- */
 .research-grid {
   display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 2rem;
-  /* align-items: stretch; is the default, which matches heights */
+  grid-template-columns: 1.4fr 1fr;
+  grid-template-rows: repeat(4, 1fr);
+  gap: 1rem;
+  min-height: 340px;
+
+  /* CV: 왼쪽 전체 */
+  .main-card {
+    grid-column: 1;
+    grid-row: 1 / 5;
+  }
+
+  /* 오른쪽 4개 카드 */
+  > *:nth-child(2) { grid-column: 2; grid-row: 1; }
+  > *:nth-child(3) { grid-column: 2; grid-row: 2; }
+  > *:nth-child(4) { grid-column: 2; grid-row: 3; }
+  > *:nth-child(5) { grid-column: 2; grid-row: 4; }
 }
 
-/* 왼쪽의 큰 카드 (CV) */
+/* CV 카드 */
 .main-card {
   border-radius: 20px;
   padding: 2.5rem;
   text-decoration: none;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end; /* 요청하신 대로 하단 정렬 유지 */
+  justify-content: flex-end;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 
+  .card-title { font-size: 2.2em; font-weight: 700; margin-bottom: 0.4rem; letter-spacing: -0.02em; }
+  .card-desc  { font-size: 1.05em; line-height: 1.5; }
+
   &:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+    transform: translateY(-6px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
   }
-
-  .card-title { font-size: 2.5em; font-weight: 700; margin-bottom: 0.5rem; }
-  .card-desc { font-size: 1.2em; }
 }
 
-/* CV 카드 특별 디자인 */
 .main-card.cv-card-dark {
-  background-color: #000;
+  background-color: #1d1d1f;
   color: #fff;
-  .card-title, .card-desc { color: #fff; }
-  .card-desc { opacity: 0.8; }
+  .card-title { color: #fff; }
+  .card-desc  { color: rgba(255, 255, 255, 0.65); }
 }
 
-/* 오른쪽 작은 카드들을 감싸는 컨테이너 */
-.sub-card-stack {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
-/* 오른쪽 작은 카드들 */
+/* 서브카드 (About / Contact / Publications 등 동일 스타일) */
 .sub-card {
-  border-radius: 20px;
-  padding: 1.5rem 1.5rem;
+  border-radius: 16px;
+  padding: 1.25rem 1.5rem;
   text-decoration: none;
-  background-color: #fff;
+  background-color: #ffffff;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.07);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+
   .sub-card-title {
-    font-size: 1.3em;
-    font-weight: 700;
+    font-size: 1.1em;
+    font-weight: 600;
     color: #1d1d1f;
     margin: 0;
   }
 
-  i { /* Arrow Icon */
-    font-size: 1.3em;
-    opacity: 0;
-    transform: translateX(-10px);
-    transition: opacity 0.2s ease, transform 0.2s ease;
+  i {
+    font-size: 0.9em;
+    color: #86868b;
+    opacity: 0.4;
+    transform: translateX(-4px);
+    transition: opacity 0.2s ease, transform 0.2s ease, color 0.2s ease;
   }
 
   &:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
     i {
       opacity: 1;
+      color: #0071e3;
       transform: translateX(0);
     }
   }
 }
 
-/* --- Responsive Adjustments --- */
+/* --- Responsive --- */
 @media (max-width: 900px) {
+  .about-layout {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .about-right {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .scroll-section-card {
+    flex: 1;
+    min-width: 140px;
+    min-height: 140px;
+  }
+
+  .about-links-row { width: 100%; }
+
+  .scroll-section-card h3 { font-size: 2em; }
+
   .research-grid {
     grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    min-height: unset;
+
+    .main-card      { grid-column: 1; grid-row: auto; }
+    > *:nth-child(2),
+    > *:nth-child(3),
+    > *:nth-child(4),
+    > *:nth-child(5) { grid-column: auto; grid-row: auto; }
   }
 }
 
-/* --- Section 3: Pursuits (New Carousel Style) --- */
-
-/* carousel-wrapper를 flexbox로 만들고 정렬 기준을 변경합니다. */
+/* --- Section 2: Pursuits Carousel --- */
 .carousel-wrapper {
   position: relative;
   display: flex;
   flex-direction: column;
-  align-items: flex-end; /* 핵심: 자식 요소들을 오른쪽으로 정렬 */
+  align-items: flex-end;
 }
 
 .hobby-carousel-container {
-  width: 100%; /* 부모 너비를 꽉 채우도록 설정 */
+  width: 100%;
   display: flex;
-  gap: 1.5rem;
+  gap: 1.25rem;
   overflow-x: auto;
-  padding: 1rem 0 1rem;
+  padding: 1rem 0;
   -webkit-overflow-scrolling: touch;
   scroll-snap-type: x mandatory;
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
-.hobby-carousel-container::-webkit-scrollbar {
-  display: none;
-}
+.hobby-carousel-container::-webkit-scrollbar { display: none; }
 
-/* 화살표 버튼들의 컨테이너 */
 .carousel-navigation {
   display: flex;
-  /* justify-content: flex-end; -> 이 속성은 이제 부모가 처리하므로 제거 */
-  gap: 0.75rem;
-  margin-top: 1.5rem;
-  /* padding-right: 1rem; -> 불필요하므로 제거 */
+  gap: 0.6rem;
+  margin-top: 1.25rem;
 }
 
-/* 새롭게 정의된 버튼 스타일 */
 .carousel-btn {
-  /* position, top, transform, left, right 속성은 모두 제거합니다. */
-  background-color: #f0f0f5;
+  background-color: rgba(0, 0, 0, 0.06);
   border: none;
   border-radius: 50%;
-  width: 40px; /* 크기를 살짝 줄여서 조화롭게 */
-  height: 40px;
-  font-size: 1rem;
-  color: #555;
+  width: 38px;
+  height: 38px;
+  font-size: 0.9rem;
+  color: #1d1d1f;
   cursor: pointer;
-  display: flex; /* 아이콘 중앙 정렬 */
+  display: flex;
   align-items: center;
   justify-content: center;
-  transition: background-color 0.2s ease, color 0.2s ease;
+  transition: background-color 0.2s ease;
 }
-
-.carousel-btn:hover {
-  background-color: #e0e0e5;
-  color: #111;
-}
+.carousel-btn:hover { background-color: rgba(0, 0, 0, 0.12); }
 
 .hobby-card-vertical {
-  /* ... 기존 스타일 유지 ... */
   flex-shrink: 0;
-  width: 300px;
-  height: 450px;
+  width: 280px;
+  height: 420px;
   border-radius: 20px;
   text-decoration: none;
   overflow: hidden;
@@ -271,38 +397,35 @@ html {
   background-size: cover;
   background-position: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
 }
-
 .hobby-card-vertical:hover {
   transform: translateY(-8px);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.16);
 }
 
 .hobby-card-vertical .card-content-overlay {
-  /* ... 기존 스타일 유지 ... */
   align-self: flex-end;
   width: 100%;
   padding: 1.5rem;
   box-sizing: border-box;
   color: #fff;
-  background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0) 100%);
 }
 
-/* 작게 표시될 대주제 (예: Taste) */
 .hobby-card-vertical .card-main-topic {
-  font-size: 0.9em;
+  font-size: 0.85em;
   font-weight: 600;
-  color: #fff;
-  opacity: 0.8; /* 살짝 투명하게 하여 부가 정보임을 나타냄 */
+  color: rgba(255, 255, 255, 0.75);
   display: block;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
 }
-
-/* 크게 표시될 소주제 (예: Gastronomy) */
 .hobby-card-vertical .card-sub-topic {
-  font-size: 2.2em;
+  font-size: 2em;
   font-weight: 700;
   color: #fff;
-  margin: 0.2rem 0 0; /* 대주제와의 상단 여백 */
+  margin: 0.2rem 0 0;
   line-height: 1.2;
+  letter-spacing: -0.01em;
 }

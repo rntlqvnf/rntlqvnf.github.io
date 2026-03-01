@@ -75,6 +75,19 @@ layout: full-width
   font-size: 0.9em;
   font-weight: 600;
   margin-top: 0.5rem;
+  margin-right: 0.4rem;
+}
+
+.pub-role {
+  display: inline-block;
+  background-color: #e9f7ef;
+  color: #1a7f4b;
+  padding: 0.25rem 0.75rem;
+  border-radius: 8px;
+  font-size: 0.9em;
+  font-weight: 600;
+  margin-top: 0.5rem;
+  margin-right: 0.4rem;
 }
 
 </style>
@@ -83,6 +96,21 @@ layout: full-width
 
   <div class="pub-header">
     <h1>Publications</h1>
+  </div>
+
+  <div class="pub-entry">
+    <p class="pub-venue">
+      VLDB 2026
+    </p>
+    <h3 class="pub-title">
+      TurboLynx: Schemaless Graph Engine Strikes Back for General-Purpose Analytics
+    </h3>
+    <p class="pub-authors">
+      Taesung Lee, <strong>Jaehyun Ha</strong>, Byungchul Tak, and Wook-Shin Han
+    </p>
+    <div class="pub-role">
+      2nd Author
+    </div>
   </div>
 
   <div class="pub-entry">
@@ -97,6 +125,9 @@ layout: full-width
     <p class="pub-authors">
       Wonseok Lee, <strong>Jaehyun Ha</strong>, Wook-Shin Han, Changgyoo Park, Myunggon Park, and Juhyeng Han
     </p>
+    <div class="pub-role">
+      2nd Author
+    </div>
   </div>
 
   <div class="pub-entry">
@@ -111,6 +142,9 @@ layout: full-width
     <p class="pub-authors">
       Wonseok Lee*, <strong>Jaehyun Ha*</strong>, Wook-Shin Han, Changgyoo Park, Myunggon Park, Juhyeng Han, and Juchang Lee
     </p>
+    <div class="pub-role">
+      Co-first Author
+    </div>
   </div>
 
   <div class="pub-entry">
@@ -125,6 +159,9 @@ layout: full-width
     <p class="pub-authors">
       Kyoungmin Kim, <strong>Jaehyun Ha</strong>, George Fletcher, Wook-Shin Han
     </p>
+    <div class="pub-role">
+      2nd Author
+    </div>
     <div class="pub-highlight">
       First Korean recipient of the PODS Paper!
     </div>

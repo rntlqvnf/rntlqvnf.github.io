@@ -97,13 +97,13 @@ layout: full-width
       <div class="address">yshajae@postech.ac.kr</div>
     </a>
 
-    <a href="https://www.instagram.com/daily_hajae/" target="_blank" rel="noopener noreferrer" class="contact-card">
+    <a href="https://www.instagram.com/insta_hajae/" target="_blank" rel="noopener noreferrer" class="contact-card">
       <div class="icon"><i class="fab fa-instagram"></i></div>
       <h3>Instagram DM</h3>
       <p class="description">
         For casual conversations, or questions about my personal posts and pursuits.
       </p>
-      <div class="address">@daily_hajae</div>
+      <div class="address">@insta_hajae</div>
     </a>
 
   </div>

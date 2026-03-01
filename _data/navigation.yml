@@ -1,7 +1,7 @@
 main:
-  - title: "Home"
-    url: /#home
-  - title: "Profession"
+  - title: "About"
+    url: /#about
+  - title: "Research"
     url: /#research
   - title: "Pursuits"
     url: /#pursuits
