@@ -214,8 +214,27 @@ layout: default
   var semChip   = document.getElementById('sem-chip');
   var planChip  = document.getElementById('plan-chip');
   var dots      = document.querySelectorAll('.ri-dot');
+  var currentStep = 1;
+
+  /* Position the opt-connector so it is centred directly below the
+     Optimize chip, no matter where the chip sits in the pipeline row. */
+  function alignConnector() {
+    if (!planChip || !semChip) return;
+    var connector = semChip.querySelector('.opt-connector');
+    if (!connector) return;
+
+    var chipRect   = planChip.getBoundingClientRect();
+    var expandRect = semChip.getBoundingClientRect();
+
+    /* horizontal distance from plan-expand's left edge to chip centre */
+    var offset = (chipRect.left + chipRect.width / 2) - expandRect.left;
+
+    connector.style.marginLeft  = (offset - 1) + 'px'; /* -1 = half of 2px width */
+    connector.style.marginRight = '0';
+  }
 
   function update(activeStep) {
+    currentStep = activeStep;
     elements.forEach(function (el) {
       var from = parseInt(el.dataset.from, 10);
       el.classList.toggle('lit', activeStep >= from);
@@ -225,6 +244,7 @@ layout: default
     dots.forEach(function (d, i) {
       d.classList.toggle('active', (i + 1) === activeStep);
     });
+    if (activeStep >= 5) alignConnector();
   }
 
   var observer = new IntersectionObserver(function (entries) {
@@ -237,5 +257,10 @@ layout: default
 
   steps.forEach(function (s) { observer.observe(s); });
   update(1); // initialise diagram to step 1
+
+  /* Re-align on resize (e.g. font scaling, window resize) */
+  window.addEventListener('resize', function () {
+    if (currentStep >= 5) alignConnector();
+  });
 }());
 </script>

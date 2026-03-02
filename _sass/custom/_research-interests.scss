@@ -197,11 +197,11 @@ body.page--research-interests #main {
   }
 
   // Vertical line from Optimize chip down to the ops box
+  // (horizontal position set dynamically by JS — see alignConnector())
   .opt-connector {
     width: 2px;
     height: 14px;
     background: rgba(0, 113, 227, 0.45);
-    margin: 0 auto;
     border-radius: 1px;
   }
 
