@@ -333,6 +333,11 @@ body.page--research-interests #main {
   }
 }
 
+/* ── Disable global scroll-snap from homepage CSS ───────────────────────── */
+html:has(body.page--research-interests) {
+  scroll-snap-type: none;
+}
+
 /* ── Responsive ─────────────────────────────────────────────────────────── */
 @media (max-width: 900px) {
   .ri-hero .ri-title { font-size: 2.5em; }
@@ -341,17 +346,33 @@ body.page--research-interests #main {
     grid-template-columns: 1fr;
   }
 
+  /* Diagram stays sticky at top so animation is visible while scrolling steps */
   .ri-diagram-panel {
-    position: relative;
-    height: auto;
-    min-height: 380px;
-    padding: 2.5rem 1.5rem;
+    position: sticky;
+    top: 0;
+    height: 40vh;
+    z-index: 10;
+    padding: 1.25rem 1rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
   }
 
+  .arch-diagram { max-width: 300px; }
+
+  /* Slightly smaller chips to fit the smaller panel */
+  .arch-agents .a-pill    { font-size: 0.7em;  padding: 0.22rem 0.55rem; }
+  .arch-raw   .r-chip     { font-size: 0.68em; padding: 0.2rem  0.48rem; }
+  .arch-card  .ac-label   { font-size: 0.62em; }
+  .graph-svg              { margin-top: 0.4rem; }
+
   .ri-step {
-    min-height: auto;
-    padding: 3.5rem 1.5rem;
+    min-height: 60vh; /* each step fills the remaining 60vh so observer fires */
+    padding: 3rem 1.5rem;
     border-left: none;
+
+    &:last-child {
+      min-height: auto;
+      padding-bottom: 4rem;
+    }
   }
 
   .ri-progress { display: none; }
