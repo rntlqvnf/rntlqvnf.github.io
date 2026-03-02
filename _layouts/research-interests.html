@@ -51,18 +51,18 @@ layout: default
           <div class="query-pipeline">
             <span class="p-chip">Parse</span>
             <span class="p-sep">→</span>
-            <span class="p-chip">Plan</span>
+            <span class="p-chip p-plan" id="plan-chip">Plan</span>
             <span class="p-sep">→</span>
             <span class="p-chip">Execute</span>
           </div>
-          <!-- Semantic Optimizer block — appears at step 5 -->
-          <div class="sem-opt-block" id="sem-chip">
-            <div class="sem-opt-title">⚡ Semantic Optimizer</div>
-            <div class="sem-opt-tags">
-              <span>LLM Operators</span>
-              <span class="sem-dot">·</span>
-              <span>Cost Estimation</span>
+          <!-- Plan expands at step 5 to show what's being optimized -->
+          <div class="plan-expand" id="sem-chip">
+            <div class="plan-ops">
+              <span class="op-chip sem-op">⚡ Semantic Ops</span>
+              <span class="op-plus">+</span>
+              <span class="op-chip trad-op">Traditional Ops</span>
             </div>
+            <div class="plan-hint">jointly optimized</div>
           </div>
         </div>
       </div>
@@ -206,17 +206,19 @@ layout: default
 
 <script>
 (function () {
-  var steps    = document.querySelectorAll('.ri-step');
-  var elements = document.querySelectorAll('.arch-el[data-from]');
-  var semChip  = document.getElementById('sem-chip');
-  var dots     = document.querySelectorAll('.ri-dot');
+  var steps     = document.querySelectorAll('.ri-step');
+  var elements  = document.querySelectorAll('.arch-el[data-from]');
+  var semChip   = document.getElementById('sem-chip');
+  var planChip  = document.getElementById('plan-chip');
+  var dots      = document.querySelectorAll('.ri-dot');
 
   function update(activeStep) {
     elements.forEach(function (el) {
       var from = parseInt(el.dataset.from, 10);
       el.classList.toggle('lit', activeStep >= from);
     });
-    if (semChip) semChip.classList.toggle('lit', activeStep >= 5);
+    if (semChip)  semChip.classList.toggle('lit',  activeStep >= 5);
+    if (planChip) planChip.classList.toggle('lit', activeStep >= 5);
     dots.forEach(function (d, i) {
       d.classList.toggle('active', (i + 1) === activeStep);
     });
