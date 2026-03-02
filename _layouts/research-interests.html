@@ -247,20 +247,35 @@ layout: default
     if (activeStep >= 5) alignConnector();
   }
 
-  var observer = new IntersectionObserver(function (entries) {
-    entries.forEach(function (entry) {
-      if (entry.isIntersecting) {
-        update(parseInt(entry.target.dataset.step, 10));
-      }
-    });
-  }, { threshold: 0.5 });
+  /* On mobile the sticky diagram panel occupies the top 40vh, so we tell
+     the observer to ignore that band and only watch the bottom 60vh.
+     A lower threshold (0.3) also makes updates feel more immediate. */
+  var mq = window.matchMedia('(max-width: 900px)');
 
+  function makeObserver() {
+    var mobile = mq.matches;
+    return new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          update(parseInt(entry.target.dataset.step, 10));
+        }
+      });
+    }, {
+      threshold:  mobile ? 0.3 : 0.5,
+      rootMargin: mobile ? '-40% 0px 0px 0px' : '0px'
+    });
+  }
+
+  var observer = makeObserver();
   steps.forEach(function (s) { observer.observe(s); });
   update(1); // initialise diagram to step 1
 
-  /* Re-align on resize (e.g. font scaling, window resize) */
+  /* Rebuild observer and re-align connector on resize / orientation change */
   window.addEventListener('resize', function () {
     if (currentStep >= 5) alignConnector();
+    observer.disconnect();
+    observer = makeObserver();
+    steps.forEach(function (s) { observer.observe(s); });
   });
 }());
 </script>
