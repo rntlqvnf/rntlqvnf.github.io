@@ -333,6 +333,12 @@ body.page--research-interests #main {
   }
 }
 
+/* ── Hide AdSense block injected by default.html ────────────────────────── */
+body.page--research-interests .adsbygoogle,
+body.page--research-interests .adsbygoogle + script {
+  display: none !important;
+}
+
 /* ── Disable global scroll-snap from homepage CSS ───────────────────────── */
 html:has(body.page--research-interests) {
   scroll-snap-type: none;
