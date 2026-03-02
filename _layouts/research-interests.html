@@ -49,22 +49,22 @@ layout: default
         <div class="arch-card light">
           <span class="ac-label">Query Engine</span>
           <div class="query-pipeline">
+            <span class="p-chip">Query</span>
+            <span class="p-sep">→</span>
             <span class="p-chip">Parse</span>
             <span class="p-sep">→</span>
-            <div class="p-opt-group">
-              <span class="p-chip p-plan" id="plan-chip">Optimize</span>
-              <!-- Expands at step 5 to reveal what Optimize breaks down into -->
-              <div class="plan-expand" id="sem-chip">
-                <div class="opt-connector"></div>
-                <div class="plan-ops">
-                  <span class="op-chip sem-op">⚡ Semantic Ops</span>
-                  <span class="op-plus">+</span>
-                  <span class="op-chip trad-op">Traditional Ops</span>
-                </div>
-              </div>
-            </div>
+            <span class="p-chip p-plan" id="plan-chip">Optimize</span>
             <span class="p-sep">→</span>
             <span class="p-chip">Execute</span>
+          </div>
+          <!-- Expands at step 5: breakdown of the Optimize step -->
+          <div class="plan-expand" id="sem-chip">
+            <div class="opt-connector"></div>
+            <div class="plan-ops">
+              <span class="op-chip sem-op">⚡ Semantic Ops</span>
+              <span class="op-plus">+</span>
+              <span class="op-chip trad-op">Traditional Ops</span>
+            </div>
           </div>
         </div>
       </div>
