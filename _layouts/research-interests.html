@@ -1,0 +1,229 @@
+---
+layout: default
+---
+
+<!-- Hero -->
+<header class="ri-hero">
+  <span class="ri-eyebrow">Research Vision</span>
+  <h1 class="ri-title">AI Database Systems</h1>
+  <p class="ri-desc">
+    Scroll to follow the story — from the chaos of real-world data
+    to a unified, agent-driven database for the AI era.
+  </p>
+</header>
+
+<!-- Fixed progress dots -->
+<nav class="ri-progress" aria-label="Section progress">
+  <span class="ri-dot active" data-dot="1"></span>
+  <span class="ri-dot" data-dot="2"></span>
+  <span class="ri-dot" data-dot="3"></span>
+  <span class="ri-dot" data-dot="4"></span>
+  <span class="ri-dot" data-dot="5"></span>
+</nav>
+
+<!-- Scrollytelling container -->
+<div class="ri-scroll-container">
+
+  <!-- ══ LEFT: Sticky Architecture Diagram ══ -->
+  <div class="ri-diagram-panel">
+    <div class="arch-diagram">
+
+      <!-- [Step 5] Query Agents -->
+      <div class="arch-el" data-from="5">
+        <div class="arch-agents">
+          <span class="a-pill">🤖 Query Agent</span>
+          <span class="a-pill">🤖 Query Agent</span>
+        </div>
+      </div>
+
+      <!-- Connector: agents ↓ query engine -->
+      <div class="arch-el" data-from="5">
+        <div class="arch-connector">
+          <div class="conn-head down"></div>
+          <div class="conn-line"></div>
+        </div>
+      </div>
+
+      <!-- [Step 4] Query Engine -->
+      <div class="arch-el" data-from="4">
+        <div class="arch-card light">
+          <span class="ac-label">Query Engine</span>
+          <div class="query-pipeline">
+            <span class="p-chip">Parse</span>
+            <span class="p-sep">→</span>
+            <span class="p-chip">Plan</span>
+            <span class="p-sep">→</span>
+            <span class="p-chip sem" id="sem-chip">⚡ LLM Op</span>
+            <span class="p-sep">→</span>
+            <span class="p-chip">Execute</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Connector: query engine ↓ graph -->
+      <div class="arch-el" data-from="4">
+        <div class="arch-connector">
+          <div class="conn-line"></div>
+          <div class="conn-head down"></div>
+        </div>
+      </div>
+
+      <!-- [Step 2] Semantic Knowledge Graph -->
+      <div class="arch-el" data-from="2">
+        <div class="arch-card dark">
+          <span class="ac-label">Semantic Knowledge Graph</span>
+          <svg class="graph-svg" viewBox="0 0 240 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <line x1="120" y1="36" x2="36"  y2="10" stroke="rgba(255,255,255,0.18)" stroke-width="1.5"/>
+            <line x1="120" y1="36" x2="204" y2="10" stroke="rgba(255,255,255,0.18)" stroke-width="1.5"/>
+            <line x1="120" y1="36" x2="36"  y2="62" stroke="rgba(255,255,255,0.18)" stroke-width="1.5"/>
+            <line x1="120" y1="36" x2="204" y2="62" stroke="rgba(255,255,255,0.18)" stroke-width="1.5"/>
+            <line x1="36"  y1="10" x2="204" y2="10" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+            <line x1="36"  y1="62" x2="204" y2="62" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+            <circle cx="120" cy="36" r="10" fill="#0071e3"/>
+            <circle cx="36"  cy="10" r="6"  fill="rgba(255,255,255,0.3)"/>
+            <circle cx="204" cy="10" r="6"  fill="rgba(255,255,255,0.3)"/>
+            <circle cx="36"  cy="62" r="6"  fill="rgba(255,255,255,0.3)"/>
+            <circle cx="204" cy="62" r="6"  fill="rgba(255,255,255,0.3)"/>
+          </svg>
+        </div>
+      </div>
+
+      <!-- [Step 3] Maintenance Agents -->
+      <div class="arch-el" data-from="3">
+        <div class="arch-agents" style="padding-top: 0.65rem;">
+          <span class="a-pill">🤖 Maintenance</span>
+          <span class="a-pill">🤖 Maintenance</span>
+        </div>
+      </div>
+
+      <!-- Connector: raw data ↑ graph (always visible) -->
+      <div class="arch-el always-on">
+        <div class="arch-connector">
+          <div class="conn-head up"></div>
+          <div class="conn-line"></div>
+        </div>
+      </div>
+
+      <!-- [Step 1] Raw Data (always visible) -->
+      <div class="arch-el always-on">
+        <div class="arch-raw">
+          <span class="r-chip">📄 CSV</span>
+          <span class="r-chip">🖼️ Image</span>
+          <span class="r-chip">{ } JSON</span>
+          <span class="r-chip">📋 Log</span>
+          <span class="r-chip">🗃️ DB</span>
+        </div>
+        <p class="arch-raw-label">Heterogeneous Data Sources</p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ══ RIGHT: Scrollable Steps ══ -->
+  <div class="ri-steps">
+
+    <section class="ri-step" data-step="1">
+      <p class="s-num">01 — The Problem</p>
+      <h2 class="s-title">Real-world data<br>is wild.</h2>
+      <p class="s-sub">Heterogeneous, unstructured, schema-less</p>
+      <p class="s-body">
+        Databases were designed for structured, schema-conforming data.
+        But reality looks different — scientific datasets, enterprise records,
+        medical histories, sensor streams. Each exists in its own format and
+        semantic world. Moving and transforming data (ETL) is not enough.
+        We need a layer that captures what data <strong>means</strong>.
+      </p>
+    </section>
+
+    <section class="ri-step" data-step="2">
+      <p class="s-num">02 — Semantic Layer</p>
+      <h2 class="s-title">Express meaning,<br>not just data.</h2>
+      <p class="s-sub">A Semantic Knowledge Graph as the foundation</p>
+      <p class="s-body">
+        We represent heterogeneous data through a
+        <strong>Semantic Knowledge Graph</strong> — a unified structure
+        that captures not just data, but its meaning and relationships.
+        Unlike ETL pipelines that transform data, the graph expresses
+        <em>intent</em>: what entities exist, how they relate, and what
+        they represent across modalities.
+      </p>
+      <div class="s-tags">
+        <span class="s-tag">📄 TurboLynx &mdash; VLDB 2026</span>
+      </div>
+    </section>
+
+    <section class="ri-step" data-step="3">
+      <p class="s-num">03 — Agents</p>
+      <h2 class="s-title">Agents as<br>graph architects.</h2>
+      <p class="s-sub">Autonomous construction and maintenance</p>
+      <p class="s-body">
+        Constructing and maintaining a knowledge graph over ever-changing,
+        heterogeneous data is beyond human capacity. Autonomous
+        <strong>agents</strong> continuously traverse, analyze, and update
+        the semantic layer — detecting changes, resolving conflicts, and
+        extending coverage as new data arrives.
+      </p>
+    </section>
+
+    <section class="ri-step" data-step="4">
+      <p class="s-num">04 — Query Layer</p>
+      <h2 class="s-title">Query the meaning,<br>not just the bytes.</h2>
+      <p class="s-sub">Full query engine for semantic data</p>
+      <p class="s-body">
+        Atop the semantic graph sits a full <strong>query engine</strong>
+        — parsing, planning, and executing queries across richly structured,
+        multi-modal data. Agents issue queries on behalf of users and
+        applications, navigating the full complexity of the knowledge layer.
+      </p>
+    </section>
+
+    <section class="ri-step" data-step="5">
+      <p class="s-num">05 — The Full Vision</p>
+      <h2 class="s-title">The AI<br>Database System.</h2>
+      <p class="s-sub">Semantic Operators &amp; Query Optimization</p>
+      <p class="s-body">
+        Some queries must <strong>reason</strong> over unstructured content
+        — classifying text, matching images, extracting relations. For these,
+        we embed LLMs directly into query execution as
+        <strong>Semantic Operators</strong>. Since LLM calls are expensive,
+        query optimization — proxy models and cardinality estimation —
+        is critical to making the system practical at scale.
+      </p>
+      <div class="s-tags">
+        <span class="s-tag">📄 Semantic Op Optimization &mdash; SIGMOD 2027</span>
+      </div>
+    </section>
+
+  </div>
+</div>
+
+<script>
+(function () {
+  var steps    = document.querySelectorAll('.ri-step');
+  var elements = document.querySelectorAll('.arch-el[data-from]');
+  var semChip  = document.getElementById('sem-chip');
+  var dots     = document.querySelectorAll('.ri-dot');
+
+  function update(activeStep) {
+    elements.forEach(function (el) {
+      var from = parseInt(el.dataset.from, 10);
+      el.classList.toggle('lit', activeStep >= from);
+    });
+    if (semChip) semChip.classList.toggle('lit', activeStep >= 5);
+    dots.forEach(function (d, i) {
+      d.classList.toggle('active', (i + 1) === activeStep);
+    });
+  }
+
+  var observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        update(parseInt(entry.target.dataset.step, 10));
+      }
+    });
+  }, { threshold: 0.5 });
+
+  steps.forEach(function (s) { observer.observe(s); });
+  update(1); // initialise diagram to step 1
+}());
+</script>
