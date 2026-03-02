@@ -405,13 +405,24 @@ html:has(body.page--research-interests) {
   .ri-diagram-panel {
     position: sticky;
     top: 0;
-    height: 40vh;
+    height: 45vh;
     z-index: 10;
-    padding: 1.25rem 1rem;
+    padding: 1rem 1rem 0;
     border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+
+    /* KEY FIX: top-align so as more elements appear they stack from the top,
+       and scroll internally so the panel never clips the relevant element */
+    align-items: flex-start;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scrollbar-width: none;          /* Firefox */
+    &::-webkit-scrollbar { display: none; } /* Chrome/Safari */
   }
 
-  .arch-diagram { max-width: 300px; }
+  .arch-diagram {
+    max-width: 300px;
+    padding-bottom: 1rem; /* breathing room at bottom of scroll area */
+  }
 
   /* Slightly smaller chips to fit the smaller panel */
   .arch-agents .a-pill    { font-size: 0.7em;  padding: 0.22rem 0.55rem; }
@@ -420,7 +431,7 @@ html:has(body.page--research-interests) {
   .graph-svg              { margin-top: 0.4rem; }
 
   .ri-step {
-    min-height: 60vh; /* each step fills the remaining 60vh so observer fires */
+    min-height: 70vh; /* taller sections give the observer more time to fire */
     padding: 3rem 1.5rem;
     border-left: none;
 

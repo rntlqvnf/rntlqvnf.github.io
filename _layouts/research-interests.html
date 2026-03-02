@@ -245,6 +245,16 @@ layout: default
       d.classList.toggle('active', (i + 1) === activeStep);
     });
     if (activeStep >= 5) alignConnector();
+
+    /* Mobile: reset diagram panel scroll to 0 so the top-most lit element is
+       always visible.  Collapsed elements (max-height:0) occupy no space, so
+       the new element for each step naturally rises to position 0 — no offset
+       calculation needed.  Runs after class changes so the element is already
+       expanding when the panel snaps to top. */
+    if (window.innerWidth <= 900) {
+      var panel = document.querySelector('.ri-diagram-panel');
+      if (panel) panel.scrollTop = 0;
+    }
   }
 
   /* On mobile the sticky diagram panel occupies the top 40vh, so we tell
