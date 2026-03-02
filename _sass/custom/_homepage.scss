@@ -314,15 +314,8 @@ body.page--homepage #main {
     gap: 2rem;
   }
 
-  .about-right {
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-
   .scroll-section-card {
-    flex: 1;
-    min-width: 140px;
-    min-height: 140px;
+    min-height: 130px;
   }
 
   .about-links-row { width: 100%; }
