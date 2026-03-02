@@ -152,19 +152,19 @@ body.page--research-interests #main {
 .query-pipeline {
   display: flex;
   align-items: center;
-  gap: 0.3rem;
-  flex-wrap: wrap;
+  gap: 0.2rem;
+  flex-wrap: nowrap;
   margin-top: 0.4rem;
 
   .p-sep {
-    font-size: 0.7em;
+    font-size: 0.65em;
     color: rgba(0, 0, 0, 0.25);
   }
 
   .p-chip {
-    font-size: 0.74em;
+    font-size: 0.68em;
     font-weight: 600;
-    padding: 0.2rem 0.55rem;
+    padding: 0.18rem 0.45rem;
     border-radius: 7px;
     background: rgba(0, 0, 0, 0.06);
     color: #555;
@@ -243,6 +243,11 @@ body.page--research-interests #main {
   flex-direction: column;
   justify-content: center;
   padding: 5rem 4rem 5rem 3.5rem;
+
+  &:last-child {
+    min-height: auto;
+    padding-bottom: 6rem;
+  }
 
   &:not(:last-child) {
     border-bottom: 1px solid rgba(0, 0, 0, 0.05);
