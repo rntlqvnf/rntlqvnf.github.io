@@ -152,6 +152,7 @@ body.page--research-interests #main {
 .query-pipeline {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 0.2rem;
   flex-wrap: nowrap;
   margin-top: 0.4rem;
@@ -192,15 +193,16 @@ body.page--research-interests #main {
   &.lit {
     max-height: 80px;
     opacity: 1;
-    margin-top: 0.65rem;
+    margin-top: 0.3rem;
   }
 
-  // Small vertical line from Optimize chip down to the ops box
+  // Vertical line from Optimize chip down to the ops box
   .opt-connector {
-    width: 1px;
-    height: 8px;
-    background: rgba(0, 113, 227, 0.3);
+    width: 2px;
+    height: 14px;
+    background: rgba(0, 113, 227, 0.45);
     margin: 0 auto;
+    border-radius: 1px;
   }
 
   // Ops box — visually nested "inside" the Optimize step
