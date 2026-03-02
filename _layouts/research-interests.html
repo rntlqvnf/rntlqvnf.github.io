@@ -51,18 +51,20 @@ layout: default
           <div class="query-pipeline">
             <span class="p-chip">Parse</span>
             <span class="p-sep">→</span>
-            <span class="p-chip p-plan" id="plan-chip">Plan</span>
+            <div class="p-opt-group">
+              <span class="p-chip p-plan" id="plan-chip">Optimize</span>
+              <!-- Expands at step 5 to reveal what Optimize breaks down into -->
+              <div class="plan-expand" id="sem-chip">
+                <div class="opt-connector"></div>
+                <div class="plan-ops">
+                  <span class="op-chip sem-op">⚡ Semantic Ops</span>
+                  <span class="op-plus">+</span>
+                  <span class="op-chip trad-op">Traditional Ops</span>
+                </div>
+              </div>
+            </div>
             <span class="p-sep">→</span>
             <span class="p-chip">Execute</span>
-          </div>
-          <!-- Plan expands at step 5 to show what's being optimized -->
-          <div class="plan-expand" id="sem-chip">
-            <div class="plan-ops">
-              <span class="op-chip sem-op">⚡ Semantic Ops</span>
-              <span class="op-plus">+</span>
-              <span class="op-chip trad-op">Traditional Ops</span>
-            </div>
-            <div class="plan-hint">jointly optimized</div>
           </div>
         </div>
       </div>
@@ -117,6 +119,7 @@ layout: default
           <span class="r-chip">📄 CSV</span>
           <span class="r-chip">🖼️ Image</span>
           <span class="r-chip">{ } JSON</span>
+          <span class="r-chip">📝 Text</span>
           <span class="r-chip">📋 Log</span>
           <span class="r-chip">🗃️ DB</span>
         </div>

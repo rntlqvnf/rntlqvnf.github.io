@@ -151,7 +151,7 @@ body.page--research-interests #main {
 /* Query engine pipeline */
 .query-pipeline {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 0.2rem;
   flex-wrap: nowrap;
   margin-top: 0.4rem;
@@ -159,6 +159,7 @@ body.page--research-interests #main {
   .p-sep {
     font-size: 0.65em;
     color: rgba(0, 0, 0, 0.25);
+    margin-top: 0.22rem; // align with chip text center
   }
 
   .p-chip {
@@ -169,7 +170,13 @@ body.page--research-interests #main {
     background: rgba(0, 0, 0, 0.06);
     color: #555;
   }
+}
 
+/* Optimize chip + its expand block grouped in a column */
+.p-opt-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* Plan chip — highlighted at step 5 */
@@ -181,45 +188,50 @@ body.page--research-interests #main {
   }
 }
 
-/* Plan expand block — revealed at step 5 */
+/* Plan expand block — revealed at step 5, nested under Optimize chip */
 .plan-expand {
   overflow: hidden;
   max-height: 0;
   opacity: 0;
-  margin-top: 0;
-  transition: max-height 0.45s ease 0.1s, opacity 0.4s ease 0.15s, margin-top 0.4s ease 0.1s;
+  transition: max-height 0.45s ease 0.1s, opacity 0.4s ease 0.15s;
 
   &.lit {
-    max-height: 80px;
+    max-height: 70px;
     opacity: 1;
-    margin-top: 0.6rem;
   }
 
+  // Small vertical line from Optimize chip down to the ops box
+  .opt-connector {
+    width: 1px;
+    height: 5px;
+    background: rgba(0, 113, 227, 0.3);
+    margin: 0 auto;
+  }
+
+  // Ops box — visually nested "inside" the Optimize step
   .plan-ops {
     display: flex;
     align-items: center;
-    gap: 0.3rem;
-    flex-wrap: wrap;
+    gap: 0.25rem;
+    flex-wrap: nowrap;
+    padding: 0.28rem 0.5rem;
+    background: rgba(0, 113, 227, 0.05);
+    border: 1px dashed rgba(0, 113, 227, 0.3);
+    border-radius: 8px;
   }
 
   .op-chip {
-    font-size: 0.7em;
+    font-size: 0.68em;
     font-weight: 600;
-    padding: 0.2rem 0.5rem;
-    border-radius: 7px;
+    padding: 0.18rem 0.4rem;
+    border-radius: 6px;
+    white-space: nowrap;
 
-    &.sem-op  { background: rgba(0, 113, 227, 0.1); color: #0071e3; }
-    &.trad-op { background: rgba(0, 0, 0, 0.06);    color: #555; }
+    &.sem-op  { background: rgba(0, 113, 227, 0.12); color: #0071e3; }
+    &.trad-op { background: rgba(0, 0, 0, 0.06);     color: #555; }
   }
 
   .op-plus { font-size: 0.7em; color: #bbb; font-weight: 600; }
-
-  .plan-hint {
-    font-size: 0.62em;
-    color: #aaa;
-    font-style: italic;
-    margin-top: 0.28rem;
-  }
 }
 
 /* Agent pill rows */
@@ -241,10 +253,10 @@ body.page--research-interests #main {
   }
 }
 
-/* Raw data chip row */
+/* Raw data chip row — 3-column grid for balanced layout */
 .arch-raw {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
   gap: 0.4rem;
   justify-content: center;
   padding: 0.3rem 0;
